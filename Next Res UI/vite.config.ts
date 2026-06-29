@@ -49,9 +49,17 @@ const saveJsonPlugin = (): Plugin => ({
           const targetPath = path.resolve(__dirname, '../Projects/Sample Project/outputs/resplan_analysis_results.json');
           if (fs.existsSync(targetPath)) {
             const data = fs.readFileSync(targetPath, 'utf8');
-            res.setHeader('Content-Type', 'application/json');
-            res.statusCode = 200;
-            res.end(data);
+            try {
+              JSON.parse(data); // Validate JSON
+              res.setHeader('Content-Type', 'application/json');
+              res.statusCode = 200;
+              res.end(data);
+            } catch (e) {
+              console.warn(`[WARN] Invalid JSON in ${targetPath}`);
+              res.setHeader('Content-Type', 'application/json');
+              res.statusCode = 200;
+              res.end('{}');
+            }
           } else {
             res.statusCode = 404;
             res.end(JSON.stringify({ success: false, error: 'Not found' }));
@@ -66,9 +74,17 @@ const saveJsonPlugin = (): Plugin => ({
           const targetPath = path.resolve(__dirname, '../Projects/Sample Project/outputs/structural_report.json');
           if (fs.existsSync(targetPath)) {
             const data = fs.readFileSync(targetPath, 'utf8');
-            res.setHeader('Content-Type', 'application/json');
-            res.statusCode = 200;
-            res.end(data);
+            try {
+              JSON.parse(data); // Validate JSON
+              res.setHeader('Content-Type', 'application/json');
+              res.statusCode = 200;
+              res.end(data);
+            } catch (e) {
+              console.warn(`[WARN] Invalid JSON in ${targetPath}`);
+              res.setHeader('Content-Type', 'application/json');
+              res.statusCode = 200;
+              res.end('{}');
+            }
           } else {
             res.statusCode = 404;
             res.end(JSON.stringify({ success: false, error: 'Not found' }));
@@ -90,7 +106,12 @@ const saveJsonPlugin = (): Plugin => ({
                 if (content.charCodeAt(0) === 0xFEFF) {
                   content = content.slice(1);
                 }
-                return JSON.parse(content);
+                try {
+                  return JSON.parse(content);
+                } catch (e) {
+                  console.warn(`[WARN] Invalid JSON in ${fullPath}`);
+                  return {};
+                }
               }
               return null;
             };

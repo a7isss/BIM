@@ -1,7 +1,7 @@
 Frame3DD Input Generated from ResPlan Dataset
 ==================================================
 
-144  # Number of Nodes
+145  # Number of Nodes
 # NodeID   X   Y   Z   r
 1782592778619   0.030   8.500   -1.500   0.0
 1782592778620   0.030   8.500   -0.100   0.0
@@ -147,6 +147,7 @@ Frame3DD Input Generated from ResPlan Dataset
 1782686134933   21.680   6.130   3.500   0.0
 1782686134934   18.320   9.470   3.500   0.0
 1782686134935   10.830   9.470   3.500   0.0
+1782686134936   18.320   13.950   0.000   0.0
 
 28  # Number of Nodes with Reactions
 # NodeID   x   y   z   xx   yy   zz (1=fixed, 0=free)

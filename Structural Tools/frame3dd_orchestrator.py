@@ -76,7 +76,10 @@ def run_orchestrator(mock_results_file="resplan_analysis_results.json", assumpti
                     "type": "Beam",
                     "details": f"{selected['shape']} {selected['bw_mm']}x{selected['h_mm']}",
                     "capacity": f"phi*Mn={selected['phi_Mn_kNm']} kNm, phi*Vn={selected['phi_Vn_kN']} kN",
-                    "reinforcement": f"Tier {selected['tier_level']} (As={selected['As_mm2']} mm2, stirrups @ {selected['stirrup_spacing_mm']} mm)"
+                    "reinforcement": f"Tier {selected['tier_level']} (As={selected['As_mm2']} mm2, stirrups @ {selected['stirrup_spacing_mm']} mm)",
+                    "length_m": el.get("length_m"),
+                    "effective_span_m": el.get("effective_span_m"),
+                    "n_intermediate_supports": el.get("n_intermediate_supports", 0)
                 })
             else:
                 print(f"  -> FAILED: No Section Available - Upsize Required")
@@ -90,7 +93,10 @@ def run_orchestrator(mock_results_file="resplan_analysis_results.json", assumpti
                     "type": "Column",
                     "details": f"Rectangular {selected['b_mm']}x{selected['h_mm']} mm",
                     "capacity": f"phi*Pn={selected['phi_Pn_kN']} kN, phi*Mn={selected['phi_Mn_kNm']} kNm",
-                    "reinforcement": f"Tier {selected['tier_level']} (rho={selected['rho_percent']}%)"
+                    "reinforcement": f"Tier {selected['tier_level']} (rho={selected['rho_percent']}%)",
+                    "height_m": el.get("height_m"),
+                    "Pu_kN": round(el.get("actions", {}).get("U", {}).get("P", 0), 1),
+                    "Mu_kNm": round(el.get("actions", {}).get("U", {}).get("M", 0), 1)
                 })
                 
                 # Automatically size a footing for this column's base reaction!

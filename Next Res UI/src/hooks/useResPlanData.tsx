@@ -37,7 +37,7 @@ export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ childre
                     setStructuralReport(structReport);
                     if (structReport.elements) setBom(structReport.elements);
                 }
-            setPresent(prev => prev ? prev : {
+            setPresent({
                 nodes: data.default?.nodes || data.nodes || [],
                 elements: data.default?.elements || data.elements || [],
                 slabs: data.default?.slabs || data.slabs || [],
