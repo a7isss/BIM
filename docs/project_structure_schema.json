@@ -6,7 +6,7 @@
     "properties": {
         "project_root": {
             "type": "string",
-            "description": "The root directory of the project, e.g., 'D:/Revit toolset/Projects/Sample Project'"
+            "description": "The root directory of the project, e.g., 'D:/BIM toolset/Projects/Sample Project'"
         },
         "directories": {
             "type": "object",

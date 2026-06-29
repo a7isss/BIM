@@ -64,8 +64,7 @@ def build_frame3dd_input(resplan_file="resplan_nodes.json", output_file="structu
             etype = e.get("type", "beam")
             sec = sections.get(etype, sections["beam"])
             
-            # Numeric ID for Frame3DD instead of string ID
-            num_id = e['id'].replace('C', '').replace('B', '')
+            num_id = e['id']
             
             f.write(f"{num_id}   {e['n1']}   {e['n2']}   ")
             f.write(f"{sec['Ax']}   {sec['Asy']}   {sec['Asz']}   ")

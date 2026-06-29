@@ -74,7 +74,7 @@ const TypesSchedulePanel: React.FC<TypesSchedulePanelProps> = ({ isOpen, setIsOp
                             </tr>
                         </thead>
                         <tbody>
-                            {(types[activeTab] || []).map((item: any, idx: number) => (
+                            {(types[activeTab] || []).map((item: { id: string, name: string, width: number, height: number, sill_height?: number }, idx: number) => (
                                 <tr key={item.id} className="border-b border-zinc-800 hover:bg-zinc-800/50 transition-colors">
                                     <td className="px-4 py-3 font-medium text-white">{item.id}</td>
                                     <td className="px-4 py-3">

@@ -23,6 +23,12 @@ def generate_simulated_results(resplan_file="resplan_nodes.json", assumptions_fi
         
     w_L_area = assump["loads"]["residential_live_load_kN_m2"]
     w_D_area = assump["loads"]["superimposed_dead_load_kN_m2"] + 4.0 # add roughly 4kN/m2 for self weight of slab
+    
+    analysis_assump = assump.get("analysis", {})
+    w_wall_thickness = analysis_assump.get("wall_thickness_m", 0.2)
+    w_brick_density = analysis_assump.get("wall_density_kN_m3", 18.0)
+    w_wind_pressure = assump.get("loads", {}).get("wind_pressure_kPa", 0.5)
+    default_bay_width = analysis_assump.get("default_bay_width_m", 3.0)
         
     nodes = {n["id"]: n for n in data["nodes"]}
     elements = data["elements"]
@@ -44,9 +50,6 @@ def generate_simulated_results(resplan_file="resplan_nodes.json", assumptions_fi
         if l2 == 0: return math.hypot(px - x1, py - y1)
         t = max(0, min(1, ((px - x1)*(x2 - x1) + (py - y1)*(y2 - y1)) / l2))
         return math.hypot(px - (x1 + t*(x2 - x1)), py - (y1 + t*(y2 - y1)))
-
-    w_wall_thickness = 0.2
-    w_brick_density = 18.0
 
     type_map = {}
     for t_list in data.get("types", {}).values():
@@ -273,11 +276,14 @@ def generate_simulated_results(resplan_file="resplan_nodes.json", assumptions_fi
         
         self_weight_D = (b * h * length) * 25.0 # 25 kN/m3 concrete
         
-        P_D = P_D_top + self_weight_D
+        P_D_raw = P_D_top + self_weight_D
+        # Pu minimum: even if no beams route to this node, the column carries its own self-weight
+        # plus at least 10 kN tributary (staircase, partition loads, etc.)
+        P_D = max(P_D_raw, self_weight_D + 10.0)
         P_L = P_L_top
         
-        # Transfer load to bottom node
-        node_reactions[bot_nid]["D"] += P_D
+        # Transfer load to bottom node (use raw to not artificially inflate total building weight)
+        node_reactions[bot_nid]["D"] += P_D_raw
         node_reactions[bot_nid]["L"] += P_L
         
         # Gravity moments: small eccentricity moment from beam reactions (beam-to-column connection)
@@ -287,23 +293,33 @@ def generate_simulated_results(resplan_file="resplan_nodes.json", assumptions_fi
         M_L = P_L * ecc_m
 
         # Wind moment: storey drift approach — max H/500 drift limit
-        # F_wind per storey ≈ 0.5 kPa * tributary bay width * storey height
-        trib_facade_m2 = length * 3.0  # 3m bay width
-        F_wind_kN = 0.5 * trib_facade_m2  # kN per storey
+        # Calculate dynamic tributary bay width for wind
+        col_trib_width = 0.0
+        cx, cy, cz = nodes[top_nid]['x'], nodes[top_nid]['y'], nodes[top_nid]['z']
+        for b_el in elements:
+            if b_el["type"] == "beam":
+                bn1, bn2 = nodes[b_el["n1"]], nodes[b_el["n2"]]
+                # Only consider beams roughly at the same Z level
+                if abs(bn1['z'] - cz) < 0.2:
+                    dist = point_to_segment_dist(cx, cy, bn1['x'], bn1['y'], bn2['x'], bn2['y'])
+                    if dist < 0.25:
+                        beam_len = math.hypot(bn2['x'] - bn1['x'], bn2['y'] - bn1['y'])
+                        col_trib_width += beam_len / 4.0 # Corner=1/4 bay, Edge=1/2 bay, Interior=Full bay
+        
+        if col_trib_width < 0.1:
+            col_trib_width = default_bay_width
+            
+        trib_facade_m2 = length * col_trib_width
+        F_wind_kN = w_wind_pressure * trib_facade_m2  # kN per storey
+        
         # M at base = F * h/2 (point load at mid height, fixed base)
-        # Capped at drift: delta = F*h^3/(3EI), M = EI*delta/(h^2/3) ≈ 3*delta_max*EI/h^2
-        # Practical cap: wind moment shouldn't exceed 30% of gravity axial * column dimension
         M_W_raw = F_wind_kN * (length / 2.0)
-        M_W_cap = max(P_D + self_weight_D, 10.0) * max(b, h) * 0.30
+        M_W_cap = max(P_D, 10.0) * max(b, h) * 0.30
         M_W = min(M_W_raw, M_W_cap)
 
         # Lateral shear
         V_gravity = (P_D + P_L) * 0.03  # 3% lateral imperfection
         V_wind = F_wind_kN
-        
-        # Pu minimum: even if no beams route to this node, the column carries its own self-weight
-        # plus at least 10 kN tributary (staircase, partition loads, etc.)
-        P_D = max(P_D, self_weight_D + 10.0)
         
         P_u = 1.2 * P_D + 1.6 * P_L
         M_u = 1.2 * M_D + 1.6 * M_L + 1.0 * M_W
@@ -337,7 +353,7 @@ def generate_simulated_results(resplan_file="resplan_nodes.json", assumptions_fi
             "utilization": round(max_utilization, 2)
         })
 
-        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w') as f:
         json.dump(results, f, indent=4)
         

@@ -1,16 +1,17 @@
 import React from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { useResPlanData } from '../hooks/useResPlanData';
+import type { Level } from '../types';
 
 interface LeftPanelProps {
     isOpen: boolean;
     setIsOpen: (isOpen: boolean) => void;
-    activeTypes: any;
-    setActiveTypes: (types: any) => void;
+    activeTypes: Record<string, string>;
+    setActiveTypes: (types: Record<string, string>) => void;
 }
 
 const LeftPanel: React.FC<LeftPanelProps> = ({ isOpen, setIsOpen, activeTypes, setActiveTypes }) => {
-    const { project_info, levels, updateState, save, types } = useResPlanData();
+    const { project_info, levels, updateState, types } = useResPlanData();
 
     const handleInfoChange = (field: string, value: string) => {
         updateState({
@@ -136,11 +137,75 @@ const LeftPanel: React.FC<LeftPanelProps> = ({ isOpen, setIsOpen, activeTypes, s
                             </div>
                         </div>
 
+                        <hr className="border-zinc-800 my-4" />
+                        <h3 className="text-sm font-semibold text-white/80">Land & Envelope Parameters</h3>
+                        
+                        <div className="flex gap-2">
+                            <div className="flex-1">
+                                <label className="block text-xs font-medium text-zinc-500 mb-1">Land Width (m)</label>
+                                <input 
+                                    type="number"
+                                    value={project_info.plot?.width_m || ''}
+                                    onChange={(e) => handleInfoChange('plot', { ...project_info.plot, width_m: parseFloat(e.target.value) || 0 })}
+                                    className="w-full bg-zinc-800/50 border border-zinc-700 rounded p-2 text-sm text-zinc-200 outline-none focus:border-blue-500"
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <label className="block text-xs font-medium text-zinc-500 mb-1">Land Depth (m)</label>
+                                <input 
+                                    type="number"
+                                    value={project_info.plot?.depth_m || ''}
+                                    onChange={(e) => handleInfoChange('plot', { ...project_info.plot, depth_m: parseFloat(e.target.value) || 0 })}
+                                    className="w-full bg-zinc-800/50 border border-zinc-700 rounded p-2 text-sm text-zinc-200 outline-none focus:border-blue-500"
+                                />
+                            </div>
+                        </div>
+                        
+                        <label className="block text-xs font-medium text-zinc-500 mt-2">Setbacks (m)</label>
+                        <div className="grid grid-cols-2 gap-2">
+                            <div>
+                                <label className="block text-[10px] text-zinc-600">Front</label>
+                                <input 
+                                    type="number"
+                                    value={project_info.plot?.setbacks_m?.front || ''}
+                                    onChange={(e) => handleInfoChange('plot', { ...project_info.plot, setbacks_m: { ...project_info.plot?.setbacks_m, front: parseFloat(e.target.value) || 0 } })}
+                                    className="w-full bg-zinc-800/50 border border-zinc-700 rounded p-1.5 text-xs text-zinc-200 outline-none focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-[10px] text-zinc-600">Rear</label>
+                                <input 
+                                    type="number"
+                                    value={project_info.plot?.setbacks_m?.rear || ''}
+                                    onChange={(e) => handleInfoChange('plot', { ...project_info.plot, setbacks_m: { ...project_info.plot?.setbacks_m, rear: parseFloat(e.target.value) || 0 } })}
+                                    className="w-full bg-zinc-800/50 border border-zinc-700 rounded p-1.5 text-xs text-zinc-200 outline-none focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-[10px] text-zinc-600">Side 1</label>
+                                <input 
+                                    type="number"
+                                    value={project_info.plot?.setbacks_m?.side1 || ''}
+                                    onChange={(e) => handleInfoChange('plot', { ...project_info.plot, setbacks_m: { ...project_info.plot?.setbacks_m, side1: parseFloat(e.target.value) || 0 } })}
+                                    className="w-full bg-zinc-800/50 border border-zinc-700 rounded p-1.5 text-xs text-zinc-200 outline-none focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-[10px] text-zinc-600">Side 2</label>
+                                <input 
+                                    type="number"
+                                    value={project_info.plot?.setbacks_m?.side2 || ''}
+                                    onChange={(e) => handleInfoChange('plot', { ...project_info.plot, setbacks_m: { ...project_info.plot?.setbacks_m, side2: parseFloat(e.target.value) || 0 } })}
+                                    className="w-full bg-zinc-800/50 border border-zinc-700 rounded p-1.5 text-xs text-zinc-200 outline-none focus:border-blue-500"
+                                />
+                            </div>
+                        </div>
+
                         <hr className="border-zinc-800 my-2" />
                         <h3 className="text-sm font-semibold text-white/80">Architectural Levels</h3>
                         
                         <div className="flex flex-col gap-3">
-                            {levels?.architectural?.map((lvl: any, index: number) => (
+                            {levels?.architectural?.map((lvl: Level, index: number) => (
                                 <div key={lvl.id} className="bg-zinc-800/30 border border-zinc-700/50 p-3 rounded-lg">
                                     <div className="font-medium text-sm text-zinc-300 mb-2">{lvl.name}</div>
                                     <div className="flex gap-2">

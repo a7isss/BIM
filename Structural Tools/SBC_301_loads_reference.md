@@ -11,9 +11,9 @@
 |------|--------------|-------|
 | RC Slab self-weight (150mm) | 3.75 | 25 kN/m³ × 0.15m |
 | RC Slab self-weight (200mm) | 5.00 | 25 kN/m³ × 0.20m |
-| Superimposed Dead (SDL) — floor finish, screed, MEP | **1.50** | Tile + screed + MEP |
+| Superimposed Dead (SDL) — floor finish, screed, MEP | **1.75** | Tile + screed + MEP |
 | Partition allowance (movable) | **0.75** | SBC 301 §4.3.2 min |
-| **Total SDL (use in analysis)** | **2.25** | SDL + Partitions |
+| **Total SDL (use in analysis)** | **2.50** | SDL + Partitions |
 
 ### Live Loads — SBC 301 Table 4-1 (kN/m²)
 | Space | LL (kN/m²) |
@@ -60,7 +60,7 @@ Effective wall height = `floor_height - beam_depth` (no double-counting of beam 
 | Combo | Formula | Controls |
 |-------|---------|---------|
 | 1 | `1.4D` | Self-weight only |
-| 2 | `1.2D + 1.7L + 0.5Lr` | Gravity dominant |
+| 2 | `1.2D + 1.6L + 0.5Lr` | Gravity dominant |
 | 3 | `1.2D + 1.6Lr + (L or 0.5W)` | Roof + gravity |
 | **4** | **`1.2D + 1.0W + L + 0.5Lr`** | **Wind + gravity (governs MWFRS)** |
 | 5 | `1.2D + 1.0E + L` | Seismic |
@@ -145,7 +145,7 @@ Where:
 | Item | Current Code | SBC Correct | Action |
 |------|-------------|-------------|--------|
 | Floor live load | 2.0 kN/m² flat | Per space type Table 4-1 | TODO: Use room-type LL |
-| SDL | 2.0 kN/m² | 2.25 kN/m² (incl. partitions) | Minor update |
+| SDL | 2.5 kN/m² | 2.5 kN/m² (incl. partitions) | OK |
 | Load combo beams | 1.2D + 1.6L | Correct for gravity | OK |
 | Wind on columns | Capped at 30% gravity×h | Should use storey shear | TODO: Implement MWFRS allocation |
 | Wind on beams | Not applied | Correct — gravity only | OK |

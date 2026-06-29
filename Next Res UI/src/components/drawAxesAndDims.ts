@@ -1,10 +1,10 @@
 import * as d3 from 'd3';
+import type { Node, Element } from '../types';
 
 export const drawAxesAndDims = (
-    svg: d3.Selection<SVGSVGElement, unknown, null, undefined>,
     g: d3.Selection<SVGGElement, unknown, null, undefined>,
-    nodes: any[],
-    elements: any[],
+    nodes: Node[],
+    elements: Element[],
     toPxX: (m: number) => number,
     toPxY: (m: number) => number,
     minX: number,
@@ -36,7 +36,7 @@ export const drawAxesAndDims = (
     uniqueYs.sort((a, b) => b - a); // Y axis goes down on screen, but actual coordinates might be standard cartesian. We sort descending so top is first (A, B, C...)
 
     const pxPerMeter = 100;
-    const padding = 3 * pxPerMeter; // Extensions past the building (3m to clear plot boundary)
+    const padding = 6 * pxPerMeter; // Extensions past the building (6m to clear plot boundary and fence)
 
     const startX = toPxX(minX) - padding;
     const endX = toPxX(maxX) + padding;

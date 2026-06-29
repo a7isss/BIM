@@ -1,21 +1,28 @@
 import * as d3 from 'd3';
 import { drawStructuralLabels } from './StructuralLabels';
+import type { Node, Element, Slab, Scope } from '../types';
 
 export const drawStructure = (
-    g: any,
-    renderSlabs: any[],
-    renderElements: any[],
-    renderNodes: any[],
-    nodes: any[],
+    g: d3.Selection<SVGGElement, unknown, null, undefined>,
+    renderSlabs: Slab[],
+    renderElements: Element[],
+    renderNodes: Node[],
+    nodes: Node[],
     bom: any[],
     toPxX: (m: number) => number,
     toPxY: (m: number) => number,
-    scope: string,
-    isPrintMode: boolean
+    scope: Scope,
+    isPrintMode: boolean,
+    activeTool: string,
+    elements: Element[],
+    updateState: (state: any) => void,
+    selectedElementForMove: any,
+    setSelectedElementForMove: (el: any) => void
 ) => {
     // 1. Draw Slabs (Polygons)
     renderSlabs.forEach(slab => {
-        const slabNodes = (slab.nodes || []).map((nid: number) => nodes.find(n => n.id === nid)).filter(Boolean);
+        if (!slab.nodes) return;
+        const slabNodes = slab.nodes.map((nid: string | number) => nodes.find(n => n.id === nid)).filter(Boolean);
         if (slabNodes.length > 2) {
             const points = slabNodes.map((n: any) => `${toPxX(n.x)},${toPxY(n.y)}`).join(' ');
             g.append('polygon')
@@ -56,7 +63,14 @@ export const drawStructure = (
                     .attr('x2', x2).attr('y2', y2)
                     .attr('stroke', '#fbbf24')
                     .attr('stroke-width', 8)
-                    .attr('stroke-linecap', 'round');
+                    .attr('stroke-linecap', 'round')
+                    .style('cursor', activeTool === 'remove_beam' ? 'pointer' : 'default')
+                    .on('click', (e: any) => {
+                        if (activeTool === 'remove_beam') {
+                            e.stopPropagation();
+                            updateState({ elements: elements.filter((el: any) => el.id !== beam.id) });
+                        }
+                    });
 
                 // Effective span label at beam midpoint
                 const mx = (x1 + x2) / 2;
@@ -107,7 +121,40 @@ export const drawStructure = (
                     .attr('height', 30)
                     .attr('fill', '#ef4444')
                     .attr('stroke', '#991b1b')
-                    .attr('stroke-width', 2);
+                    .attr('stroke-width', 2)
+                    .style('cursor', activeTool === 'remove_column' || activeTool === 'rotate_column' || activeTool === 'move_element' ? 'pointer' : 'default')
+                    .on('click', (e: any) => {
+                        const colId = columns.find(c => c.n1 === nid || c.n2 === nid)?.id;
+                        if (!colId) return;
+
+                        if (activeTool === 'remove_column') {
+                            e.stopPropagation();
+                            updateState({ elements: elements.filter((el: any) => el.id !== colId) });
+                        } else if (activeTool === 'rotate_column') {
+                            e.stopPropagation();
+                            updateState({
+                                elements: elements.map((el: any) => 
+                                    el.id === colId ? { ...el, b: el.h, h: el.b } : el
+                                )
+                            });
+                        } else if (activeTool === 'move_element') {
+                            e.stopPropagation();
+                            setSelectedElementForMove({ id: colId, type: 'column' });
+                        }
+                    });
+                
+                const colId = columns.find(c => c.n1 === nid || c.n2 === nid)?.id;
+                if (colId && selectedElementForMove && selectedElementForMove.id === colId) {
+                    g.append('rect')
+                        .attr('x', toPxX(n.x) - 20)
+                        .attr('y', toPxY(n.y) - 20)
+                        .attr('width', 40)
+                        .attr('height', 40)
+                        .attr('fill', 'none')
+                        .attr('stroke', '#eab308') // yellow-500
+                        .attr('stroke-width', 2)
+                        .attr('stroke-dasharray', '4,4');
+                }
             }
         });
     }

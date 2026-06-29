@@ -54,8 +54,8 @@ def generate_footing_library(filename="footings_library.json"):
                         "B_mm": B,
                         "T_mm": T,
                         "d_mm": d,
-                        "area_m2": (L/1000.0) * (B/1000.0),
-                        "volume_m3": (L/1000.0) * (B/1000.0) * (T/1000.0),
+                        "area_m2": round((L/1000.0) * (B/1000.0), 2),
+                        "volume_m3": round((L/1000.0) * (B/1000.0) * (T/1000.0), 3),
                         "columns": [],
                         "tiers": []
                     }

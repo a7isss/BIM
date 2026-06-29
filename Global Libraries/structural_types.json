@@ -1,12 +1,12 @@
 {
     "materials": {
-        "CONC_25MPa": {
-            "density_kN_m3": 25.0,
-            "fc_MPa": 25.0,
-            "E_MPa": 23500.0
+        "CONC_28MPa": {
+            "density_kN_m3": 24.0,
+            "fc_MPa": 28.0,
+            "E_MPa": 24000.0
         },
-        "REBAR_B500B": {
-            "fy_MPa": 500.0,
+        "REBAR_Grade420": {
+            "fy_MPa": 420.0,
             "E_MPa": 200000.0
         }
     },

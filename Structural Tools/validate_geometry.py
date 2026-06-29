@@ -108,7 +108,7 @@ def validate_geometry(data):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--project_dir", default="D:/Revit toolset/Projects/Sample Project")
+    parser.add_argument("--project_dir", default="D:/BIM toolset/Projects/Sample Project")
     args = parser.parse_args()
     
     data = check_json_files(args.project_dir)

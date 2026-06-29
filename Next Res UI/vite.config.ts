@@ -44,6 +44,24 @@ const saveJsonPlugin = (): Plugin => ({
             res.end(JSON.stringify({ success: false, error: String(e) }));
           }
         });
+      } else if (req.method === 'POST' && req.url === '/api/save_touchups') {
+        let body = '';
+        req.on('data', chunk => {
+          body += chunk.toString();
+        });
+        req.on('end', () => {
+          try {
+            const data = JSON.parse(body);
+            const targetPath = path.resolve(__dirname, '../Projects/Sample Project/inputs/resplan_touchups.json');
+            fs.writeFileSync(targetPath, JSON.stringify(data, null, 4));
+            res.statusCode = 200;
+            res.end(JSON.stringify({ success: true, message: 'Touchups saved successfully' }));
+          } catch (e) {
+            console.error(e);
+            res.statusCode = 500;
+            res.end(JSON.stringify({ success: false, error: String(e) }));
+          }
+        });
       } else if (req.method === 'GET' && req.url === '/api/load_results') {
         try {
           const targetPath = path.resolve(__dirname, '../Projects/Sample Project/outputs/resplan_analysis_results.json');
@@ -99,7 +117,7 @@ const saveJsonPlugin = (): Plugin => ({
           const projectPath = path.resolve(__dirname, '../Projects/Sample Project/project.json');
           if (fs.existsSync(projectPath)) {
             const proj = JSON.parse(fs.readFileSync(projectPath, 'utf8'));
-            const loadFile = (relPath) => {
+            const loadFile = (relPath: string) => {
               const fullPath = path.resolve(__dirname, '../Projects/Sample Project', relPath);
               if (fs.existsSync(fullPath)) {
                 let content = fs.readFileSync(fullPath, 'utf8');
@@ -123,7 +141,8 @@ const saveJsonPlugin = (): Plugin => ({
               struct_types_data: loadFile(proj.files.structural_types),
               settings_data: loadFile(proj.files.settings),
               analysis_results_data: loadFile(proj.files.analysis_results),
-              structural_report_data: loadFile(proj.files.structural_report)
+              structural_report_data: loadFile(proj.files.structural_report),
+              touchups_data: proj.files.touchups ? loadFile(proj.files.touchups) : { touchups: [] }
             };
             
             res.setHeader('Content-Type', 'application/json');

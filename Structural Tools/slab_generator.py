@@ -1,7 +1,7 @@
 import json
 import os
 
-def generate_slabs(resplan_file="resplan_nodes.json", output_file="resplan_nodes.json"):
+def generate_slabs(resplan_file="resplan_nodes.json", output_file="resplan_slabs.json"):
     """
     Detects slabs based on architectural room boundaries and maps them to structural Z-levels.
     """
@@ -94,10 +94,14 @@ def generate_slabs(resplan_file="resplan_nodes.json", output_file="resplan_nodes
     
     data["slabs"] = generated_slabs
     
-    with open(output_file, 'w') as f:
+    import tempfile
+    temp_dir = os.path.dirname(output_file) or '.'
+    temp_fd, temp_path = tempfile.mkstemp(dir=temp_dir, suffix='.json')
+    with os.fdopen(temp_fd, 'w') as f:
         json.dump(data, f, indent=4)
+    os.replace(temp_path, output_file)
         
     print(f"Successfully saved to {output_file}")
 
 if __name__ == "__main__":
-    generate_slabs("../Projects/Sample Project/inputs/resplan_nodes.json", "../Projects/Sample Project/inputs/resplan_nodes.json")
+    generate_slabs("../Projects/Sample Project/inputs/resplan_nodes.json", "../Projects/Sample Project/inputs/resplan_slabs.json")

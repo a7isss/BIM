@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { useResPlanData } from '../hooks/useResPlanData';
-import type { Scope } from './RightPanel';
+import type { Scope } from '../types';
 import { Maximize2, Minimize2 } from 'lucide-react';
 
 import EditToolbar from './EditToolbar';
-import type { EditTool } from './EditToolbar';
-import { drawStructuralLabels } from './StructuralLabels';
+import type { EditTool } from '../types';
 import { drawAxesAndDims } from './drawAxesAndDims';
 import { drawArchitecture } from './drawArchitecture';
 import { drawStructure } from './drawStructure';
+import FurnitureCatalogPanel from './FurnitureCatalogPanel';
 
 interface LayoutCanvasProps {
     scope: Scope;
@@ -20,10 +20,10 @@ interface LayoutCanvasProps {
     activeTypes?: Record<string, string>;
 }
 
-const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, setIsEditMode, forcedFloor, isPrintMode, activeTypes }) => {
+const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, forcedFloor, isPrintMode, activeTypes, isEditMode, setIsEditMode }) => {
     const svgRef = useRef<SVGSVGElement>(null);
     const currentZoomRef = useRef<d3.ZoomTransform | null>(null);
-    const { architecture, rooms, openings, nodes, elements, slabs, bom, structuralReport, levels, updateState, types } = useResPlanData();
+    const { architecture, rooms, openings, nodes, elements, slabs, bom, levels, touchups, updateState, types, project_info } = useResPlanData();
     const [isFullScreen, setIsFullScreen] = useState(false);
     const availableLevels = scope === 'structural' ? (levels?.structural || []) : (levels?.architectural || []);
     
@@ -42,14 +42,127 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
     const selectedFloor = forcedFloor || localFloor || defaultId;
     const [activeTool, setActiveTool] = useState<EditTool>('select');
     const [editingRoomId, setEditingRoomId] = useState<string | null>(null);
+    const [selectedElementForMove, setSelectedElementForMove] = useState<{ id: string, type: 'column' | 'door' | 'front_door' | 'window' | 'touchup' | 'node' } | null>(null);
+    const [drawingSequence, setDrawingSequence] = useState<(string | number)[]>([]);
+    const [mousePos, setMousePos] = useState<{ x: number, y: number } | null>(null);
     
-    const roomNames: Record<string, string> = { 'living': 'LIVING (🛋️)', 'bedroom': 'BEDROOM (🛏️)', 'bathroom': 'BATHROOM (🚽)', 'kitchen': 'KITCHEN (🍳)', 'default': 'ROOM' };
+    // Touch Up State
+    const [activeFurnitureId, setActiveFurnitureId] = useState<string>('');
+    const [isCatalogOpen, setIsCatalogOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (activeTool === 'add_touchup') {
+            setIsCatalogOpen(true);
+            // Default select the first furniture if none selected
+            if (!activeFurnitureId && types?.furniture?.length > 0) {
+                setActiveFurnitureId(types.furniture[0].id);
+            }
+        } else {
+            setIsCatalogOpen(false);
+        }
+    }, [activeTool, types, activeFurnitureId]);
+
+    // Clear sequence when tool changes
+    useEffect(() => {
+        setDrawingSequence([]);
+        setMousePos(null);
+    }, [activeTool, selectedFloor]);
+    
 
     useEffect(() => {
         if (localFloor && availableLevels.length > 0 && !availableLevels.some((l: any) => l.id === localFloor)) {
             setLocalFloor(''); // Reset if invalid
         }
     }, [scope, levels, localFloor, availableLevels]);
+
+    // Deselect if tool changes
+    useEffect(() => {
+        if (activeTool !== 'move_element') {
+            setSelectedElementForMove(null);
+        }
+    }, [activeTool]);
+
+    // Keyboard event for moving
+    useEffect(() => {
+        if (!isEditMode || activeTool !== 'move_element' || !selectedElementForMove) return;
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (!['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+            e.preventDefault();
+
+            const inc = e.shiftKey ? 5 : 0.05; // 5 degrees for rotation, 0.05m for translation
+            let dx = 0;
+            let dy = 0;
+            let drot = 0;
+            
+            if (e.shiftKey) {
+                if (e.key === 'ArrowLeft') drot = -inc;
+                if (e.key === 'ArrowRight') drot = inc;
+            } else {
+                if (e.key === 'ArrowUp') dy = 1;
+                if (e.key === 'ArrowDown') dy = -1;
+                if (e.key === 'ArrowLeft') dx = -1;
+                if (e.key === 'ArrowRight') dx = 1;
+            }
+
+            if (selectedElementForMove.type === 'touchup' && (dx !== 0 || dy !== 0 || drot !== 0)) {
+                const tu = touchups.find(t => t.id === selectedElementForMove.id);
+                if (tu) {
+                    updateState({
+                        touchups: touchups.map(t => t.id === tu.id ? { 
+                            ...t, 
+                            x: Number((t.x + dx * inc).toFixed(2)), 
+                            y: Number((t.y + dy * inc).toFixed(2)),
+                            rotation: (t.rotation || 0) + drot
+                        } : t)
+                    });
+                }
+            } else if (selectedElementForMove.type === 'column') {
+                const el = elements.find(e => e.id === selectedElementForMove.id);
+                if (el) {
+                    const node = nodes.find(n => n.id === el.node_id);
+                    if (node) {
+                        updateState({
+                            nodes: nodes.map(n => n.id === node.id ? { ...n, x: Number((n.x + dx * inc).toFixed(2)), y: Number((n.y + dy * inc).toFixed(2)) } : n)
+                        });
+                    }
+                }
+            } else if (selectedElementForMove.type === 'door' || selectedElementForMove.type === 'front_door' || selectedElementForMove.type === 'window') {
+                const op = openings.find(o => o.id === selectedElementForMove.id);
+                if (op) {
+                    const ux = op.ny || 0;
+                    const uy = -(op.nx || 0);
+                    const dot = (dx * inc * ux) + (dy * inc * uy);
+                    
+                    updateState({
+                        openings: openings.map(o => o.id === op.id ? { ...o, x: Number((o.x + dot * ux).toFixed(2)), y: Number((o.y + dot * uy).toFixed(2)) } : o)
+                    });
+                }
+            } else if (selectedElementForMove.type === 'node') {
+                updateState({
+                    nodes: nodes.map(n => n.id === parseInt(selectedElementForMove.id) ? { ...n, x: Number((n.x + dx * inc).toFixed(2)), y: Number((n.y + dy * inc).toFixed(2)) } : n)
+                });
+            }
+        };
+
+        const handleKeyDownDelete = (e: KeyboardEvent) => {
+            if (e.key === 'Delete' || e.key === 'Backspace') {
+                if (selectedElementForMove && selectedElementForMove.type === 'touchup') {
+                    updateState({
+                        touchups: touchups.filter(t => t.id !== selectedElementForMove.id)
+                    });
+                    setSelectedElementForMove(null);
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keydown', handleKeyDownDelete);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keydown', handleKeyDownDelete);
+        };
+    }, [isEditMode, activeTool, selectedElementForMove, elements, nodes, openings, touchups, updateState]);
 
     useEffect(() => {
         if (!svgRef.current || nodes.length === 0) return;
@@ -62,18 +175,20 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
 
         try {
             // Create zoomable group
-        const g = svg.append('g').attr('class', 'canvas-group');
+            const g = svg.append('g').attr('class', 'canvas-group');
 
-        const zoom = d3.zoom<SVGSVGElement, unknown>()
-            .scaleExtent([0.1, 50])
-            .on('zoom', (event) => {
-                g.attr('transform', event.transform);
-                currentZoomRef.current = event.transform;
-            });
+            const zoom = d3.zoom<SVGSVGElement, unknown>()
+                .scaleExtent([0.1, 50])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                    currentZoomRef.current = event.transform;
+                });
 
-        svg.call(zoom);
-
-        svg.call(zoom);
+            svg.call(zoom);
+            
+            // Only allow zoom/pan if tool is 'select', 'rotate_column', 'move_column', or remove tools
+            // For add tools, we want to capture clicks, but we can keep zoom active on the background if we stop propagation on nodes.
+            // Actually, keep zoom always active on the svg background.
 
         // Get selected floor elevation
         let activeZ = 0;
@@ -98,11 +213,12 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
             
             renderSlabs = slabs.filter(s => {
                 if (!s.nodes) return false;
-                return s.nodes.some((nid: number) => zNodes.has(nid));
+                return s.nodes.some((nid: string | number) => zNodes.has(nid));
             });
             
             renderElements = elements.filter(e => {
                 if (e.type === 'beam') {
+                    if (e.n1 === undefined || e.n2 === undefined) return false;
                     return zNodes.has(e.n1) && zNodes.has(e.n2);
                 } else if (e.type === 'column') {
                     const n1 = nodes.find((n:any) => n.id === e.n1);
@@ -112,13 +228,14 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
                     const maxZ = Math.max(n1.z, n2.z);
                     return activeZ >= minZ - 0.1 && activeZ <= maxZ + 0.1;
                 } else if (e.type === 'footing') {
+                    if (e.n1 === undefined) return false;
                     return zNodes.has(e.n1);
                 }
                 return true;
             });
             
             // Collect all nodes referenced by renderElements to draw columns going up/down
-            const elementNodes = new Set<number>();
+            const elementNodes = new Set<string | number>();
             renderElements.forEach(e => {
                 if (e.n1 !== undefined) elementNodes.add(e.n1);
                 if (e.n2 !== undefined) elementNodes.add(e.n2);
@@ -141,6 +258,9 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
         const toPxX = (m: number) => (m - cx) * pxPerMeter;
         const toPxY = (m: number) => -(m - cy) * pxPerMeter; // invert Y for screen coords
         
+        const fromPxX = (px: number) => px / pxPerMeter + cx;
+        const fromPxY = (py: number) => cy - (py / pxPerMeter);
+        
         // Calculate dynamic bounds for zooming and grid
         const boundsWidth = Math.max((maxX - minX), 10);
         const boundsHeight = Math.max((maxY - minY), 10);
@@ -158,7 +278,7 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
         }
 
         // --- BACKGROUND / GRID LAYER ---
-        drawAxesAndDims(svg, g, nodes, elements, toPxX, toPxY, minX, maxX, minY, maxY);
+        drawAxesAndDims(g, nodes, elements, toPxX, toPxY, minX, maxX, minY, maxY);
 
         // Draw grid based on scope
         if (scope === 'architectural' || scope === 'structural') {
@@ -201,16 +321,70 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
         if (scope === 'architectural' || scope === 'structural') {
             drawArchitecture(
                 g, renderRooms, renderArch, renderOpenings, nodes, types,
-                toPxX, toPxY, pxPerMeter, scope, activeTool, rooms, architecture, openings,
-                updateState, editingRoomId, setEditingRoomId, archOpacity
-            );
+                toPxX, toPxY, fromPxX, fromPxY, pxPerMeter, scope, activeTool, rooms, architecture, openings,
+                updateState, editingRoomId, setEditingRoomId, archOpacity, selectedFloor,
+                selectedElementForMove, setSelectedElementForMove, project_info);
         }
 
         if (scope === 'structural' || scope === 'architectural') {
             drawStructure(
                 g, renderSlabs, renderElements, renderNodes, nodes, bom,
-                toPxX, toPxY, scope, isPrintMode || false
+                toPxX, toPxY, scope, isPrintMode || false, activeTool, elements, updateState,
+                selectedElementForMove, setSelectedElementForMove
             );
+        }
+        
+        // 4.5 Touch Up Layer
+        if (scope === 'architectural') {
+            const touchupGroup = g.append('g').attr('class', 'touchup-layer');
+            const renderTouchups = touchups.filter(t => !t.level_id || t.level_id === selectedFloor);
+            
+            renderTouchups.forEach(tu => {
+                const fType = types?.furniture?.find((f: any) => f.id === tu.type_id);
+                if (fType && fType.svg_path) {
+                    const px = toPxX(tu.x);
+                    const py = toPxY(tu.y);
+                    const isSelected = selectedElementForMove?.id === tu.id && selectedElementForMove?.type === 'touchup';
+                    
+                    const el = touchupGroup.append('g')
+                        .attr('transform', `translate(${px},${py}) rotate(${tu.rotation || 0}) scale(${tu.scale || 1})`);
+                        
+                    // Centered 1x1m base bounding box for furniture SVG placement
+                    el.append('image')
+                        .attr('href', `/${fType.svg_path}`)
+                        .attr('x', -pxPerMeter)
+                        .attr('y', -pxPerMeter)
+                        .attr('width', pxPerMeter * 2)
+                        .attr('height', pxPerMeter * 2)
+                        .attr('class', 'opacity-80')
+                        .style('pointer-events', 'none');
+                        
+                    // Interaction hit box
+                    el.append('circle')
+                        .attr('r', 20)
+                        .attr('fill', isSelected ? 'rgba(59, 130, 246, 0.4)' : 'transparent')
+                        .attr('stroke', isSelected ? '#3b82f6' : 'transparent')
+                        .attr('stroke-width', 2)
+                        .style('cursor', activeTool === 'move_element' ? 'move' : (activeTool === 'remove_touchup' ? 'pointer' : 'default'))
+                        .style('pointer-events', 'all')
+                        .on('click', (e) => {
+                            e.stopPropagation();
+                            if (activeTool === 'move_element') {
+                                setSelectedElementForMove({ id: tu.id, type: 'touchup' });
+                            } else if (activeTool === 'remove_touchup') {
+                                updateState({ touchups: touchups.filter(t => t.id !== tu.id) });
+                            }
+                        })
+                        .on('mouseenter', function() {
+                            if (activeTool === 'move_element' || activeTool === 'remove_touchup') {
+                                d3.select(this).attr('fill', activeTool === 'remove_touchup' ? 'rgba(239, 68, 68, 0.4)' : 'rgba(255, 255, 255, 0.2)');
+                            }
+                        })
+                        .on('mouseleave', function() {
+                            d3.select(this).attr('fill', isSelected ? 'rgba(59, 130, 246, 0.4)' : 'transparent');
+                        });
+                }
+            });
         }
         
         // 5. Plumbing Scope Placeholder
@@ -224,14 +398,178 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
                 .text('Plumbing Scope Active - No Wet Zones Defined');
         }
 
+        // 6. Interactive Drawing Layer
+        if (isEditMode && activeTool !== 'select') {
+            const interactGroup = g.append('g').attr('class', 'interaction-layer');
+
+            // Draw ghost preview for multi-node tools
+            if (drawingSequence.length > 0 && mousePos) {
+                const seqPx = drawingSequence.map(nid => {
+                    const n = nodes.find(nn => nn.id === nid);
+                    return n ? [toPxX(n.x), toPxY(n.y)] : null;
+                }).filter(Boolean) as [number, number][];
+
+                if (seqPx.length > 0) {
+                    if (activeTool === 'add_arch_wall' || activeTool === 'add_beam') {
+                        // Line from last clicked node to mouse
+                        interactGroup.append('line')
+                            .attr('x1', seqPx[0][0]).attr('y1', seqPx[0][1])
+                            .attr('x2', mousePos.x).attr('y2', mousePos.y)
+                            .attr('stroke', activeTool === 'add_beam' ? '#fbbf24' : '#6b7280')
+                            .attr('stroke-width', activeTool === 'add_beam' ? 8 : 16)
+                            .attr('stroke-dasharray', '5,5')
+                            .attr('opacity', 0.5);
+                    } else if (activeTool === 'add_room') {
+                        // Polygon from clicked nodes + mouse
+                        const pts = [...seqPx, [mousePos.x, mousePos.y]];
+                        interactGroup.append('polygon')
+                            .attr('points', pts.map(p => `${p[0]},${p[1]}`).join(' '))
+                            .attr('fill', 'rgba(16, 185, 129, 0.2)')
+                            .attr('stroke', '#10b981')
+                            .attr('stroke-dasharray', '5,5')
+                            .attr('stroke-width', 2);
+                    }
+                }
+            }
+
+            // Draw clickable nodes for snapping
+            if (['add_column', 'add_beam', 'add_arch_wall', 'add_room'].includes(activeTool)) {
+                // Find node ID of the start of the sequence to color it differently
+                const startNid = drawingSequence.length > 0 ? drawingSequence[0] : null;
+
+                renderNodes.forEach(n => {
+                    const px = toPxX(n.x);
+                    const py = toPxY(n.y);
+                    const isStart = n.id === startNid;
+                    const isSequence = drawingSequence.includes(n.id);
+                    
+                    interactGroup.append('circle')
+                        .attr('cx', px)
+                        .attr('cy', py)
+                        .attr('r', isStart ? 8 : 4)
+                        .attr('fill', isStart ? '#10b981' : (isSequence ? '#3b82f6' : 'rgba(255,255,255,0.2)'))
+                        .attr('stroke', isStart ? '#059669' : '#ffffff')
+                        .attr('stroke-width', 2)
+                        .style('cursor', 'crosshair')
+                        .on('mouseenter', function() { d3.select(this).attr('r', 16).attr('fill', '#fcd34d'); })
+                        .on('mouseleave', function() { d3.select(this).attr('r', isStart ? 8 : 4).attr('fill', isStart ? '#10b981' : (isSequence ? '#3b82f6' : 'rgba(255,255,255,0.2)')); })
+                        .on('click', (e) => {
+                            e.stopPropagation(); // prevent zooming/panning
+                            
+                            if (activeTool === 'add_column') {
+                                const newId = `col_${Date.now()}`;
+                                updateState({ elements: [...elements, { id: newId, type: 'column', n1: n.id, n2: n.id, level_id: selectedFloor }] });
+                                setActiveTool('select');
+                            } 
+                            else if (activeTool === 'add_beam' || activeTool === 'add_arch_wall') {
+                                if (drawingSequence.length === 0) {
+                                    setDrawingSequence([n.id]);
+                                } else if (drawingSequence.length === 1 && drawingSequence[0] !== n.id) {
+                                    // Complete the segment
+                                    const n1 = drawingSequence[0];
+                                    const n2 = n.id;
+                                    if (activeTool === 'add_beam') {
+                                        const newId = `beam_${Date.now()}`;
+                                        updateState({ elements: [...elements, { id: newId, type: 'beam', n1, n2, b: 0.2, h: 0.6, level_id: selectedFloor }] });
+                                    } else {
+                                        const newId = `aw_${Date.now()}`;
+                                        const type_id = activeTypes?.wall || 'EXT_BRICK_200';
+                                        updateState({ architecture: [...architecture, { id: newId, type: 'wall', n1, n2, type_id, level_id: selectedFloor }] });
+                                    }
+                                    setDrawingSequence([]); // reset for next
+                                }
+                            }
+                            else if (activeTool === 'add_room') {
+                                if (drawingSequence.length > 2 && n.id === drawingSequence[0]) {
+                                    // Closed the polygon!
+                                    const newId = `room_${Date.now()}`;
+                                    const type_id = activeTypes?.room || 'LIVING_SPACE';
+                                    const rType = type_id.includes('BED') ? 'bedroom' : type_id.includes('BATH') ? 'bathroom' : type_id.includes('KITCH') ? 'kitchen' : type_id.includes('STAIR') ? 'stair' : type_id.includes('CORRIDOR') ? 'corridor' : 'living';
+                                    updateState({ rooms: [...rooms, { id: newId, type: rType, type_id, nodes: [...drawingSequence], level_id: selectedFloor }] });
+                                    setDrawingSequence([]);
+                                    setActiveTool('select');
+                                } else if (!drawingSequence.includes(n.id)) {
+                                    // Add node to sequence
+                                    setDrawingSequence([...drawingSequence, n.id]);
+                                }
+                            }
+                        });
+                });
+            }
+            
+            // Add SVG background mousemove for ghost lines
+            svg.on('mousemove', (e) => {
+                if (drawingSequence.length > 0 && currentZoomRef.current) {
+                    const [mx, my] = d3.pointer(e, g.node());
+                    setMousePos({ x: mx, y: my });
+                }
+            });
+            
+            svg.on('click', (e) => {
+                if (activeTool === 'add_touchup' && activeFurnitureId) {
+                    const [mx, my] = d3.pointer(e, g.node());
+                    const mX = fromPxX(mx);
+                    const mY = fromPxY(my);
+                    
+                    const newId = `tu_${Date.now()}`;
+                    updateState({
+                        touchups: [...touchups, {
+                            id: newId,
+                            type_id: activeFurnitureId,
+                            x: Number(mX.toFixed(2)),
+                            y: Number(mY.toFixed(2)),
+                            rotation: 0,
+                            scale: 1,
+                            level_id: selectedFloor
+                        }]
+                    });
+                }
+            });
+        }
+
         } catch (err) {
             console.error("D3 Rendering Error:", err);
             svg.append('text').attr('x', 50).attr('y', 50).text('Render Error: ' + err).attr('fill', 'red');
         }
-    }, [architecture, rooms, openings, nodes, elements, slabs, scope, localFloor, forcedFloor]);
+    }, [architecture, rooms, openings, nodes, elements, slabs, scope, localFloor, forcedFloor, activeTool, isPrintMode, types, bom, updateState, editingRoomId, availableLevels, isEditMode]);
 
     return (
-        <div className={`relative bg-zinc-950 rounded-xl overflow-hidden shadow-2xl border border-zinc-800 ${isFullScreen ? 'fixed inset-0 z-40 rounded-none' : 'w-full h-[800px]'}`}>
+        <div className={`relative bg-zinc-950 rounded-xl overflow-hidden shadow-2xl border border-zinc-800 ${isFullScreen ? 'fixed inset-0 z-40 rounded-none' : 'w-full h-full'}`}>
+            
+            {/* Top Controls */}
+            {!isPrintMode && (
+                <div className="absolute top-4 left-4 flex gap-2 z-50">
+                    <div className="bg-zinc-800/80 backdrop-blur rounded-lg p-1 border border-zinc-700 flex items-center shadow-lg">
+                        <select 
+                            value={selectedFloor}
+                            onChange={(e) => setLocalFloor(e.target.value)}
+                            className="bg-transparent text-white px-2 py-1 outline-none text-sm font-medium cursor-pointer"
+                        >
+                            {availableLevels.map((l: any) => (
+                                <option key={l.id} value={l.id} className="bg-zinc-800">{l.name}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    {setIsEditMode && (
+                        <div className="bg-zinc-800/80 backdrop-blur rounded-lg p-1 border border-zinc-700 flex items-center shadow-lg">
+                            <button
+                                onClick={() => setIsEditMode(false)}
+                                className={`px-3 py-1 text-sm font-medium rounded-md transition-all ${!isEditMode ? 'bg-zinc-600 text-white shadow' : 'text-zinc-400 hover:text-zinc-200'}`}
+                            >
+                                View
+                            </button>
+                            <button
+                                onClick={() => setIsEditMode(true)}
+                                className={`px-3 py-1 text-sm font-medium rounded-md transition-all ${isEditMode ? 'bg-blue-600 text-white shadow' : 'text-zinc-400 hover:text-zinc-200'}`}
+                            >
+                                Edit
+                            </button>
+                        </div>
+                    )}
+                </div>
+            )}
+
             <button 
                 onClick={() => setIsFullScreen(!isFullScreen)}
                 className="absolute top-4 right-4 p-2 bg-zinc-800/80 hover:bg-zinc-700 text-white rounded-lg backdrop-blur z-50 transition"
@@ -239,6 +577,10 @@ const LayoutCanvas: React.FC<LayoutCanvasProps> = ({ scope, isEditMode = false, 
                 {isFullScreen ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
             </button>
             <svg ref={svgRef} className="w-full h-full cursor-move" viewBox="0 0 1200 800" />
+            
+            {isEditMode && <EditToolbar activeTool={activeTool} setActiveTool={setActiveTool} />}
+            
+            <FurnitureCatalogPanel isOpen={isCatalogOpen} setIsOpen={setIsCatalogOpen} activeFurniture={activeFurnitureId} setActiveFurniture={setActiveFurnitureId} />
             
             {/* Legend */}
             <div className="absolute bottom-6 left-6 bg-zinc-900/90 p-4 rounded-lg border border-zinc-700/50 backdrop-blur-md">

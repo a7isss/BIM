@@ -1,10 +1,22 @@
 import json
 import math
 
+import os
+
 def generate_slab_library(filename="slabs_library.json"):
-    fc = 28.0 # MPa
-    gamma_c = 24.0 # kN/m3 (Concrete density)
-    gamma_block = 10.0 # kN/m3 (Hollow block equivalent density)
+    assumptions_file = "design_assumptions.json"
+    if not os.path.exists(assumptions_file):
+        print("Error: assumptions file not found.")
+        return
+        
+    with open(assumptions_file, 'r') as f:
+        assumptions = json.load(f)
+        
+    fc = assumptions["materials"]["concrete_fc_MPa"]
+    fy = assumptions["materials"]["steel_fy_MPa"]
+    # Convert from kg/m3 to kN/m3 exactly (1 kgf = 9.80665 N, so * 9.81 / 1000)
+    gamma_c = assumptions["materials"]["concrete_density_kg_m3"] * 9.81 / 1000.0
+    gamma_block = 10.0 # kN/m3 (Hollow block equivalent density, kept as hardcoded since it's not in assumptions)
     
     library = []
     
@@ -28,6 +40,12 @@ def generate_slab_library(filename="slabs_library.json"):
         Mcr_Nmm = (fr * Ig) / yt
         Mcr_kNm = Mcr_Nmm / 1e6
         
+        # Flexural capacity based on minimum steel As_min = 0.0018 * b * h
+        As_min = 0.0018 * 1000.0 * h
+        a_solid = (As_min * fy) / (0.85 * fc * 1000.0)
+        Mn_solid_Nmm = As_min * fy * (d - a_solid / 2.0)
+        phi_Mn_kNm = 0.9 * Mn_solid_Nmm / 1e6
+        
         # Minimum reinforcement assuming Grade 420 steel
         # Very simplified representation for the library mesh
         if h <= 150:
@@ -49,6 +67,7 @@ def generate_slab_library(filename="slabs_library.json"):
             "DL_kN_m2": round(DL, 2),
             "phi_Vc_kN_per_m": round(phi_Vc_kN, 1),
             "Mcr_kNm_per_m": round(Mcr_kNm, 1),
+            "phi_Mn_kNm_per_m": round(phi_Mn_kNm, 1),
             "reinforcement_1way": reinf_1w,
             "reinforcement_2way": reinf_2w
         })
@@ -81,6 +100,14 @@ def generate_slab_library(filename="slabs_library.json"):
             
             reinf_1w = "2xT16 B.W. per rib, T8 @ 200mm Topping"
             
+            # Flexural capacity per rib for 2xT16
+            As_rib = 2.0 * math.pi * (16.0 / 2.0)**2
+            a_rib = (As_rib * fy) / (0.85 * fc * s) # Assumes NA in flange
+            Mn_rib_Nmm = As_rib * fy * (d - a_rib / 2.0)
+            phi_Mn_rib_kNm = 0.9 * Mn_rib_Nmm / 1e6
+            phi_Mn_kNm_per_m = phi_Mn_rib_kNm * (1000.0 / s)
+            
+            # For 1-way ribbed, bending is mostly in one direction
             library.append({
                 "type": "Ribbed",
                 "h_mm": h,
@@ -90,6 +117,7 @@ def generate_slab_library(filename="slabs_library.json"):
                 "rib_spacing_mm": s,
                 "DL_kN_m2": round(DL_1w, 2),
                 "phi_Vc_kN_per_m": round(phi_Vc_1w_kN_per_m, 1),
+                "phi_Mn_kNm_per_m": round(phi_Mn_kNm_per_m, 1),
                 "reinforcement_1way": reinf_1w
             })
             
@@ -111,6 +139,7 @@ def generate_slab_library(filename="slabs_library.json"):
                 "rib_spacing_mm": s,
                 "DL_kN_m2": round(DL_2w, 2),
                 "phi_Vc_kN_per_m": round(phi_Vc_2w_kN_per_m, 1),
+                "phi_Mn_kNm_per_m": round(phi_Mn_kNm_per_m, 1),
                 "reinforcement_2way": reinf_2w
             })
             

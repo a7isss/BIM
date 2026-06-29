@@ -1,14 +1,15 @@
 import React from 'react';
 import { useResPlanData } from '../hooks/useResPlanData';
-import type { Scope } from './RightPanel';
+import type { Scope } from '../types';
 import LayoutCanvas from './LayoutCanvas';
+import type { Level } from '../types';
 
 interface PrintLayoutProps {
     scope: Scope;
 }
 
 const PrintLayout: React.FC<PrintLayoutProps> = ({ scope }) => {
-    const { slabs, levels, project_info, structuralReport } = useResPlanData();
+    const { levels, project_info, structuralReport } = useResPlanData();
 
     // Extract schedules from the backend-generated report
     const columns = structuralReport?.schedules?.columns || [];
@@ -63,7 +64,7 @@ const PrintLayout: React.FC<PrintLayoutProps> = ({ scope }) => {
             </style>
             
             {/* 1. Floor Plan Layouts */}
-            {availableLevels.map((level: any, index: number) => (
+            {availableLevels.map((level: Level, index: number) => (
                 <div key={level.id} className="w-[420mm] h-[297mm] mx-auto page-break break-after-page relative overflow-hidden flex bg-white" style={{ pageBreakAfter: 'always' }}>
                     
                     {/* The Canvas Area (Left 80%) */}

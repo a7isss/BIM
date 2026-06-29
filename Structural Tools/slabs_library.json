@@ -2,36 +2,40 @@
     {
         "type": "Solid",
         "h_mm": 150,
-        "DL_kN_m2": 3.6,
+        "DL_kN_m2": 3.53,
         "phi_Vc_kN_per_m": 84.3,
         "Mcr_kNm_per_m": 12.3,
+        "phi_Mn_kNm_per_m": 12.5,
         "reinforcement_1way": "T10 @ 200mm Main, T10 @ 200mm Shrinkage",
         "reinforcement_2way": "T10 @ 200mm B.W."
     },
     {
         "type": "Solid",
         "h_mm": 200,
-        "DL_kN_m2": 4.8,
+        "DL_kN_m2": 4.71,
         "phi_Vc_kN_per_m": 118.1,
         "Mcr_kNm_per_m": 21.9,
+        "phi_Mn_kNm_per_m": 23.4,
         "reinforcement_1way": "T12 @ 200mm Main, T10 @ 200mm Shrinkage",
         "reinforcement_2way": "T12 @ 200mm B.W."
     },
     {
         "type": "Solid",
         "h_mm": 250,
-        "DL_kN_m2": 6.0,
+        "DL_kN_m2": 5.89,
         "phi_Vc_kN_per_m": 151.8,
         "Mcr_kNm_per_m": 34.2,
+        "phi_Mn_kNm_per_m": 37.6,
         "reinforcement_1way": "T12 @ 150mm Main, T10 @ 200mm Shrinkage",
         "reinforcement_2way": "T12 @ 150mm B.W."
     },
     {
         "type": "Solid",
         "h_mm": 300,
-        "DL_kN_m2": 7.2,
+        "DL_kN_m2": 7.06,
         "phi_Vc_kN_per_m": 185.5,
         "Mcr_kNm_per_m": 49.2,
+        "phi_Mn_kNm_per_m": 55.2,
         "reinforcement_1way": "T14 @ 150mm Main, T12 @ 200mm Shrinkage",
         "reinforcement_2way": "T14 @ 150mm B.W."
     },
@@ -42,8 +46,9 @@
         "topping_mm": 50,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 4.04,
+        "DL_kN_m2": 3.99,
         "phi_Vc_kN_per_m": 44.5,
+        "phi_Mn_kNm_per_m": 64.7,
         "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
     },
     {
@@ -53,8 +58,9 @@
         "topping_mm": 50,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 4.63,
+        "DL_kN_m2": 4.56,
         "phi_Vc_kN_per_m": 44.5,
+        "phi_Mn_kNm_per_m": 64.7,
         "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
     },
     {
@@ -64,8 +70,9 @@
         "topping_mm": 75,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 4.64,
+        "DL_kN_m2": 4.58,
         "phi_Vc_kN_per_m": 49.6,
+        "phi_Mn_kNm_per_m": 72.3,
         "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
     },
     {
@@ -75,8 +82,9 @@
         "topping_mm": 75,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 5.23,
+        "DL_kN_m2": 5.15,
         "phi_Vc_kN_per_m": 49.6,
+        "phi_Mn_kNm_per_m": 72.3,
         "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
     },
     {
@@ -86,8 +94,9 @@
         "topping_mm": 50,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 4.75,
+        "DL_kN_m2": 4.69,
         "phi_Vc_kN_per_m": 54.6,
+        "phi_Mn_kNm_per_m": 79.9,
         "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
     },
     {
@@ -97,8 +106,9 @@
         "topping_mm": 50,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 5.48,
+        "DL_kN_m2": 5.4,
         "phi_Vc_kN_per_m": 54.6,
+        "phi_Mn_kNm_per_m": 79.9,
         "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
     },
     {
@@ -108,8 +118,9 @@
         "topping_mm": 75,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 5.35,
+        "DL_kN_m2": 5.28,
         "phi_Vc_kN_per_m": 59.7,
+        "phi_Mn_kNm_per_m": 87.5,
         "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
     },
     {
@@ -119,8 +130,9 @@
         "topping_mm": 75,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 6.08,
+        "DL_kN_m2": 5.99,
         "phi_Vc_kN_per_m": 59.7,
+        "phi_Mn_kNm_per_m": 87.5,
         "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
     },
     {
@@ -130,8 +142,9 @@
         "topping_mm": 50,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 5.46,
+        "DL_kN_m2": 5.4,
         "phi_Vc_kN_per_m": 64.8,
+        "phi_Mn_kNm_per_m": 95.1,
         "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
     },
     {
@@ -141,8 +154,9 @@
         "topping_mm": 50,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 6.34,
+        "DL_kN_m2": 6.25,
         "phi_Vc_kN_per_m": 64.8,
+        "phi_Mn_kNm_per_m": 95.1,
         "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
     },
     {
@@ -152,8 +166,9 @@
         "topping_mm": 75,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 6.06,
+        "DL_kN_m2": 5.98,
         "phi_Vc_kN_per_m": 69.8,
+        "phi_Mn_kNm_per_m": 102.7,
         "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
     },
     {
@@ -163,8 +178,9 @@
         "topping_mm": 75,
         "rib_width_mm": 150,
         "rib_spacing_mm": 500,
-        "DL_kN_m2": 6.94,
+        "DL_kN_m2": 6.84,
         "phi_Vc_kN_per_m": 69.8,
+        "phi_Mn_kNm_per_m": 102.7,
         "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
     }
 ]

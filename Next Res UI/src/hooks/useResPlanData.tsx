@@ -1,19 +1,8 @@
 import React, { useState, useEffect, useCallback, createContext, useContext } from 'react';
 
-interface ResPlanData {
-    nodes: any[];
-    elements: any[];
-    slabs: any[];
-    architecture: any[];
-    rooms: any[];
-    openings: any[];
-    levels: any;
-    types: any;
-    project_info?: { name?: string; designer?: string; client?: string; date?: string; rev?: string; front_elevation_angle?: number };
-    settings?: any;
-}
+import type { ResPlanData, ResPlanContextType, Opening, Level } from '../types';
 
-const ResPlanContext = createContext<any>(null);
+const ResPlanContext = createContext<ResPlanContextType | null>(null);
 
 export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
     const [past, setPast] = useState<ResPlanData[]>([]);
@@ -43,10 +32,10 @@ export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ childre
                 slabs: data.default?.slabs || data.slabs || [],
                 architecture: data.default?.architecture || data.architecture || [],
                 rooms: data.default?.rooms || data.rooms || [],
-                openings: (data.default?.openings || data.openings || []).map((op: any) => {
+                openings: (data.default?.openings || data.openings || []).map((op: Opening) => {
                     if (op.z !== undefined && op.height !== undefined) return op;
                     const isWindow = op.type === 'window';
-                    const lvl = (data.default?.levels?.architectural || data.levels?.architectural || []).find((l: any) => l.id === op.level_id);
+                    const lvl = (data.default?.levels?.architectural || data.levels?.architectural || []).find((l: Level) => l.id === op.level_id);
                     const lvl_z = lvl ? lvl.elevation_m : 0;
                     
                     const defaultHeight = isWindow ? 1.2 : 2.1;
@@ -59,11 +48,15 @@ export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ childre
                     };
                 }),
                 levels: data.default?.levels || data.levels || { architectural: [], structural: [] },
+                touchups: payload.touchups_data?.touchups || [],
                 types: {
                     ...((typesData as any).default || typesData),
                     ...((structTypesData as any).default || structTypesData)
                 },
-                project_info: data.default?.project_info || data.project_info || { name: 'New Project', front_elevation_angle: 0 },
+                project_info: {
+                    ...(data.default?.project_info || data.project_info || { name: 'New Project', front_elevation_angle: 0 }),
+                    plot: payload.project?.plot
+                },
                 settings: (settingsData as any).default || settingsData
             });
         }).catch(err => console.error("Failed to load resplan project:", err));
@@ -150,6 +143,25 @@ export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ childre
         }
     }, [present]);
 
+    const saveTouchups = useCallback(async () => {
+        if (!present) return;
+        try {
+            const response = await fetch('/api/save_touchups', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ touchups: present.touchups })
+            });
+            const result = await response.json();
+            if (result.success) {
+                console.log('Touchups saved successfully');
+            } else {
+                console.error('Failed to save touchups', result.error);
+            }
+        } catch (e) {
+            console.error('Save touchups request failed', e);
+        }
+    }, [present]);
+
     // Keyboard shortcuts
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -167,7 +179,7 @@ export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ childre
 
     const value = {
         ...(present || {
-            nodes: [], elements: [], slabs: [], architecture: [], rooms: [], openings: [], levels: { architectural: [], structural: [] }, types: { doors: [], windows: [] }, settings: { floor_height_m: 3.5, parapet_height_m: 1.0 }
+            nodes: [], elements: [], slabs: [], architecture: [], rooms: [], openings: [], levels: { architectural: [], structural: [] }, touchups: [], types: { doors: [], windows: [] }, settings: { floor_height_m: 3.5, parapet_height_m: 1.0 }
         }),
         bom,
         structuralReport,
@@ -176,6 +188,7 @@ export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ childre
         redo,
         save,
         saveTypes,
+        saveTouchups,
         reloadResults,
         canUndo: past.length > 0,
         canRedo: future.length > 0
@@ -191,11 +204,7 @@ export const ResPlanProvider: React.FC<{children: React.ReactNode}> = ({ childre
 export const useResPlanData = () => {
     const context = useContext(ResPlanContext);
     if (!context) {
-        console.warn('useResPlanData must be used within a ResPlanProvider');
-        return {
-            nodes: [], elements: [], slabs: [], architecture: [], rooms: [], openings: [], levels: { architectural: [], structural: [] }, types: { doors: [], windows: [] }, settings: { floor_height_m: 3.5, parapet_height_m: 1.0 },
-            updateState: () => {}, undo: () => {}, redo: () => {}, save: async () => {}, saveTypes: async () => {}, reloadResults: async () => {}
-        };
+        throw new Error('useResPlanData must be used within a ResPlanProvider');
     }
     return context;
 };

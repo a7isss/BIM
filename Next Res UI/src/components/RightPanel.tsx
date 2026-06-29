@@ -1,9 +1,9 @@
-import { ChevronRight, ChevronLeft, Download, Printer, Save, Edit3, Eye, RefreshCw } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronRight, ChevronLeft, Download, Printer, Save, Edit3, Eye, RefreshCw, CheckCircle2 } from 'lucide-react';
 import { downloadDxf } from '../utils/dxfExport';
 import { useResPlanData } from '../hooks/useResPlanData';
 
-export type Scope = 'architectural' | 'structural' | 'plumbing';
-
+import type { Scope } from '../types';
 interface RightPanelProps {
     isOpen: boolean;
     setIsOpen: (isOpen: boolean) => void;
@@ -25,6 +25,7 @@ const RightPanel: React.FC<RightPanelProps> = ({
     elevationAngle, setElevationAngle
 }) => {
     const { nodes, elements, slabs, save, reloadResults, project_info } = useResPlanData();
+    const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved'>('idle');
 
     const handlePrint = () => {
         window.print();
@@ -186,15 +187,23 @@ const RightPanel: React.FC<RightPanelProps> = ({
                         Data Management
                     </label>
                     <div className="flex flex-col gap-3">
-                        <button
+                        <button 
+                            className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold transition-all ${
+                                saveState === 'saved' ? 'bg-emerald-600/20 text-emerald-400 border border-emerald-500/50' :
+                                saveState === 'saving' ? 'bg-zinc-700/50 text-zinc-400 cursor-wait' :
+                                'bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-900/20'
+                            }`}
                             onClick={async () => {
+                                if (saveState !== 'idle') return;
+                                setSaveState('saving');
                                 await save();
-                                alert('Project saved successfully! You can now run the Frame3DD solver.');
+                                setSaveState('saved');
+                                setTimeout(() => setSaveState('idle'), 2500);
                             }}
-                            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-900/20"
+                            disabled={saveState !== 'idle'}
                         >
-                            <Save className="w-4 h-4" />
-                            <span>Save Project</span>
+                            {saveState === 'saved' ? <CheckCircle2 className="w-4 h-4" /> : <Save className={`w-4 h-4 ${saveState === 'saving' ? 'animate-pulse' : ''}`} />}
+                            <span>{saveState === 'saved' ? 'Saved' : saveState === 'saving' ? 'Saving...' : 'Save Project'}</span>
                         </button>
                         
                         <button

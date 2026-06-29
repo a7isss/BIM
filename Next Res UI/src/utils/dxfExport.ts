@@ -1,3 +1,5 @@
+import type { Node, Element, Slab } from '../types';
+
 interface Point {
     x: number;
     y: number;
@@ -29,7 +31,7 @@ function dxfRect(center: Point, sizeX: number, sizeY: number, layer: string): st
     return dxfPolyline([p1, p2, p3, p4], layer, true);
 }
 
-export function generateProjectDxf(nodes: any[], elements: any[], slabs: any[]): string {
+export function generateProjectDxf(nodes: Node[], elements: Element[], slabs: Slab[]): string {
     const entityLines: string[] = [];
 
     // Layers mapped
@@ -39,7 +41,8 @@ export function generateProjectDxf(nodes: any[], elements: any[], slabs: any[]):
 
     // Draw Slabs
     for (const slab of slabs) {
-        const slabNodes = slab.nodes.map((nid: number) => nodes.find(n => n.id === nid)).filter(Boolean);
+        if (!slab.nodes) continue;
+        const slabNodes = slab.nodes.map((nid: string | number) => nodes.find(n => n.id === nid)).filter((n): n is Node => !!n);
         if (slabNodes.length > 2) {
             entityLines.push(dxfPolyline(slabNodes, SLAB_LAYER, true));
         }
@@ -71,7 +74,7 @@ export function generateProjectDxf(nodes: any[], elements: any[], slabs: any[]):
     return `0\nSECTION\n2\nENTITIES\n${body}\n0\nENDSEC\n0\nEOF\n`;
 }
 
-export function downloadDxf(nodes: any[], elements: any[], slabs: any[], filename: string = 'resplan_export.dxf') {
+export function downloadDxf(nodes: Node[], elements: Element[], slabs: Slab[], filename: string = 'resplan_export.dxf') {
     const dxfString = generateProjectDxf(nodes, elements, slabs);
     const blob = new Blob([dxfString], { type: 'application/dxf' });
     const url = URL.createObjectURL(blob);

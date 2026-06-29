@@ -1,4 +1,40 @@
 {
+    "shapes": {
+        "swinging_door": [
+            { "type": "line", "x1": -0.5, "y1": -0.5, "x2": 0.5, "y2": -0.5, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": 0, "x2": 0.5, "y2": 0, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": 0.5, "x2": 0.5, "y2": 0.5, "strokeWidth": 1.5 },
+            { "type": "leaf" },
+            { "type": "swing_arc" }
+        ],
+        "double_swinging_door": [
+            { "type": "line", "x1": -0.5, "y1": -0.5, "x2": 0.5, "y2": -0.5, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": 0, "x2": 0.5, "y2": 0, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": 0.5, "x2": 0.5, "y2": 0.5, "strokeWidth": 1.5 },
+            { "type": "leaf_double" },
+            { "type": "swing_arc_double" }
+        ],
+        "opening": [
+            { "type": "line", "x1": -0.5, "y1": 0, "x2": 0.5, "y2": 0, "strokeWidth": 1, "strokeDasharray": "2 2" }
+        ],
+        "sliding_door": [
+            { "type": "line", "x1": -0.5, "y1": -0.5, "x2": 0.5, "y2": -0.5, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": 0.5, "x2": 0.5, "y2": 0.5, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": -0.15, "x2": 0.1, "y2": -0.15, "strokeWidth": 2.5 },
+            { "type": "line", "x1": -0.1, "y1": 0.15, "x2": 0.5, "y2": 0.15, "strokeWidth": 2.5 }
+        ],
+        "sliding_window": [
+            { "type": "line", "x1": -0.5, "y1": -0.5, "x2": 0.5, "y2": -0.5, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": 0.5, "x2": 0.5, "y2": 0.5, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": -0.1, "x2": 0.1, "y2": -0.1, "strokeWidth": 2.5 },
+            { "type": "line", "x1": -0.1, "y1": 0.1, "x2": 0.5, "y2": 0.1, "strokeWidth": 2.5 }
+        ],
+        "fixed_window": [
+            { "type": "line", "x1": -0.5, "y1": -0.5, "x2": 0.5, "y2": -0.5, "strokeWidth": 1.5 },
+            { "type": "line", "x1": -0.5, "y1": 0, "x2": 0.5, "y2": 0, "strokeWidth": 2 },
+            { "type": "line", "x1": -0.5, "y1": 0.5, "x2": 0.5, "y2": 0.5, "strokeWidth": 1.5 }
+        ]
+    },
     "walls": [
         {
             "id": "EXT_BRICK_200",
@@ -28,21 +64,42 @@
             "name": "Single Door 900x2100",
             "width": 0.9,
             "height": 2.1,
-            "sill_height": 0.0
+            "sill_height": 0.0,
+            "shape": "swinging_door"
         },
         {
             "id": "D_SGL_1000",
             "name": "Single Door 1000x2100",
             "width": 1.0,
             "height": 2.1,
-            "sill_height": 0.0
+            "sill_height": 0.0,
+            "shape": "swinging_door"
         },
         {
             "id": "D_DBL_1800",
             "name": "Double Door 1800x2100",
             "width": 1.8,
             "height": 2.1,
-            "sill_height": 0.0
+            "sill_height": 0.0,
+            "shape": "double_swinging_door"
+        },
+        {
+            "id": "D_OPENING",
+            "name": "Opening",
+            "width": 1.5,
+            "height": 2.1,
+            "sill_height": 0.0,
+            "is_opening_only": true,
+            "shape": "opening"
+        },
+        {
+            "id": "D_SLIDING_2000",
+            "name": "Sliding Door 2000x2100",
+            "width": 2.0,
+            "height": 2.1,
+            "sill_height": 0.0,
+            "is_sliding": true,
+            "shape": "sliding_door"
         }
     ],
     "windows": [
@@ -51,21 +108,24 @@
             "name": "Sliding Window 1200x1200",
             "width": 1.2,
             "height": 1.2,
-            "sill_height": 0.9
+            "sill_height": 0.9,
+            "shape": "sliding_window"
         },
         {
             "id": "W_SLD_1500",
             "name": "Sliding Window 1500x1200",
             "width": 1.5,
             "height": 1.2,
-            "sill_height": 0.9
+            "sill_height": 0.9,
+            "shape": "sliding_window"
         },
         {
             "id": "W_FIX_600",
             "name": "Fixed Window 600x2000",
             "width": 0.6,
             "height": 2.0,
-            "sill_height": 0.1
+            "sill_height": 0.1,
+            "shape": "fixed_window"
         }
     ],
     "rooms": [
@@ -74,6 +134,18 @@
             "name": "Living Area",
             "color": "#dcfce7",
             "label": "LIVING (\u0635\u0627\u0644\u0629)"
+        },
+        {
+            "id": "STAIRWAY_SPACE",
+            "name": "Stairway",
+            "color": "#fef08a",
+            "label": "STAIRWAY (درج)"
+        },
+        {
+            "id": "CORRIDOR_SPACE",
+            "name": "Corridor",
+            "color": "#f3f4f6",
+            "label": "CORRIDOR (ممر)"
         },
         {
             "id": "BEDROOM_SPACE",
@@ -92,12 +164,182 @@
             "name": "Kitchen",
             "color": "#fce7f3",
             "label": "KITCHEN (\u0645\u0637\u0628\u062e)"
+        }
+    ],
+    "furniture": [
+        {
+            "id": "F_SOFA",
+            "name": "Sofa",
+            "svg_path": "furniture_svgs/SofaUpholstered.svg",
+            "category": "Living Area"
         },
         {
-            "id": "CORRIDOR_SPACE",
-            "name": "Corridor",
-            "color": "#f3f4f6",
-            "label": "CORRIDOR (\u0645\u0645\u0631)"
+            "id": "F_BED_DOUBLE",
+            "name": "Double Bed",
+            "svg_path": "furniture_svgs/BedDouble.svg",
+            "category": "Bedroom"
+        },
+        {
+            "id": "F_TOILET",
+            "name": "Toilet",
+            "svg_path": "furniture_svgs/Toilet.svg",
+            "category": "Bathroom"
+        },
+        {
+            "id": "F_SINK_DOUBLE",
+            "name": "Double Sink",
+            "svg_path": "furniture_svgs/Sink-Double.svg",
+            "category": "Kitchen"
+        },
+        {
+            "id": "F_ARMOIRE",
+            "name": "Armoire",
+            "svg_path": "furniture_svgs/Armoire.svg",
+            "category": "Bedroom"
+        },
+        {
+            "id": "F_BEDKING",
+            "name": "BedKing",
+            "svg_path": "furniture_svgs/BedKing.svg",
+            "category": "Bedroom"
+        },
+        {
+            "id": "F_BEDQUEEN",
+            "name": "BedQueen",
+            "svg_path": "furniture_svgs/BedQueen.svg",
+            "category": "Bedroom"
+        },
+        {
+            "id": "F_BEDSINGLE",
+            "name": "BedSingle",
+            "svg_path": "furniture_svgs/BedSingle.svg",
+            "category": "Bedroom"
+        },
+        {
+            "id": "F_DRESSER_60X18",
+            "name": "Dresser 60x18",
+            "svg_path": "furniture_svgs/Dresser-60x18.svg",
+            "category": "Bedroom"
+        },
+        {
+            "id": "F_NIGHTSTAND",
+            "name": "Nightstand",
+            "svg_path": "furniture_svgs/Nightstand.svg",
+            "category": "Bedroom"
+        },
+        {
+            "id": "F_CHAIR",
+            "name": "Chair",
+            "svg_path": "furniture_svgs/Chair.svg",
+            "category": "Dining Room"
+        },
+        {
+            "id": "F_TABLEOVAL_90_72X44X",
+            "name": "TableOval 90 72x44x",
+            "svg_path": "furniture_svgs/TableOval-90-72x44x.svg",
+            "category": "Dining Room"
+        },
+        {
+            "id": "F_TABLERECT_90_72X44",
+            "name": "TableRect 90 72x44",
+            "svg_path": "furniture_svgs/TableRect-90-72x44.svg",
+            "category": "Dining Room"
+        },
+        {
+            "id": "F_ENDTABLE",
+            "name": "EndTable",
+            "svg_path": "furniture_svgs/EndTable.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_MEDIACENTRELWRCTR",
+            "name": "MediaCentreLwrCtr",
+            "svg_path": "furniture_svgs/MediaCentreLwrCtr.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_MEDIACENTRELWRSIDE",
+            "name": "MediaCentreLwrSide",
+            "svg_path": "furniture_svgs/MediaCentreLwrSide.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_MEDIACENTREUPRCTR",
+            "name": "MediaCentreUprCtr",
+            "svg_path": "furniture_svgs/MediaCentreUprCtr.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_MEDIACENTREUPRSIDE",
+            "name": "MediaCentreUprSide",
+            "svg_path": "furniture_svgs/MediaCentreUprSide.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_SECTIONALARML",
+            "name": "SectionalArmL",
+            "svg_path": "furniture_svgs/SectionalArmL.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_SECTIONALARMR",
+            "name": "SectionalArmR",
+            "svg_path": "furniture_svgs/SectionalArmR.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_SECTIONALCORNER",
+            "name": "SectionalCorner",
+            "svg_path": "furniture_svgs/SectionalCorner.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_SECTIONALLOUNGEL",
+            "name": "SectionalLoungeL",
+            "svg_path": "furniture_svgs/SectionalLoungeL.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_SECTIONALLOUNGER",
+            "name": "SectionalLoungeR",
+            "svg_path": "furniture_svgs/SectionalLoungeR.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_SECTIONALNOARM",
+            "name": "SectionalNoArm",
+            "svg_path": "furniture_svgs/SectionalNoArm.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_SECTIONALOTTOMAN",
+            "name": "SectionalOttoman",
+            "svg_path": "furniture_svgs/SectionalOttoman.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_TELEVISION_43",
+            "name": "Television 43",
+            "svg_path": "furniture_svgs/Television-43.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_TELEVISION_49",
+            "name": "Television 49",
+            "svg_path": "furniture_svgs/Television-49.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_TELEVISION_55",
+            "name": "Television 55",
+            "svg_path": "furniture_svgs/Television-55.svg",
+            "category": "Family Room"
+        },
+        {
+            "id": "F_TELEVISION_65",
+            "name": "Television 65",
+            "svg_path": "furniture_svgs/Television-65.svg",
+            "category": "Family Room"
         }
     ]
 }

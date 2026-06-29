@@ -1,13 +1,24 @@
 {
     "project_name": "Sample Project",
     "version": "1.0.0",
+    "plot": {
+        "width_m": 20,
+        "depth_m": 30,
+        "setbacks_m": {
+            "front": 3,
+            "rear": 2,
+            "side1": 2,
+            "side2": 2
+        }
+    },
     "files": {
         "nodes": "inputs/resplan_nodes.json",
         "settings": "inputs/project_settings.json",
-        "architectural_types": "inputs/resplan_types.json",
-        "structural_types": "inputs/structural_types.json",
+        "architectural_types": "../../Global Libraries/architectural.json",
+        "structural_types": "../../Global Libraries/structural_types.json",
         "design_assumptions": "inputs/design_assumptions.json",
         "analysis_results": "outputs/resplan_analysis_results.json",
-        "structural_report": "outputs/structural_report.json"
+        "structural_report": "outputs/structural_report.json",
+        "touchups": "inputs/resplan_touchups.json"
     }
 }

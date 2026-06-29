@@ -39,24 +39,60 @@ def generate_column_library(filename="columns_library.json"):
             for tier_idx, rho in enumerate(rho_tiers):
                 As = rho * Ag
                 
-                # Nominal Axial Capacity for tied columns (ACI/SBC)
-                # Pn = 0.80 * [0.85 * fc * (Ag - As) + fy * As]
-                Pn_N = 0.80 * (0.85 * fc * (Ag - As) + fy * As)
+                # 1. Pure Axial
+                Pn_max_N = 0.80 * (0.85 * fc * (Ag - As) + fy * As)
+                phi_Pn_max_kN = (phi_axial * Pn_max_N) / 1000.0
                 
-                phi_Pn_kN = (phi_axial * Pn_N) / 1000.0
+                d = h - 50.0 # 50mm cover to centroid
+                d_prime = 50.0
+                As_face = As / 2.0
                 
-                # Simplified interaction for pure moment (assuming tension controlled failure phi=0.9)
-                # This is a very rough proxy just for the selector logic
-                # Mn ~ As * fy * (0.8 * h)
-                phi_flexure = assumptions["factors"]["phi_flexure"]
-                phi_Mn_kNm = (phi_flexure * As * fy * (0.8 * h)) / 1e6
+                # 2. Balanced Point (eps_t = 0.0021)
+                cb = 600.0 / (600.0 + fy) * d
+                ab = 0.85 * cb
+                Cc_b = 0.85 * fc * ab * b
+                Ts_b = As_face * fy
+                eps_s_prime_b = 0.003 * (cb - d_prime) / cb if cb > 0 else 0
+                fs_prime_b = min(fy, max(-fy, eps_s_prime_b * 200000.0))
+                Cs_b = As_face * (fs_prime_b - 0.85 * fc)
+                Pn_b = Cc_b + Cs_b - Ts_b
+                Mn_b = Cc_b * (h/2.0 - ab/2.0) + Cs_b * (h/2.0 - d_prime) + Ts_b * (d - h/2.0)
+                phi_Pn_b_kN = (phi_axial * Pn_b) / 1000.0
+                phi_Mn_b_kNm = (phi_axial * Mn_b) / 1e6
+                
+                # 3. Tension-Controlled Point (eps_t = 0.005)
+                ct = 0.375 * d
+                at = 0.85 * ct
+                Cc_t = 0.85 * fc * at * b
+                Ts_t = As_face * fy
+                eps_s_prime_t = 0.003 * (ct - d_prime) / ct if ct > 0 else 0
+                fs_prime_t = min(fy, max(-fy, eps_s_prime_t * 200000.0))
+                Cs_t = As_face * (fs_prime_t - 0.85 * fc)
+                Pn_t = Cc_t + Cs_t - Ts_t
+                Mn_t = Cc_t * (h/2.0 - at/2.0) + Cs_t * (h/2.0 - d_prime) + Ts_t * (d - h/2.0)
+                phi_Pn_t_kN = (0.90 * Pn_t) / 1000.0
+                phi_Mn_t_kNm = (0.90 * Mn_t) / 1e6
+                
+                # 4. Pure Flexure (P = 0)
+                # Ignoring compression steel for simplicity
+                a_f = (As_face * fy) / (0.85 * fc * b)
+                Mn_f = As_face * fy * (d - a_f / 2.0)
+                phi_Mn_f_kNm = (0.90 * Mn_f) / 1e6
+                
+                pm_points = [
+                    {"P": round(phi_Pn_max_kN, 1), "M": 0.0},
+                    {"P": round(phi_Pn_b_kN, 1), "M": round(phi_Mn_b_kNm, 1)},
+                    {"P": round(phi_Pn_t_kN, 1), "M": round(phi_Mn_t_kNm, 1)},
+                    {"P": 0.0, "M": round(phi_Mn_f_kNm, 1)}
+                ]
                 
                 column["tiers"].append({
                     "tier_level": tier_idx + 1,
                     "rho_percent": round(rho * 100, 1),
                     "As_mm2": round(As, 1),
-                    "phi_Pn_kN": round(phi_Pn_kN, 1),
-                    "phi_Mn_kNm": round(phi_Mn_kNm, 1)
+                    "phi_Pn_kN": round(phi_Pn_max_kN, 1), # Max axial
+                    "phi_Mn_kNm": round(phi_Mn_f_kNm, 1), # Pure flexure
+                    "pm_diagram": pm_points
                 })
                 
             library.append(column)

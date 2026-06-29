@@ -1,6 +1,8 @@
 import json
 import math
 
+import os
+
 def calculate_beta1(fc):
     if fc <= 28:
         return 0.85
@@ -8,9 +10,18 @@ def calculate_beta1(fc):
     return max(beta, 0.65)
 
 def generate_beam_library(filename="beams_library.json"):
-    fc = 28.0 # MPa
-    fy = 420.0 # MPa
-    fyt = 420.0 # Stirrup yield strength, MPa
+    assumptions_file = "design_assumptions.json"
+    if not os.path.exists(assumptions_file):
+        print("Error: assumptions file not found.")
+        return
+        
+    with open(assumptions_file, 'r') as f:
+        assumptions = json.load(f)
+        
+    fc = assumptions["materials"]["concrete_fc_MPa"]
+    fy = assumptions["materials"]["steel_fy_MPa"]
+    fyt = assumptions["materials"]["steel_fy_MPa"] # Assuming stirrup yield strength is the same
+    
     Av = 157.0 # 2 legs of 10mm bar
     hf = 150.0 # Standard slab thickness in mm for flanged beams
     
@@ -18,8 +29,8 @@ def generate_beam_library(filename="beams_library.json"):
     depths = [300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000] # mm
     shapes = ["Rectangular", "T-Beam", "L-Beam"]
     
-    phi_flexure = 0.9 # Tension controlled
-    phi_shear = 0.75
+    phi_flexure = assumptions["factors"]["phi_flexure"]
+    phi_shear = assumptions["factors"]["phi_shear"]
     
     beta1 = calculate_beta1(fc)
     

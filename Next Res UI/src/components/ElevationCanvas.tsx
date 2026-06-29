@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 import { useResPlanData } from '../hooks/useResPlanData';
+import type { ArchitectureLine, Level, Opening } from '../types';
 
 interface ElevationCanvasProps {
     elevationAngle: number;
@@ -30,9 +31,9 @@ const ElevationCanvas: React.FC<ElevationCanvasProps> = ({ elevationAngle }) => 
 
         // Calculate building center for panning
         let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-        architecture.forEach((w: any) => {
+        architecture.forEach((w: ArchitectureLine) => {
             if (w.type === 'wall' && w.coordinates) {
-                w.coordinates.forEach((pt: any) => {
+                w.coordinates.forEach((pt: [number, number]) => {
                     if (pt[0] < minX) minX = pt[0];
                     if (pt[0] > maxX) maxX = pt[0];
                     if (pt[1] < minY) minY = pt[1];
@@ -67,9 +68,9 @@ const ElevationCanvas: React.FC<ElevationCanvasProps> = ({ elevationAngle }) => 
         let maxElevation = -Infinity;
         let topLevelId: string | null = null;
         
-        archLevels.forEach((l: any) => {
+        archLevels.forEach((l: Level) => {
             levelElevations.set(l.id, l.elevation_m);
-            levelHeights.set(l.id, l.height_m);
+            levelHeights.set(l.id, (l as any).height_m || settings?.floor_height_m || 3.5);
             if (l.elevation_m > maxElevation) {
                 maxElevation = l.elevation_m;
                 topLevelId = l.id;
@@ -78,7 +79,7 @@ const ElevationCanvas: React.FC<ElevationCanvasProps> = ({ elevationAngle }) => 
 
         // 1. Draw Level Guides (back layer)
         const levelsGroup = g.append('g').attr('class', 'levels');
-        archLevels.forEach((lvl: any) => {
+        archLevels.forEach((lvl: Level) => {
             const zPx = toPxY(lvl.elevation_m);
             levelsGroup.append('line')
                 .attr('x1', -width * 2)
@@ -101,10 +102,10 @@ const ElevationCanvas: React.FC<ElevationCanvasProps> = ({ elevationAngle }) => 
         // Prepare Walls
         const drawItems: any[] = [];
         
-        architecture.forEach((w: any) => {
+        architecture.forEach((w: ArchitectureLine) => {
             if (w.type === 'wall' && w.coordinates && w.coordinates.length >= 2) {
-                const z0 = levelElevations.get(w.level_id) || 0;
-                let h = levelHeights.get(w.level_id) || settings?.floor_height_m || 3.5;
+                const z0 = (w.level_id && levelElevations.get(w.level_id)) || 0;
+                let h = (w.level_id && levelHeights.get(w.level_id)) || settings?.floor_height_m || 3.5;
                 
                 // If it's the top-most level, assume it's a parapet wall
                 if (w.level_id === topLevelId) {
@@ -143,14 +144,14 @@ const ElevationCanvas: React.FC<ElevationCanvasProps> = ({ elevationAngle }) => 
         });
 
         // Prepare Openings (Doors/Windows)
-        openings.forEach((op: any) => {
-            const z0 = op.z !== undefined ? op.z : (levelElevations.get(op.level_id) || 0);
+        openings.forEach((op: Opening) => {
+            const z0 = op.z !== undefined ? op.z : ((op.level_id && levelElevations.get(op.level_id)) || 0);
             let h = op.height || 2.1;
             let w = op.width || 1.0;
             
-            if (op.type_id && types) {
+            if ((op as any).type_id && types) {
                 const arr = op.type === 'window' ? types.windows : types.doors;
-                const t = arr?.find((t: any) => t.id === op.type_id);
+                const t = arr?.find((t: any) => t.id === (op as any).type_id);
                 if (t) {
                     if (t.height) h = t.height;
                     if (t.width) w = t.width;
@@ -163,8 +164,8 @@ const ElevationCanvas: React.FC<ElevationCanvasProps> = ({ elevationAngle }) => 
             
             // To project the opening width, we must know its orientation. 
             // op.nx, op.ny is the normal. The tangent is (-ny, nx).
-            const tx = -op.ny;
-            const ty = op.nx;
+            const tx = -(op as any).ny;
+            const ty = (op as any).nx;
             
             // Project tangent to screen
             const screenTx = getScreenX(op.x + tx * w / 2, op.y + ty * w / 2) - sx;

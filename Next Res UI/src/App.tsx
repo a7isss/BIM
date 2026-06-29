@@ -2,7 +2,7 @@ import { useState } from 'react';
 import LayoutCanvas from './components/LayoutCanvas';
 import ElevationCanvas from './components/ElevationCanvas';
 import TypesSchedulePanel from './components/TypesSchedulePanel';
-import type { Scope } from './components/RightPanel';
+import type { Scope } from './types';
 import PrintLayout from './components/PrintLayout';
 import LeftPanel from './components/LeftPanel';
 import RightPanel from './components/RightPanel';
@@ -16,7 +16,7 @@ function App() {
   const [viewMode, setViewMode] = useState<'plan' | 'elevation'>('plan');
   const [elevationAngle, setElevationAngle] = useState<number | null>(null);
   
-  const [activeTypes, setActiveTypes] = useState({
+  const [activeTypes, setActiveTypes] = useState<Record<string, string>>({
       wall: 'EXT_BRICK_200',
       door: 'D_SGL_900',
       window: 'W_SLD_1200',
