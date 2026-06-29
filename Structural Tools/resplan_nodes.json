@@ -1,0 +1,30 @@
+{
+    "nodes": [
+        {"id": 1, "x": 0.0, "y": 0.0, "z": 0.0, "is_support": true},
+        {"id": 2, "x": 5.0, "y": 0.0, "z": 0.0, "is_support": true},
+        {"id": 3, "x": 0.0, "y": 4.0, "z": 0.0, "is_support": true},
+        {"id": 4, "x": 5.0, "y": 4.0, "z": 0.0, "is_support": true},
+        {"id": 5, "x": 0.0, "y": 0.0, "z": 3.0, "is_support": false},
+        {"id": 6, "x": 5.0, "y": 0.0, "z": 3.0, "is_support": false},
+        {"id": 7, "x": 0.0, "y": 4.0, "z": 3.0, "is_support": false},
+        {"id": 8, "x": 5.0, "y": 4.0, "z": 3.0, "is_support": false}
+    ],
+    "elements": [
+        {"id": "C1", "type": "column", "n1": 1, "n2": 5},
+        {"id": "C2", "type": "column", "n1": 2, "n2": 6},
+        {"id": "C3", "type": "column", "n1": 3, "n2": 7},
+        {"id": "C4", "type": "column", "n1": 4, "n2": 8},
+        {"id": "B1", "type": "beam", "n1": 5, "n2": 6},
+        {"id": "B2", "type": "beam", "n1": 7, "n2": 8},
+        {"id": "B3", "type": "beam", "n1": 5, "n2": 7},
+        {"id": "B4", "type": "beam", "n1": 6, "n2": 8}
+    ],
+    "slabs": [
+        {
+            "id": "S1",
+            "type": "slab",
+            "span_m": 4.0,
+            "nodes": [5, 6, 8, 7]
+        }
+    ]
+}

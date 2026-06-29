@@ -1,0 +1,103 @@
+{
+    "walls": [
+        {
+            "id": "EXT_BRICK_200",
+            "name": "Exterior Brick 200mm",
+            "thickness": 0.2,
+            "color": "#1f2937",
+            "u_value": 0.6
+        },
+        {
+            "id": "INT_BLOCK_150",
+            "name": "Interior Block 150mm",
+            "thickness": 0.15,
+            "color": "#4b5563",
+            "u_value": 1.2
+        },
+        {
+            "id": "INT_DRYWALL_100",
+            "name": "Interior Drywall 100mm",
+            "thickness": 0.1,
+            "color": "#9ca3af",
+            "u_value": 1.5
+        }
+    ],
+    "doors": [
+        {
+            "id": "D_SGL_900",
+            "name": "Single Door 900x2100",
+            "width": 0.9,
+            "height": 2.1,
+            "sill_height": 0.0
+        },
+        {
+            "id": "D_SGL_1000",
+            "name": "Single Door 1000x2100",
+            "width": 1.0,
+            "height": 2.1,
+            "sill_height": 0.0
+        },
+        {
+            "id": "D_DBL_1800",
+            "name": "Double Door 1800x2100",
+            "width": 1.8,
+            "height": 2.1,
+            "sill_height": 0.0
+        }
+    ],
+    "windows": [
+        {
+            "id": "W_SLD_1200",
+            "name": "Sliding Window 1200x1200",
+            "width": 1.2,
+            "height": 1.2,
+            "sill_height": 0.9
+        },
+        {
+            "id": "W_SLD_1500",
+            "name": "Sliding Window 1500x1200",
+            "width": 1.5,
+            "height": 1.2,
+            "sill_height": 0.9
+        },
+        {
+            "id": "W_FIX_600",
+            "name": "Fixed Window 600x2000",
+            "width": 0.6,
+            "height": 2.0,
+            "sill_height": 0.1
+        }
+    ],
+    "rooms": [
+        {
+            "id": "LIVING_SPACE",
+            "name": "Living Area",
+            "color": "#dcfce7",
+            "label": "LIVING (\u0635\u0627\u0644\u0629)"
+        },
+        {
+            "id": "BEDROOM_SPACE",
+            "name": "Bedroom",
+            "color": "#dbeafe",
+            "label": "BEDROOM (\u063a\u0631\u0641\u0629 \u0646\u0648\u0645)"
+        },
+        {
+            "id": "BATHROOM_SPACE",
+            "name": "Bathroom",
+            "color": "#fef3c7",
+            "label": "BATHROOM (\u062d\u0645\u0627\u0645)"
+        },
+        {
+            "id": "KITCHEN_SPACE",
+            "name": "Kitchen",
+            "color": "#fce7f3",
+            "label": "KITCHEN (\u0645\u0637\u0628\u062e)"
+        },
+        {
+            "id": "CORRIDOR_SPACE",
+            "name": "Corridor",
+            "color": "#f3f4f6",
+            "label": "CORRIDOR (\u0645\u0645\u0631)"
+        }
+    ]
+}

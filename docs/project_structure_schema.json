@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Next Res Project Structure",
+    "description": "Standardized folder and file structure for isolated Next Res projects.",
+    "type": "object",
+    "properties": {
+        "project_root": {
+            "type": "string",
+            "description": "The root directory of the project, e.g., 'D:/Revit toolset/Projects/Sample Project'"
+        },
+        "directories": {
+            "type": "object",
+            "properties": {
+                "inputs": {
+                    "description": "Contains raw architectural inputs and assumptions.",
+                    "required_files": [
+                        "resplan_nodes.json",
+                        "design_assumptions.json"
+                    ]
+                },
+                "outputs": {
+                    "description": "Contains the structural engine outputs.",
+                    "required_files": [
+                        "resplan_analysis_results.json"
+                    ],
+                    "subdirectories": {
+                        "pdf": {
+                            "description": "Exported PDF Bill of Materials and Layouts."
+                        },
+                        "dxf": {
+                            "description": "Exported DXF CAD files."
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

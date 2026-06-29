@@ -1,0 +1,170 @@
+[
+    {
+        "type": "Solid",
+        "h_mm": 150,
+        "DL_kN_m2": 3.6,
+        "phi_Vc_kN_per_m": 84.3,
+        "Mcr_kNm_per_m": 12.3,
+        "reinforcement_1way": "T10 @ 200mm Main, T10 @ 200mm Shrinkage",
+        "reinforcement_2way": "T10 @ 200mm B.W."
+    },
+    {
+        "type": "Solid",
+        "h_mm": 200,
+        "DL_kN_m2": 4.8,
+        "phi_Vc_kN_per_m": 118.1,
+        "Mcr_kNm_per_m": 21.9,
+        "reinforcement_1way": "T12 @ 200mm Main, T10 @ 200mm Shrinkage",
+        "reinforcement_2way": "T12 @ 200mm B.W."
+    },
+    {
+        "type": "Solid",
+        "h_mm": 250,
+        "DL_kN_m2": 6.0,
+        "phi_Vc_kN_per_m": 151.8,
+        "Mcr_kNm_per_m": 34.2,
+        "reinforcement_1way": "T12 @ 150mm Main, T10 @ 200mm Shrinkage",
+        "reinforcement_2way": "T12 @ 150mm B.W."
+    },
+    {
+        "type": "Solid",
+        "h_mm": 300,
+        "DL_kN_m2": 7.2,
+        "phi_Vc_kN_per_m": 185.5,
+        "Mcr_kNm_per_m": 49.2,
+        "reinforcement_1way": "T14 @ 150mm Main, T12 @ 200mm Shrinkage",
+        "reinforcement_2way": "T14 @ 150mm B.W."
+    },
+    {
+        "type": "Ribbed",
+        "h_mm": 250,
+        "block_depth_mm": 200,
+        "topping_mm": 50,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 4.04,
+        "phi_Vc_kN_per_m": 44.5,
+        "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Waffle",
+        "h_mm": 250,
+        "block_depth_mm": 200,
+        "topping_mm": 50,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 4.63,
+        "phi_Vc_kN_per_m": 44.5,
+        "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Ribbed",
+        "h_mm": 275,
+        "block_depth_mm": 200,
+        "topping_mm": 75,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 4.64,
+        "phi_Vc_kN_per_m": 49.6,
+        "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Waffle",
+        "h_mm": 275,
+        "block_depth_mm": 200,
+        "topping_mm": 75,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 5.23,
+        "phi_Vc_kN_per_m": 49.6,
+        "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Ribbed",
+        "h_mm": 300,
+        "block_depth_mm": 250,
+        "topping_mm": 50,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 4.75,
+        "phi_Vc_kN_per_m": 54.6,
+        "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Waffle",
+        "h_mm": 300,
+        "block_depth_mm": 250,
+        "topping_mm": 50,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 5.48,
+        "phi_Vc_kN_per_m": 54.6,
+        "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Ribbed",
+        "h_mm": 325,
+        "block_depth_mm": 250,
+        "topping_mm": 75,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 5.35,
+        "phi_Vc_kN_per_m": 59.7,
+        "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Waffle",
+        "h_mm": 325,
+        "block_depth_mm": 250,
+        "topping_mm": 75,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 6.08,
+        "phi_Vc_kN_per_m": 59.7,
+        "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Ribbed",
+        "h_mm": 350,
+        "block_depth_mm": 300,
+        "topping_mm": 50,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 5.46,
+        "phi_Vc_kN_per_m": 64.8,
+        "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Waffle",
+        "h_mm": 350,
+        "block_depth_mm": 300,
+        "topping_mm": 50,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 6.34,
+        "phi_Vc_kN_per_m": 64.8,
+        "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Ribbed",
+        "h_mm": 375,
+        "block_depth_mm": 300,
+        "topping_mm": 75,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 6.06,
+        "phi_Vc_kN_per_m": 69.8,
+        "reinforcement_1way": "2xT16 B.W. per rib, T8 @ 200mm Topping"
+    },
+    {
+        "type": "Waffle",
+        "h_mm": 375,
+        "block_depth_mm": 300,
+        "topping_mm": 75,
+        "rib_width_mm": 150,
+        "rib_spacing_mm": 500,
+        "DL_kN_m2": 6.94,
+        "phi_Vc_kN_per_m": 69.8,
+        "reinforcement_2way": "2xT16 B.W. per rib each way, T8 @ 200mm Topping"
+    }
+]

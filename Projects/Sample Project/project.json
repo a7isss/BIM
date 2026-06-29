@@ -1,0 +1,13 @@
+{
+    "project_name": "Sample Project",
+    "version": "1.0.0",
+    "files": {
+        "nodes": "inputs/resplan_nodes.json",
+        "settings": "inputs/project_settings.json",
+        "architectural_types": "inputs/resplan_types.json",
+        "structural_types": "inputs/structural_types.json",
+        "design_assumptions": "inputs/design_assumptions.json",
+        "analysis_results": "outputs/resplan_analysis_results.json",
+        "structural_report": "outputs/structural_report.json"
+    }
+}

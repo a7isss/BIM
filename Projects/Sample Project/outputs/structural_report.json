@@ -1,0 +1,1318 @@
+{
+    "elements": [
+        {
+            "id": "Slab_3.5_living_0",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 375mm",
+            "capacity": "DL: 6.94 kN/m2, phi*Vc: 69.8 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S1",
+            "section": "Two-Way Solid Slab 375mm"
+        },
+        {
+            "id": "Slab_3.5_kitchen_0",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 250mm",
+            "capacity": "DL: 4.63 kN/m2, phi*Vc: 44.5 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S2",
+            "section": "Two-Way Solid Slab 250mm"
+        },
+        {
+            "id": "Slab_3.5_bedroom_0",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 250mm",
+            "capacity": "DL: 4.63 kN/m2, phi*Vc: 44.5 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S2",
+            "section": "Two-Way Solid Slab 250mm"
+        },
+        {
+            "id": "Slab_3.5_bedroom_1",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 250mm",
+            "capacity": "DL: 4.63 kN/m2, phi*Vc: 44.5 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S2",
+            "section": "Two-Way Solid Slab 250mm"
+        },
+        {
+            "id": "Slab_3.5_bathroom_0",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 150mm",
+            "capacity": "DL: 3.6 kN/m2, phi*Vc: 84.3 kN/m",
+            "reinforcement": "T10 @ 200mm B.W.",
+            "design_label": "S3",
+            "section": "Two-Way Solid Slab 150mm"
+        },
+        {
+            "id": "Slab_3.5_bathroom_1",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 150mm",
+            "capacity": "DL: 3.6 kN/m2, phi*Vc: 84.3 kN/m",
+            "reinforcement": "T10 @ 200mm B.W.",
+            "design_label": "S3",
+            "section": "Two-Way Solid Slab 150mm"
+        },
+        {
+            "id": "Slab_3.5_balcony_0",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 250mm",
+            "capacity": "DL: 4.63 kN/m2, phi*Vc: 44.5 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S2",
+            "section": "Two-Way Solid Slab 250mm"
+        },
+        {
+            "id": "Slab_3.5_stair_0",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 150mm",
+            "capacity": "DL: 3.6 kN/m2, phi*Vc: 84.3 kN/m",
+            "reinforcement": "T10 @ 200mm B.W.",
+            "design_label": "S3",
+            "section": "Two-Way Solid Slab 150mm"
+        },
+        {
+            "id": "Slab_7.0_great_room_F1",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 375mm",
+            "capacity": "DL: 6.94 kN/m2, phi*Vc: 69.8 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S1",
+            "section": "Two-Way Solid Slab 375mm"
+        },
+        {
+            "id": "Slab_7.0_master_suite_F1",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 250mm",
+            "capacity": "DL: 4.63 kN/m2, phi*Vc: 44.5 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S2",
+            "section": "Two-Way Solid Slab 250mm"
+        },
+        {
+            "id": "Slab_7.0_right_wing_F1",
+            "type": "Slab",
+            "details": "Two-Way Solid Slab 250mm",
+            "capacity": "DL: 4.63 kN/m2, phi*Vc: 44.5 kN/m",
+            "reinforcement": "2xT16 B.W. per rib each way, T8 @ 200mm Topping",
+            "design_label": "S2",
+            "section": "Two-Way Solid Slab 250mm"
+        },
+        {
+            "id": "C_1782592778619_1782592778620",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778620_1782592778621",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778621_1782592778622",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778623_1782592778624",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778624_1782592778625",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778625_1782592778626",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778627_1782592778628",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778628_1782592778629",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778629_1782592778630",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778631_1782592778632",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778632_1782592778633",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778633_1782592778634",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778635_1782592778636",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778636_1782592778637",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778637_1782592778638",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778639_1782592778640",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778640_1782592778641",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778641_1782592778642",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778643_1782592778644",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778644_1782592778645",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778645_1782592778646",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778647_1782592778648",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778648_1782592778649",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778649_1782592778650",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778651_1782592778652",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778652_1782592778653",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778655_1782592778656",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778656_1782592778657",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778657_1782592778658",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778659_1782592778660",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778660_1782592778661",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778661_1782592778662",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778663_1782592778664",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778664_1782592778665",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778665_1782592778666",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778667_1782592778668",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778668_1782592778669",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778669_1782592778670",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778671_1782592778672",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778672_1782592778673",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778673_1782592778674",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778675_1782592778676",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778676_1782592778677",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778677_1782592778678",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778679_1782592778680",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778680_1782592778681",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778681_1782592778682",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778683_1782592778684",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778684_1782592778685",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778685_1782592778686",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778687_1782592778688",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778688_1782592778689",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778689_1782592778690",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778691_1782592778692",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778692_1782592778693",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778693_1782592778694",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778695_1782592778696",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778696_1782592778697",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778699_1782592778700",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778700_1782592778701",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778701_1782592778702",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778703_1782592778704",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778704_1782592778705",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778705_1782592778706",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778707_1782592778708",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778708_1782592778709",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778709_1782592778710",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778711_1782592778712",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778712_1782592778713",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778713_1782592778714",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778715_1782592778716",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778716_1782592778717",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778717_1782592778718",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778719_1782592778720",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778720_1782592778721",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778721_1782592778722",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778723_1782592778724",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778724_1782592778725",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "C_1782592778725_1782592778726",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        },
+        {
+            "id": "B_-0.1_1782592778688_1782592778716",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=71.7 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 3 (As=903.1 mm2, stirrups @ 62.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778689_1782592778717",
+            "type": "Beam",
+            "details": "Rectangular 300x1000",
+            "capacity": "phi*Mn=1554.0 kNm, phi*Vn=390.1 kN",
+            "reinforcement": "Tier 3 (As=5147.8 mm2, stirrups @ 238.0 mm)",
+            "design_label": "B2",
+            "section": "Rectangular 300x1000"
+        },
+        {
+            "id": "B_7.0_1782592778690_1782592778718",
+            "type": "Beam",
+            "details": "Rectangular 250x900",
+            "capacity": "phi*Mn=1036.7 kNm, phi*Vn=341.2 kN",
+            "reinforcement": "Tier 3 (As=3838.3 mm2, stirrups @ 212.0 mm)",
+            "design_label": "B3",
+            "section": "Rectangular 250x900"
+        },
+        {
+            "id": "B_-0.1_1782592778632_1782592778668",
+            "type": "Beam",
+            "details": "Rectangular 200x350",
+            "capacity": "phi*Mn=103.3 kNm, phi*Vn=197.6 kN",
+            "reinforcement": "Tier 3 (As=1083.8 mm2, stirrups @ 75.0 mm)",
+            "design_label": "B4",
+            "section": "Rectangular 200x350"
+        },
+        {
+            "id": "B_-0.1_1782592778660_1782592778656",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778661_1782592778657",
+            "type": "Beam",
+            "details": "Rectangular 200x350",
+            "capacity": "phi*Mn=103.3 kNm, phi*Vn=197.6 kN",
+            "reinforcement": "Tier 3 (As=1083.8 mm2, stirrups @ 75.0 mm)",
+            "design_label": "B4",
+            "section": "Rectangular 200x350"
+        },
+        {
+            "id": "B_7.0_1782592778662_1782592778658",
+            "type": "Beam",
+            "details": "Rectangular 200x350",
+            "capacity": "phi*Mn=103.3 kNm, phi*Vn=197.6 kN",
+            "reinforcement": "Tier 3 (As=1083.8 mm2, stirrups @ 75.0 mm)",
+            "design_label": "B4",
+            "section": "Rectangular 200x350"
+        },
+        {
+            "id": "B_-0.1_1782592778692_1782592778672",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=39.3 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 2 (As=451.6 mm2, stirrups @ 83.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778693_1782592778673",
+            "type": "Beam",
+            "details": "Rectangular 300x1000",
+            "capacity": "phi*Mn=1554.0 kNm, phi*Vn=390.1 kN",
+            "reinforcement": "Tier 3 (As=5147.8 mm2, stirrups @ 238.0 mm)",
+            "design_label": "B2",
+            "section": "Rectangular 300x1000"
+        },
+        {
+            "id": "B_7.0_1782592778694_1782592778674",
+            "type": "Beam",
+            "details": "Rectangular 250x850",
+            "capacity": "phi*Mn=918.3 kNm, phi*Vn=332.8 kN",
+            "reinforcement": "Tier 3 (As=3612.5 mm2, stirrups @ 200.0 mm)",
+            "design_label": "B5",
+            "section": "Rectangular 250x850"
+        },
+        {
+            "id": "B_-0.1_1782592778704_1782592778700",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778705_1782592778701",
+            "type": "Beam",
+            "details": "Rectangular 200x400",
+            "capacity": "phi*Mn=140.6 kNm, phi*Vn=230.6 kN",
+            "reinforcement": "Tier 3 (As=1264.4 mm2, stirrups @ 88.0 mm)",
+            "design_label": "B6",
+            "section": "Rectangular 200x400"
+        },
+        {
+            "id": "B_7.0_1782592778706_1782592778702",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=71.7 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 3 (As=903.1 mm2, stirrups @ 62.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_-0.1_1782592778624_1782592778640",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=39.3 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 2 (As=451.6 mm2, stirrups @ 83.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778625_1782592778641",
+            "type": "Beam",
+            "details": "Rectangular 400x900",
+            "capacity": "phi*Mn=1658.7 kNm, phi*Vn=427.2 kN",
+            "reinforcement": "Tier 3 (As=6141.2 mm2, stirrups @ 212.0 mm)",
+            "design_label": "B7",
+            "section": "Rectangular 400x900"
+        },
+        {
+            "id": "B_7.0_1782592778626_1782592778642",
+            "type": "Beam",
+            "details": "Rectangular 250x900",
+            "capacity": "phi*Mn=1036.7 kNm, phi*Vn=341.2 kN",
+            "reinforcement": "Tier 3 (As=3838.3 mm2, stirrups @ 212.0 mm)",
+            "design_label": "B3",
+            "section": "Rectangular 250x900"
+        },
+        {
+            "id": "B_-0.1_1782592778652_1782592778648",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778653_1782592778649",
+            "type": "Beam",
+            "details": "Rectangular 250x750",
+            "capacity": "phi*Mn=703.1 kNm, phi*Vn=315.9 kN",
+            "reinforcement": "Tier 3 (As=3160.9 mm2, stirrups @ 175.0 mm)",
+            "design_label": "B8",
+            "section": "Rectangular 250x750"
+        },
+        {
+            "id": "B_7.0_1782592778654_1782592778650",
+            "type": "Beam",
+            "details": "Rectangular 200x650",
+            "capacity": "phi*Mn=413.2 kNm, phi*Vn=278.8 kN",
+            "reinforcement": "Tier 3 (As=2167.5 mm2, stirrups @ 150.0 mm)",
+            "design_label": "B9",
+            "section": "Rectangular 200x650"
+        },
+        {
+            "id": "B_-0.1_1782592778620_1782592778664",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778621_1782592778665",
+            "type": "Beam",
+            "details": "Rectangular 200x450",
+            "capacity": "phi*Mn=183.7 kNm, phi*Vn=251.8 kN",
+            "reinforcement": "Tier 3 (As=1445.0 mm2, stirrups @ 100.0 mm)",
+            "design_label": "B10",
+            "section": "Rectangular 200x450"
+        },
+        {
+            "id": "B_7.0_1782592778622_1782592778666",
+            "type": "Beam",
+            "details": "Rectangular 200x450",
+            "capacity": "phi*Mn=183.7 kNm, phi*Vn=251.8 kN",
+            "reinforcement": "Tier 3 (As=1445.0 mm2, stirrups @ 100.0 mm)",
+            "design_label": "B10",
+            "section": "Rectangular 200x450"
+        },
+        {
+            "id": "B_-0.1_1782592778724_1782592778720",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778725_1782592778721",
+            "type": "Beam",
+            "details": "Rectangular 200x400",
+            "capacity": "phi*Mn=140.6 kNm, phi*Vn=230.6 kN",
+            "reinforcement": "Tier 3 (As=1264.4 mm2, stirrups @ 88.0 mm)",
+            "design_label": "B6",
+            "section": "Rectangular 200x400"
+        },
+        {
+            "id": "B_7.0_1782592778726_1782592778722",
+            "type": "Beam",
+            "details": "Rectangular 200x400",
+            "capacity": "phi*Mn=140.6 kNm, phi*Vn=230.6 kN",
+            "reinforcement": "Tier 3 (As=1264.4 mm2, stirrups @ 88.0 mm)",
+            "design_label": "B6",
+            "section": "Rectangular 200x400"
+        },
+        {
+            "id": "B_-0.1_1782592778684_1782592778680",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778685_1782592778681",
+            "type": "Beam",
+            "details": "Rectangular 200x600",
+            "capacity": "phi*Mn=347.2 kNm, phi*Vn=272.0 kN",
+            "reinforcement": "Tier 3 (As=1986.9 mm2, stirrups @ 138.0 mm)",
+            "design_label": "B11",
+            "section": "Rectangular 200x600"
+        },
+        {
+            "id": "B_7.0_1782592778686_1782592778682",
+            "type": "Beam",
+            "details": "Rectangular 200x550",
+            "capacity": "phi*Mn=287.0 kNm, phi*Vn=265.3 kN",
+            "reinforcement": "Tier 3 (As=1806.2 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B12",
+            "section": "Rectangular 200x550"
+        },
+        {
+            "id": "B_-0.1_1782592778708_1782592778712",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778709_1782592778713",
+            "type": "Beam",
+            "details": "Rectangular 200x550",
+            "capacity": "phi*Mn=287.0 kNm, phi*Vn=265.3 kN",
+            "reinforcement": "Tier 3 (As=1806.2 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B12",
+            "section": "Rectangular 200x550"
+        },
+        {
+            "id": "B_7.0_1782592778710_1782592778714",
+            "type": "Beam",
+            "details": "Rectangular 200x400",
+            "capacity": "phi*Mn=140.6 kNm, phi*Vn=230.6 kN",
+            "reinforcement": "Tier 3 (As=1264.4 mm2, stirrups @ 88.0 mm)",
+            "design_label": "B6",
+            "section": "Rectangular 200x400"
+        },
+        {
+            "id": "B_-0.1_1782592778676_1782592778644",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778677_1782592778645",
+            "type": "Beam",
+            "details": "Rectangular 200x550",
+            "capacity": "phi*Mn=287.0 kNm, phi*Vn=265.3 kN",
+            "reinforcement": "Tier 3 (As=1806.2 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B12",
+            "section": "Rectangular 200x550"
+        },
+        {
+            "id": "B_7.0_1782592778678_1782592778646",
+            "type": "Beam",
+            "details": "Rectangular 200x550",
+            "capacity": "phi*Mn=287.0 kNm, phi*Vn=265.3 kN",
+            "reinforcement": "Tier 3 (As=1806.2 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B12",
+            "section": "Rectangular 200x550"
+        },
+        {
+            "id": "B_-0.1_1782592778672_1782592778716",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=39.3 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 2 (As=451.6 mm2, stirrups @ 83.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778673_1782592778717",
+            "type": "Beam",
+            "details": "Rectangular 200x850",
+            "capacity": "phi*Mn=734.7 kNm, phi*Vn=305.8 kN",
+            "reinforcement": "Tier 3 (As=2890.0 mm2, stirrups @ 200.0 mm)",
+            "design_label": "B13",
+            "section": "Rectangular 200x850"
+        },
+        {
+            "id": "B_7.0_1782592778674_1782592778718",
+            "type": "Beam",
+            "details": "Rectangular 200x700",
+            "capacity": "phi*Mn=485.0 kNm, phi*Vn=285.5 kN",
+            "reinforcement": "Tier 3 (As=2348.1 mm2, stirrups @ 162.0 mm)",
+            "design_label": "B14",
+            "section": "Rectangular 200x700"
+        },
+        {
+            "id": "B_-0.1_1782592778620_1782592778624",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778621_1782592778625",
+            "type": "Beam",
+            "details": "Rectangular 200x550",
+            "capacity": "phi*Mn=287.0 kNm, phi*Vn=265.3 kN",
+            "reinforcement": "Tier 3 (As=1806.2 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B12",
+            "section": "Rectangular 200x550"
+        },
+        {
+            "id": "B_7.0_1782592778622_1782592778626",
+            "type": "Beam",
+            "details": "Rectangular 200x550",
+            "capacity": "phi*Mn=287.0 kNm, phi*Vn=265.3 kN",
+            "reinforcement": "Tier 3 (As=1806.2 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B12",
+            "section": "Rectangular 200x550"
+        },
+        {
+            "id": "B_-0.1_1782592778656_1782592778652",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778657_1782592778653",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=71.7 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 3 (As=903.1 mm2, stirrups @ 62.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_7.0_1782592778658_1782592778654",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=71.7 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 3 (As=903.1 mm2, stirrups @ 62.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_-0.1_1782592778636_1782592778688",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778637_1782592778689",
+            "type": "Beam",
+            "details": "Rectangular 200x650",
+            "capacity": "phi*Mn=413.2 kNm, phi*Vn=278.8 kN",
+            "reinforcement": "Tier 3 (As=2167.5 mm2, stirrups @ 150.0 mm)",
+            "design_label": "B9",
+            "section": "Rectangular 200x650"
+        },
+        {
+            "id": "B_7.0_1782592778638_1782592778690",
+            "type": "Beam",
+            "details": "Rectangular 200x550",
+            "capacity": "phi*Mn=287.0 kNm, phi*Vn=265.3 kN",
+            "reinforcement": "Tier 3 (As=1806.2 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B12",
+            "section": "Rectangular 200x550"
+        },
+        {
+            "id": "B_-0.1_1782592778660_1782592778664",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778661_1782592778665",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=39.3 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 2 (As=451.6 mm2, stirrups @ 83.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_7.0_1782592778662_1782592778666",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=39.3 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 2 (As=451.6 mm2, stirrups @ 83.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_-0.1_1782592778632_1782592778628",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778633_1782592778629",
+            "type": "Beam",
+            "details": "Rectangular 200x400",
+            "capacity": "phi*Mn=140.6 kNm, phi*Vn=230.6 kN",
+            "reinforcement": "Tier 3 (As=1264.4 mm2, stirrups @ 88.0 mm)",
+            "design_label": "B6",
+            "section": "Rectangular 200x400"
+        },
+        {
+            "id": "B_7.0_1782592778634_1782592778630",
+            "type": "Beam",
+            "details": "Rectangular 200x350",
+            "capacity": "phi*Mn=103.3 kNm, phi*Vn=197.6 kN",
+            "reinforcement": "Tier 3 (As=1083.8 mm2, stirrups @ 75.0 mm)",
+            "design_label": "B4",
+            "section": "Rectangular 200x350"
+        },
+        {
+            "id": "B_-0.1_1782592778692_1782592778696",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=15.3 kNm, phi*Vn=132.6 kN",
+            "reinforcement": "Tier 1 (As=166.7 mm2, stirrups @ 125.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_3.5_1782592778693_1782592778697",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=71.7 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 3 (As=903.1 mm2, stirrups @ 62.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "B_7.0_1782592778694_1782592778698",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=71.7 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 3 (As=903.1 mm2, stirrups @ 62.0 mm)",
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "C_1782666593936",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=824.7 kN, phi*Mn=96.8 kNm",
+            "reinforcement": "Tier 3 (rho=4.0%)",
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        }
+    ]
+}

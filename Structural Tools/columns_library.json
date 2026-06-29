@@ -1,0 +1,4286 @@
+[
+    {
+        "b_mm": 200,
+        "h_mm": 200,
+        "area_m2": 0.04,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 400.0,
+                "phi_Pn_kN": 577.4,
+                "phi_Mn_kNm": 24.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 800.0,
+                "phi_Pn_kN": 659.9,
+                "phi_Mn_kNm": 48.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 1600.0,
+                "phi_Pn_kN": 824.7,
+                "phi_Mn_kNm": 96.8
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 250,
+        "area_m2": 0.05,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 500.0,
+                "phi_Pn_kN": 721.8,
+                "phi_Mn_kNm": 37.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1000.0,
+                "phi_Pn_kN": 824.8,
+                "phi_Mn_kNm": 75.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 2000.0,
+                "phi_Pn_kN": 1030.8,
+                "phi_Mn_kNm": 151.2
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 300,
+        "area_m2": 0.06,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 600.0,
+                "phi_Pn_kN": 866.2,
+                "phi_Mn_kNm": 54.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1200.0,
+                "phi_Pn_kN": 989.8,
+                "phi_Mn_kNm": 108.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 2400.0,
+                "phi_Pn_kN": 1237.0,
+                "phi_Mn_kNm": 217.7
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 350,
+        "area_m2": 0.07,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 700.0,
+                "phi_Pn_kN": 1010.5,
+                "phi_Mn_kNm": 74.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1400.0,
+                "phi_Pn_kN": 1154.8,
+                "phi_Mn_kNm": 148.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 2800.0,
+                "phi_Pn_kN": 1443.2,
+                "phi_Mn_kNm": 296.4
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 400,
+        "area_m2": 0.08,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 800.0,
+                "phi_Pn_kN": 1154.9,
+                "phi_Mn_kNm": 96.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1600.0,
+                "phi_Pn_kN": 1319.7,
+                "phi_Mn_kNm": 193.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 3200.0,
+                "phi_Pn_kN": 1649.4,
+                "phi_Mn_kNm": 387.1
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 450,
+        "area_m2": 0.09,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 900.0,
+                "phi_Pn_kN": 1299.3,
+                "phi_Mn_kNm": 122.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1800.0,
+                "phi_Pn_kN": 1484.7,
+                "phi_Mn_kNm": 244.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 1855.5,
+                "phi_Mn_kNm": 489.9
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 500,
+        "area_m2": 0.1,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1000.0,
+                "phi_Pn_kN": 1443.6,
+                "phi_Mn_kNm": 151.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2000.0,
+                "phi_Pn_kN": 1649.6,
+                "phi_Mn_kNm": 302.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4000.0,
+                "phi_Pn_kN": 2061.7,
+                "phi_Mn_kNm": 604.8
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 550,
+        "area_m2": 0.11,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1100.0,
+                "phi_Pn_kN": 1588.0,
+                "phi_Mn_kNm": 183.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2200.0,
+                "phi_Pn_kN": 1814.6,
+                "phi_Mn_kNm": 365.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4400.0,
+                "phi_Pn_kN": 2267.9,
+                "phi_Mn_kNm": 731.8
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 600,
+        "area_m2": 0.12,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1200.0,
+                "phi_Pn_kN": 1732.3,
+                "phi_Mn_kNm": 217.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2400.0,
+                "phi_Pn_kN": 1979.6,
+                "phi_Mn_kNm": 435.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4800.0,
+                "phi_Pn_kN": 2474.0,
+                "phi_Mn_kNm": 870.9
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 650,
+        "area_m2": 0.13,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1300.0,
+                "phi_Pn_kN": 1876.7,
+                "phi_Mn_kNm": 255.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2600.0,
+                "phi_Pn_kN": 2144.5,
+                "phi_Mn_kNm": 511.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 5200.0,
+                "phi_Pn_kN": 2680.2,
+                "phi_Mn_kNm": 1022.1
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 700,
+        "area_m2": 0.14,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1400.0,
+                "phi_Pn_kN": 2021.1,
+                "phi_Mn_kNm": 296.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2800.0,
+                "phi_Pn_kN": 2309.5,
+                "phi_Mn_kNm": 592.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 5600.0,
+                "phi_Pn_kN": 2886.4,
+                "phi_Mn_kNm": 1185.4
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 750,
+        "area_m2": 0.15,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1500.0,
+                "phi_Pn_kN": 2165.4,
+                "phi_Mn_kNm": 340.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3000.0,
+                "phi_Pn_kN": 2474.5,
+                "phi_Mn_kNm": 680.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 3092.5,
+                "phi_Mn_kNm": 1360.8
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 800,
+        "area_m2": 0.16,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1600.0,
+                "phi_Pn_kN": 2309.8,
+                "phi_Mn_kNm": 387.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3200.0,
+                "phi_Pn_kN": 2639.4,
+                "phi_Mn_kNm": 774.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6400.0,
+                "phi_Pn_kN": 3298.7,
+                "phi_Mn_kNm": 1548.3
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 850,
+        "area_m2": 0.17,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1700.0,
+                "phi_Pn_kN": 2454.2,
+                "phi_Mn_kNm": 437.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3400.0,
+                "phi_Pn_kN": 2804.4,
+                "phi_Mn_kNm": 873.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6800.0,
+                "phi_Pn_kN": 3504.9,
+                "phi_Mn_kNm": 1747.9
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 900,
+        "area_m2": 0.18,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1800.0,
+                "phi_Pn_kN": 2598.5,
+                "phi_Mn_kNm": 489.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 2969.4,
+                "phi_Mn_kNm": 979.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7200.0,
+                "phi_Pn_kN": 3711.1,
+                "phi_Mn_kNm": 1959.6
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 950,
+        "area_m2": 0.19,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1900.0,
+                "phi_Pn_kN": 2742.9,
+                "phi_Mn_kNm": 545.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3800.0,
+                "phi_Pn_kN": 3134.3,
+                "phi_Mn_kNm": 1091.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7600.0,
+                "phi_Pn_kN": 3917.2,
+                "phi_Mn_kNm": 2183.3
+            }
+        ]
+    },
+    {
+        "b_mm": 200,
+        "h_mm": 1000,
+        "area_m2": 0.2,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2000.0,
+                "phi_Pn_kN": 2887.2,
+                "phi_Mn_kNm": 604.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4000.0,
+                "phi_Pn_kN": 3299.3,
+                "phi_Mn_kNm": 1209.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8000.0,
+                "phi_Pn_kN": 4123.4,
+                "phi_Mn_kNm": 2419.2
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 250,
+        "area_m2": 0.0625,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 625.0,
+                "phi_Pn_kN": 902.3,
+                "phi_Mn_kNm": 47.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1250.0,
+                "phi_Pn_kN": 1031.0,
+                "phi_Mn_kNm": 94.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 2500.0,
+                "phi_Pn_kN": 1288.6,
+                "phi_Mn_kNm": 189.0
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 300,
+        "area_m2": 0.075,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 750.0,
+                "phi_Pn_kN": 1082.7,
+                "phi_Mn_kNm": 68.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1500.0,
+                "phi_Pn_kN": 1237.2,
+                "phi_Mn_kNm": 136.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 3000.0,
+                "phi_Pn_kN": 1546.3,
+                "phi_Mn_kNm": 272.2
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 350,
+        "area_m2": 0.0875,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 875.0,
+                "phi_Pn_kN": 1263.2,
+                "phi_Mn_kNm": 92.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1750.0,
+                "phi_Pn_kN": 1443.4,
+                "phi_Mn_kNm": 185.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 3500.0,
+                "phi_Pn_kN": 1804.0,
+                "phi_Mn_kNm": 370.4
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 400,
+        "area_m2": 0.1,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1000.0,
+                "phi_Pn_kN": 1443.6,
+                "phi_Mn_kNm": 121.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2000.0,
+                "phi_Pn_kN": 1649.6,
+                "phi_Mn_kNm": 241.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4000.0,
+                "phi_Pn_kN": 2061.7,
+                "phi_Mn_kNm": 483.8
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 450,
+        "area_m2": 0.1125,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1125.0,
+                "phi_Pn_kN": 1624.1,
+                "phi_Mn_kNm": 153.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2250.0,
+                "phi_Pn_kN": 1855.9,
+                "phi_Mn_kNm": 306.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4500.0,
+                "phi_Pn_kN": 2319.4,
+                "phi_Mn_kNm": 612.4
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 500,
+        "area_m2": 0.125,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1250.0,
+                "phi_Pn_kN": 1804.5,
+                "phi_Mn_kNm": 189.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2500.0,
+                "phi_Pn_kN": 2062.1,
+                "phi_Mn_kNm": 378.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 5000.0,
+                "phi_Pn_kN": 2577.1,
+                "phi_Mn_kNm": 756.0
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 550,
+        "area_m2": 0.1375,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1375.0,
+                "phi_Pn_kN": 1985.0,
+                "phi_Mn_kNm": 228.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2750.0,
+                "phi_Pn_kN": 2268.3,
+                "phi_Mn_kNm": 457.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 5500.0,
+                "phi_Pn_kN": 2834.8,
+                "phi_Mn_kNm": 914.8
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 600,
+        "area_m2": 0.15,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1500.0,
+                "phi_Pn_kN": 2165.4,
+                "phi_Mn_kNm": 272.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3000.0,
+                "phi_Pn_kN": 2474.5,
+                "phi_Mn_kNm": 544.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 3092.5,
+                "phi_Mn_kNm": 1088.6
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 650,
+        "area_m2": 0.1625,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1625.0,
+                "phi_Pn_kN": 2345.9,
+                "phi_Mn_kNm": 319.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3250.0,
+                "phi_Pn_kN": 2680.7,
+                "phi_Mn_kNm": 638.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6500.0,
+                "phi_Pn_kN": 3350.3,
+                "phi_Mn_kNm": 1277.6
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 700,
+        "area_m2": 0.175,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1750.0,
+                "phi_Pn_kN": 2526.3,
+                "phi_Mn_kNm": 370.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3500.0,
+                "phi_Pn_kN": 2886.9,
+                "phi_Mn_kNm": 740.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7000.0,
+                "phi_Pn_kN": 3608.0,
+                "phi_Mn_kNm": 1481.8
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 750,
+        "area_m2": 0.1875,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1875.0,
+                "phi_Pn_kN": 2706.8,
+                "phi_Mn_kNm": 425.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3750.0,
+                "phi_Pn_kN": 3093.1,
+                "phi_Mn_kNm": 850.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7500.0,
+                "phi_Pn_kN": 3865.7,
+                "phi_Mn_kNm": 1701.0
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 800,
+        "area_m2": 0.2,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2000.0,
+                "phi_Pn_kN": 2887.2,
+                "phi_Mn_kNm": 483.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4000.0,
+                "phi_Pn_kN": 3299.3,
+                "phi_Mn_kNm": 967.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8000.0,
+                "phi_Pn_kN": 4123.4,
+                "phi_Mn_kNm": 1935.4
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 850,
+        "area_m2": 0.2125,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2125.0,
+                "phi_Pn_kN": 3067.7,
+                "phi_Mn_kNm": 546.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4250.0,
+                "phi_Pn_kN": 3505.5,
+                "phi_Mn_kNm": 1092.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8500.0,
+                "phi_Pn_kN": 4381.1,
+                "phi_Mn_kNm": 2184.8
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 900,
+        "area_m2": 0.225,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2250.0,
+                "phi_Pn_kN": 3248.2,
+                "phi_Mn_kNm": 612.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4500.0,
+                "phi_Pn_kN": 3711.7,
+                "phi_Mn_kNm": 1224.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9000.0,
+                "phi_Pn_kN": 4638.8,
+                "phi_Mn_kNm": 2449.4
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 950,
+        "area_m2": 0.2375,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2375.0,
+                "phi_Pn_kN": 3428.6,
+                "phi_Mn_kNm": 682.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4750.0,
+                "phi_Pn_kN": 3917.9,
+                "phi_Mn_kNm": 1364.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9500.0,
+                "phi_Pn_kN": 4896.5,
+                "phi_Mn_kNm": 2729.2
+            }
+        ]
+    },
+    {
+        "b_mm": 250,
+        "h_mm": 1000,
+        "area_m2": 0.25,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2500.0,
+                "phi_Pn_kN": 3609.1,
+                "phi_Mn_kNm": 756.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5000.0,
+                "phi_Pn_kN": 4124.1,
+                "phi_Mn_kNm": 1512.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 10000.0,
+                "phi_Pn_kN": 5154.2,
+                "phi_Mn_kNm": 3024.0
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 300,
+        "area_m2": 0.09,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 900.0,
+                "phi_Pn_kN": 1299.3,
+                "phi_Mn_kNm": 81.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 1800.0,
+                "phi_Pn_kN": 1484.7,
+                "phi_Mn_kNm": 163.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 1855.5,
+                "phi_Mn_kNm": 326.6
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 350,
+        "area_m2": 0.105,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1050.0,
+                "phi_Pn_kN": 1515.8,
+                "phi_Mn_kNm": 111.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2100.0,
+                "phi_Pn_kN": 1732.1,
+                "phi_Mn_kNm": 222.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4200.0,
+                "phi_Pn_kN": 2164.8,
+                "phi_Mn_kNm": 444.5
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 400,
+        "area_m2": 0.12,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1200.0,
+                "phi_Pn_kN": 1732.3,
+                "phi_Mn_kNm": 145.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2400.0,
+                "phi_Pn_kN": 1979.6,
+                "phi_Mn_kNm": 290.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4800.0,
+                "phi_Pn_kN": 2474.0,
+                "phi_Mn_kNm": 580.6
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 450,
+        "area_m2": 0.135,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1350.0,
+                "phi_Pn_kN": 1948.9,
+                "phi_Mn_kNm": 183.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2700.0,
+                "phi_Pn_kN": 2227.0,
+                "phi_Mn_kNm": 367.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 5400.0,
+                "phi_Pn_kN": 2783.3,
+                "phi_Mn_kNm": 734.8
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 500,
+        "area_m2": 0.15,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1500.0,
+                "phi_Pn_kN": 2165.4,
+                "phi_Mn_kNm": 226.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3000.0,
+                "phi_Pn_kN": 2474.5,
+                "phi_Mn_kNm": 453.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 3092.5,
+                "phi_Mn_kNm": 907.2
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 550,
+        "area_m2": 0.165,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1650.0,
+                "phi_Pn_kN": 2382.0,
+                "phi_Mn_kNm": 274.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3300.0,
+                "phi_Pn_kN": 2721.9,
+                "phi_Mn_kNm": 548.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6600.0,
+                "phi_Pn_kN": 3401.8,
+                "phi_Mn_kNm": 1097.7
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 600,
+        "area_m2": 0.18,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1800.0,
+                "phi_Pn_kN": 2598.5,
+                "phi_Mn_kNm": 326.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 2969.4,
+                "phi_Mn_kNm": 653.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7200.0,
+                "phi_Pn_kN": 3711.1,
+                "phi_Mn_kNm": 1306.4
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 650,
+        "area_m2": 0.195,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1950.0,
+                "phi_Pn_kN": 2815.1,
+                "phi_Mn_kNm": 383.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3900.0,
+                "phi_Pn_kN": 3216.8,
+                "phi_Mn_kNm": 766.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7800.0,
+                "phi_Pn_kN": 4020.3,
+                "phi_Mn_kNm": 1533.2
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 700,
+        "area_m2": 0.21,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2100.0,
+                "phi_Pn_kN": 3031.6,
+                "phi_Mn_kNm": 444.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4200.0,
+                "phi_Pn_kN": 3464.3,
+                "phi_Mn_kNm": 889.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8400.0,
+                "phi_Pn_kN": 4329.6,
+                "phi_Mn_kNm": 1778.1
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 750,
+        "area_m2": 0.225,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2250.0,
+                "phi_Pn_kN": 3248.2,
+                "phi_Mn_kNm": 510.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4500.0,
+                "phi_Pn_kN": 3711.7,
+                "phi_Mn_kNm": 1020.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9000.0,
+                "phi_Pn_kN": 4638.8,
+                "phi_Mn_kNm": 2041.2
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 800,
+        "area_m2": 0.24,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2400.0,
+                "phi_Pn_kN": 3464.7,
+                "phi_Mn_kNm": 580.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4800.0,
+                "phi_Pn_kN": 3959.2,
+                "phi_Mn_kNm": 1161.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9600.0,
+                "phi_Pn_kN": 4948.1,
+                "phi_Mn_kNm": 2322.4
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 850,
+        "area_m2": 0.255,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2550.0,
+                "phi_Pn_kN": 3681.2,
+                "phi_Mn_kNm": 655.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5100.0,
+                "phi_Pn_kN": 4206.6,
+                "phi_Mn_kNm": 1310.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 10200.0,
+                "phi_Pn_kN": 5257.3,
+                "phi_Mn_kNm": 2621.8
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 900,
+        "area_m2": 0.27,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2700.0,
+                "phi_Pn_kN": 3897.8,
+                "phi_Mn_kNm": 734.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5400.0,
+                "phi_Pn_kN": 4454.0,
+                "phi_Mn_kNm": 1469.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 10800.0,
+                "phi_Pn_kN": 5566.6,
+                "phi_Mn_kNm": 2939.3
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 950,
+        "area_m2": 0.285,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2850.0,
+                "phi_Pn_kN": 4114.3,
+                "phi_Mn_kNm": 818.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5700.0,
+                "phi_Pn_kN": 4701.5,
+                "phi_Mn_kNm": 1637.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 11400.0,
+                "phi_Pn_kN": 5875.8,
+                "phi_Mn_kNm": 3275.0
+            }
+        ]
+    },
+    {
+        "b_mm": 300,
+        "h_mm": 1000,
+        "area_m2": 0.3,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3000.0,
+                "phi_Pn_kN": 4330.9,
+                "phi_Mn_kNm": 907.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 4948.9,
+                "phi_Mn_kNm": 1814.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 12000.0,
+                "phi_Pn_kN": 6185.1,
+                "phi_Mn_kNm": 3628.8
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 350,
+        "area_m2": 0.1225,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1225.0,
+                "phi_Pn_kN": 1768.4,
+                "phi_Mn_kNm": 129.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2450.0,
+                "phi_Pn_kN": 2020.8,
+                "phi_Mn_kNm": 259.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 4900.0,
+                "phi_Pn_kN": 2525.6,
+                "phi_Mn_kNm": 518.6
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 400,
+        "area_m2": 0.14,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1400.0,
+                "phi_Pn_kN": 2021.1,
+                "phi_Mn_kNm": 169.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 2800.0,
+                "phi_Pn_kN": 2309.5,
+                "phi_Mn_kNm": 338.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 5600.0,
+                "phi_Pn_kN": 2886.4,
+                "phi_Mn_kNm": 677.4
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 450,
+        "area_m2": 0.1575,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1575.0,
+                "phi_Pn_kN": 2273.7,
+                "phi_Mn_kNm": 214.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3150.0,
+                "phi_Pn_kN": 2598.2,
+                "phi_Mn_kNm": 428.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6300.0,
+                "phi_Pn_kN": 3247.2,
+                "phi_Mn_kNm": 857.3
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 500,
+        "area_m2": 0.175,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1750.0,
+                "phi_Pn_kN": 2526.3,
+                "phi_Mn_kNm": 264.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3500.0,
+                "phi_Pn_kN": 2886.9,
+                "phi_Mn_kNm": 529.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7000.0,
+                "phi_Pn_kN": 3608.0,
+                "phi_Mn_kNm": 1058.4
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 550,
+        "area_m2": 0.1925,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1925.0,
+                "phi_Pn_kN": 2779.0,
+                "phi_Mn_kNm": 320.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3850.0,
+                "phi_Pn_kN": 3175.6,
+                "phi_Mn_kNm": 640.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7700.0,
+                "phi_Pn_kN": 3968.8,
+                "phi_Mn_kNm": 1280.7
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 600,
+        "area_m2": 0.21,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2100.0,
+                "phi_Pn_kN": 3031.6,
+                "phi_Mn_kNm": 381.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4200.0,
+                "phi_Pn_kN": 3464.3,
+                "phi_Mn_kNm": 762.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8400.0,
+                "phi_Pn_kN": 4329.6,
+                "phi_Mn_kNm": 1524.1
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 650,
+        "area_m2": 0.2275,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2275.0,
+                "phi_Pn_kN": 3284.2,
+                "phi_Mn_kNm": 447.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4550.0,
+                "phi_Pn_kN": 3752.9,
+                "phi_Mn_kNm": 894.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9100.0,
+                "phi_Pn_kN": 4690.4,
+                "phi_Mn_kNm": 1788.7
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 700,
+        "area_m2": 0.245,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2450.0,
+                "phi_Pn_kN": 3536.9,
+                "phi_Mn_kNm": 518.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4900.0,
+                "phi_Pn_kN": 4041.6,
+                "phi_Mn_kNm": 1037.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9800.0,
+                "phi_Pn_kN": 5051.2,
+                "phi_Mn_kNm": 2074.5
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 750,
+        "area_m2": 0.2625,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2625.0,
+                "phi_Pn_kN": 3789.5,
+                "phi_Mn_kNm": 595.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5250.0,
+                "phi_Pn_kN": 4330.3,
+                "phi_Mn_kNm": 1190.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 10500.0,
+                "phi_Pn_kN": 5412.0,
+                "phi_Mn_kNm": 2381.4
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 800,
+        "area_m2": 0.28,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2800.0,
+                "phi_Pn_kN": 4042.1,
+                "phi_Mn_kNm": 677.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5600.0,
+                "phi_Pn_kN": 4619.0,
+                "phi_Mn_kNm": 1354.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 11200.0,
+                "phi_Pn_kN": 5772.7,
+                "phi_Mn_kNm": 2709.5
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 850,
+        "area_m2": 0.2975,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2975.0,
+                "phi_Pn_kN": 4294.8,
+                "phi_Mn_kNm": 764.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5950.0,
+                "phi_Pn_kN": 4907.7,
+                "phi_Mn_kNm": 1529.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 11900.0,
+                "phi_Pn_kN": 6133.5,
+                "phi_Mn_kNm": 3058.8
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 900,
+        "area_m2": 0.315,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3150.0,
+                "phi_Pn_kN": 4547.4,
+                "phi_Mn_kNm": 857.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6300.0,
+                "phi_Pn_kN": 5196.4,
+                "phi_Mn_kNm": 1714.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 12600.0,
+                "phi_Pn_kN": 6494.3,
+                "phi_Mn_kNm": 3429.2
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 950,
+        "area_m2": 0.3325,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3325.0,
+                "phi_Pn_kN": 4800.0,
+                "phi_Mn_kNm": 955.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6650.0,
+                "phi_Pn_kN": 5485.1,
+                "phi_Mn_kNm": 1910.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 13300.0,
+                "phi_Pn_kN": 6855.1,
+                "phi_Mn_kNm": 3820.8
+            }
+        ]
+    },
+    {
+        "b_mm": 350,
+        "h_mm": 1000,
+        "area_m2": 0.35,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3500.0,
+                "phi_Pn_kN": 5052.7,
+                "phi_Mn_kNm": 1058.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7000.0,
+                "phi_Pn_kN": 5773.8,
+                "phi_Mn_kNm": 2116.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 14000.0,
+                "phi_Pn_kN": 7215.9,
+                "phi_Mn_kNm": 4233.6
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 400,
+        "area_m2": 0.16,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1600.0,
+                "phi_Pn_kN": 2309.8,
+                "phi_Mn_kNm": 193.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3200.0,
+                "phi_Pn_kN": 2639.4,
+                "phi_Mn_kNm": 387.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 6400.0,
+                "phi_Pn_kN": 3298.7,
+                "phi_Mn_kNm": 774.1
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 450,
+        "area_m2": 0.18,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 1800.0,
+                "phi_Pn_kN": 2598.5,
+                "phi_Mn_kNm": 244.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 2969.4,
+                "phi_Mn_kNm": 489.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 7200.0,
+                "phi_Pn_kN": 3711.1,
+                "phi_Mn_kNm": 979.8
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 500,
+        "area_m2": 0.2,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2000.0,
+                "phi_Pn_kN": 2887.2,
+                "phi_Mn_kNm": 302.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4000.0,
+                "phi_Pn_kN": 3299.3,
+                "phi_Mn_kNm": 604.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8000.0,
+                "phi_Pn_kN": 4123.4,
+                "phi_Mn_kNm": 1209.6
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 550,
+        "area_m2": 0.22,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2200.0,
+                "phi_Pn_kN": 3176.0,
+                "phi_Mn_kNm": 365.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4400.0,
+                "phi_Pn_kN": 3629.2,
+                "phi_Mn_kNm": 731.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8800.0,
+                "phi_Pn_kN": 4535.7,
+                "phi_Mn_kNm": 1463.6
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 600,
+        "area_m2": 0.24,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2400.0,
+                "phi_Pn_kN": 3464.7,
+                "phi_Mn_kNm": 435.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4800.0,
+                "phi_Pn_kN": 3959.2,
+                "phi_Mn_kNm": 870.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9600.0,
+                "phi_Pn_kN": 4948.1,
+                "phi_Mn_kNm": 1741.8
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 650,
+        "area_m2": 0.26,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2600.0,
+                "phi_Pn_kN": 3753.4,
+                "phi_Mn_kNm": 511.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5200.0,
+                "phi_Pn_kN": 4289.1,
+                "phi_Mn_kNm": 1022.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 10400.0,
+                "phi_Pn_kN": 5360.4,
+                "phi_Mn_kNm": 2044.2
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 700,
+        "area_m2": 0.28,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2800.0,
+                "phi_Pn_kN": 4042.1,
+                "phi_Mn_kNm": 592.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5600.0,
+                "phi_Pn_kN": 4619.0,
+                "phi_Mn_kNm": 1185.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 11200.0,
+                "phi_Pn_kN": 5772.7,
+                "phi_Mn_kNm": 2370.8
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 750,
+        "area_m2": 0.3,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3000.0,
+                "phi_Pn_kN": 4330.9,
+                "phi_Mn_kNm": 680.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 4948.9,
+                "phi_Mn_kNm": 1360.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 12000.0,
+                "phi_Pn_kN": 6185.1,
+                "phi_Mn_kNm": 2721.6
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 800,
+        "area_m2": 0.32,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3200.0,
+                "phi_Pn_kN": 4619.6,
+                "phi_Mn_kNm": 774.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6400.0,
+                "phi_Pn_kN": 5278.9,
+                "phi_Mn_kNm": 1548.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 12800.0,
+                "phi_Pn_kN": 6597.4,
+                "phi_Mn_kNm": 3096.6
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 850,
+        "area_m2": 0.34,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3400.0,
+                "phi_Pn_kN": 4908.3,
+                "phi_Mn_kNm": 873.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6800.0,
+                "phi_Pn_kN": 5608.8,
+                "phi_Mn_kNm": 1747.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 13600.0,
+                "phi_Pn_kN": 7009.8,
+                "phi_Mn_kNm": 3495.7
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 900,
+        "area_m2": 0.36,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 5197.0,
+                "phi_Mn_kNm": 979.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7200.0,
+                "phi_Pn_kN": 5938.7,
+                "phi_Mn_kNm": 1959.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 14400.0,
+                "phi_Pn_kN": 7422.1,
+                "phi_Mn_kNm": 3919.1
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 950,
+        "area_m2": 0.38,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3800.0,
+                "phi_Pn_kN": 5485.8,
+                "phi_Mn_kNm": 1091.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7600.0,
+                "phi_Pn_kN": 6268.7,
+                "phi_Mn_kNm": 2183.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 15200.0,
+                "phi_Pn_kN": 7834.4,
+                "phi_Mn_kNm": 4366.7
+            }
+        ]
+    },
+    {
+        "b_mm": 400,
+        "h_mm": 1000,
+        "area_m2": 0.4,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4000.0,
+                "phi_Pn_kN": 5774.5,
+                "phi_Mn_kNm": 1209.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8000.0,
+                "phi_Pn_kN": 6598.6,
+                "phi_Mn_kNm": 2419.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 16000.0,
+                "phi_Pn_kN": 8246.8,
+                "phi_Mn_kNm": 4838.4
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 450,
+        "area_m2": 0.2025,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2025.0,
+                "phi_Pn_kN": 2923.3,
+                "phi_Mn_kNm": 275.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4050.0,
+                "phi_Pn_kN": 3340.5,
+                "phi_Mn_kNm": 551.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 8100.0,
+                "phi_Pn_kN": 4174.9,
+                "phi_Mn_kNm": 1102.2
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 500,
+        "area_m2": 0.225,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2250.0,
+                "phi_Pn_kN": 3248.2,
+                "phi_Mn_kNm": 340.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4500.0,
+                "phi_Pn_kN": 3711.7,
+                "phi_Mn_kNm": 680.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9000.0,
+                "phi_Pn_kN": 4638.8,
+                "phi_Mn_kNm": 1360.8
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 550,
+        "area_m2": 0.2475,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2475.0,
+                "phi_Pn_kN": 3573.0,
+                "phi_Mn_kNm": 411.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 4950.0,
+                "phi_Pn_kN": 4082.9,
+                "phi_Mn_kNm": 823.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 9900.0,
+                "phi_Pn_kN": 5102.7,
+                "phi_Mn_kNm": 1646.6
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 600,
+        "area_m2": 0.27,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2700.0,
+                "phi_Pn_kN": 3897.8,
+                "phi_Mn_kNm": 489.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5400.0,
+                "phi_Pn_kN": 4454.0,
+                "phi_Mn_kNm": 979.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 10800.0,
+                "phi_Pn_kN": 5566.6,
+                "phi_Mn_kNm": 1959.6
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 650,
+        "area_m2": 0.2925,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2925.0,
+                "phi_Pn_kN": 4222.6,
+                "phi_Mn_kNm": 574.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5850.0,
+                "phi_Pn_kN": 4825.2,
+                "phi_Mn_kNm": 1149.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 11700.0,
+                "phi_Pn_kN": 6030.5,
+                "phi_Mn_kNm": 2299.8
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 700,
+        "area_m2": 0.315,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3150.0,
+                "phi_Pn_kN": 4547.4,
+                "phi_Mn_kNm": 666.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6300.0,
+                "phi_Pn_kN": 5196.4,
+                "phi_Mn_kNm": 1333.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 12600.0,
+                "phi_Pn_kN": 6494.3,
+                "phi_Mn_kNm": 2667.2
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 750,
+        "area_m2": 0.3375,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3375.0,
+                "phi_Pn_kN": 4872.2,
+                "phi_Mn_kNm": 765.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6750.0,
+                "phi_Pn_kN": 5567.6,
+                "phi_Mn_kNm": 1530.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 13500.0,
+                "phi_Pn_kN": 6958.2,
+                "phi_Mn_kNm": 3061.8
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 800,
+        "area_m2": 0.36,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 5197.0,
+                "phi_Mn_kNm": 870.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7200.0,
+                "phi_Pn_kN": 5938.7,
+                "phi_Mn_kNm": 1741.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 14400.0,
+                "phi_Pn_kN": 7422.1,
+                "phi_Mn_kNm": 3483.6
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 850,
+        "area_m2": 0.3825,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3825.0,
+                "phi_Pn_kN": 5521.9,
+                "phi_Mn_kNm": 983.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7650.0,
+                "phi_Pn_kN": 6309.9,
+                "phi_Mn_kNm": 1966.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 15300.0,
+                "phi_Pn_kN": 7886.0,
+                "phi_Mn_kNm": 3932.7
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 900,
+        "area_m2": 0.405,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4050.0,
+                "phi_Pn_kN": 5846.7,
+                "phi_Mn_kNm": 1102.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8100.0,
+                "phi_Pn_kN": 6681.1,
+                "phi_Mn_kNm": 2204.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 16200.0,
+                "phi_Pn_kN": 8349.9,
+                "phi_Mn_kNm": 4409.0
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 950,
+        "area_m2": 0.4275,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4275.0,
+                "phi_Pn_kN": 6171.5,
+                "phi_Mn_kNm": 1228.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8550.0,
+                "phi_Pn_kN": 7052.2,
+                "phi_Mn_kNm": 2456.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 17100.0,
+                "phi_Pn_kN": 8813.8,
+                "phi_Mn_kNm": 4912.5
+            }
+        ]
+    },
+    {
+        "b_mm": 450,
+        "h_mm": 1000,
+        "area_m2": 0.45,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4500.0,
+                "phi_Pn_kN": 6496.3,
+                "phi_Mn_kNm": 1360.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9000.0,
+                "phi_Pn_kN": 7423.4,
+                "phi_Mn_kNm": 2721.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 18000.0,
+                "phi_Pn_kN": 9277.6,
+                "phi_Mn_kNm": 5443.2
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 500,
+        "area_m2": 0.25,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2500.0,
+                "phi_Pn_kN": 3609.1,
+                "phi_Mn_kNm": 378.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5000.0,
+                "phi_Pn_kN": 4124.1,
+                "phi_Mn_kNm": 756.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 10000.0,
+                "phi_Pn_kN": 5154.2,
+                "phi_Mn_kNm": 1512.0
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 550,
+        "area_m2": 0.275,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 2750.0,
+                "phi_Pn_kN": 3970.0,
+                "phi_Mn_kNm": 457.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 5500.0,
+                "phi_Pn_kN": 4536.5,
+                "phi_Mn_kNm": 914.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 11000.0,
+                "phi_Pn_kN": 5669.7,
+                "phi_Mn_kNm": 1829.5
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 600,
+        "area_m2": 0.3,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3000.0,
+                "phi_Pn_kN": 4330.9,
+                "phi_Mn_kNm": 544.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 4948.9,
+                "phi_Mn_kNm": 1088.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 12000.0,
+                "phi_Pn_kN": 6185.1,
+                "phi_Mn_kNm": 2177.3
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 650,
+        "area_m2": 0.325,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3250.0,
+                "phi_Pn_kN": 4691.8,
+                "phi_Mn_kNm": 638.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6500.0,
+                "phi_Pn_kN": 5361.4,
+                "phi_Mn_kNm": 1277.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 13000.0,
+                "phi_Pn_kN": 6700.5,
+                "phi_Mn_kNm": 2555.3
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 700,
+        "area_m2": 0.35,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3500.0,
+                "phi_Pn_kN": 5052.7,
+                "phi_Mn_kNm": 740.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7000.0,
+                "phi_Pn_kN": 5773.8,
+                "phi_Mn_kNm": 1481.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 14000.0,
+                "phi_Pn_kN": 7215.9,
+                "phi_Mn_kNm": 2963.5
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 750,
+        "area_m2": 0.375,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3750.0,
+                "phi_Pn_kN": 5413.6,
+                "phi_Mn_kNm": 850.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7500.0,
+                "phi_Pn_kN": 6186.2,
+                "phi_Mn_kNm": 1701.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 15000.0,
+                "phi_Pn_kN": 7731.4,
+                "phi_Mn_kNm": 3402.0
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 800,
+        "area_m2": 0.4,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4000.0,
+                "phi_Pn_kN": 5774.5,
+                "phi_Mn_kNm": 967.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8000.0,
+                "phi_Pn_kN": 6598.6,
+                "phi_Mn_kNm": 1935.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 16000.0,
+                "phi_Pn_kN": 8246.8,
+                "phi_Mn_kNm": 3870.7
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 850,
+        "area_m2": 0.425,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4250.0,
+                "phi_Pn_kN": 6135.4,
+                "phi_Mn_kNm": 1092.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8500.0,
+                "phi_Pn_kN": 7011.0,
+                "phi_Mn_kNm": 2184.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 17000.0,
+                "phi_Pn_kN": 8762.2,
+                "phi_Mn_kNm": 4369.7
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 900,
+        "area_m2": 0.45,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4500.0,
+                "phi_Pn_kN": 6496.3,
+                "phi_Mn_kNm": 1224.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9000.0,
+                "phi_Pn_kN": 7423.4,
+                "phi_Mn_kNm": 2449.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 18000.0,
+                "phi_Pn_kN": 9277.6,
+                "phi_Mn_kNm": 4898.9
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 950,
+        "area_m2": 0.475,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4750.0,
+                "phi_Pn_kN": 6857.2,
+                "phi_Mn_kNm": 1364.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9500.0,
+                "phi_Pn_kN": 7835.8,
+                "phi_Mn_kNm": 2729.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 19000.0,
+                "phi_Pn_kN": 9793.1,
+                "phi_Mn_kNm": 5458.3
+            }
+        ]
+    },
+    {
+        "b_mm": 500,
+        "h_mm": 1000,
+        "area_m2": 0.5,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5000.0,
+                "phi_Pn_kN": 7218.1,
+                "phi_Mn_kNm": 1512.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 10000.0,
+                "phi_Pn_kN": 8248.2,
+                "phi_Mn_kNm": 3024.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 20000.0,
+                "phi_Pn_kN": 10308.5,
+                "phi_Mn_kNm": 6048.0
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 550,
+        "area_m2": 0.3025,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3025.0,
+                "phi_Pn_kN": 4367.0,
+                "phi_Mn_kNm": 503.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6050.0,
+                "phi_Pn_kN": 4990.2,
+                "phi_Mn_kNm": 1006.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 12100.0,
+                "phi_Pn_kN": 6236.6,
+                "phi_Mn_kNm": 2012.5
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 600,
+        "area_m2": 0.33,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3300.0,
+                "phi_Pn_kN": 4764.0,
+                "phi_Mn_kNm": 598.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 6600.0,
+                "phi_Pn_kN": 5443.8,
+                "phi_Mn_kNm": 1197.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 13200.0,
+                "phi_Pn_kN": 6803.6,
+                "phi_Mn_kNm": 2395.0
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 650,
+        "area_m2": 0.3575,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3575.0,
+                "phi_Pn_kN": 5161.0,
+                "phi_Mn_kNm": 702.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7150.0,
+                "phi_Pn_kN": 5897.5,
+                "phi_Mn_kNm": 1405.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 14300.0,
+                "phi_Pn_kN": 7370.6,
+                "phi_Mn_kNm": 2810.8
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 700,
+        "area_m2": 0.385,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3850.0,
+                "phi_Pn_kN": 5558.0,
+                "phi_Mn_kNm": 815.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7700.0,
+                "phi_Pn_kN": 6351.1,
+                "phi_Mn_kNm": 1629.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 15400.0,
+                "phi_Pn_kN": 7937.5,
+                "phi_Mn_kNm": 3259.9
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 750,
+        "area_m2": 0.4125,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4125.0,
+                "phi_Pn_kN": 5954.9,
+                "phi_Mn_kNm": 935.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8250.0,
+                "phi_Pn_kN": 6804.8,
+                "phi_Mn_kNm": 1871.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 16500.0,
+                "phi_Pn_kN": 8504.5,
+                "phi_Mn_kNm": 3742.2
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 800,
+        "area_m2": 0.44,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4400.0,
+                "phi_Pn_kN": 6351.9,
+                "phi_Mn_kNm": 1064.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8800.0,
+                "phi_Pn_kN": 7258.5,
+                "phi_Mn_kNm": 2128.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 17600.0,
+                "phi_Pn_kN": 9071.5,
+                "phi_Mn_kNm": 4257.8
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 850,
+        "area_m2": 0.4675,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4675.0,
+                "phi_Pn_kN": 6748.9,
+                "phi_Mn_kNm": 1201.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9350.0,
+                "phi_Pn_kN": 7712.1,
+                "phi_Mn_kNm": 2403.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 18700.0,
+                "phi_Pn_kN": 9638.4,
+                "phi_Mn_kNm": 4806.6
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 900,
+        "area_m2": 0.495,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4950.0,
+                "phi_Pn_kN": 7145.9,
+                "phi_Mn_kNm": 1347.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9900.0,
+                "phi_Pn_kN": 8165.8,
+                "phi_Mn_kNm": 2694.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 19800.0,
+                "phi_Pn_kN": 10205.4,
+                "phi_Mn_kNm": 5388.8
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 950,
+        "area_m2": 0.5225,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5225.0,
+                "phi_Pn_kN": 7542.9,
+                "phi_Mn_kNm": 1501.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 10450.0,
+                "phi_Pn_kN": 8619.4,
+                "phi_Mn_kNm": 3002.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 20900.0,
+                "phi_Pn_kN": 10772.4,
+                "phi_Mn_kNm": 6004.2
+            }
+        ]
+    },
+    {
+        "b_mm": 550,
+        "h_mm": 1000,
+        "area_m2": 0.55,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5500.0,
+                "phi_Pn_kN": 7939.9,
+                "phi_Mn_kNm": 1663.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 11000.0,
+                "phi_Pn_kN": 9073.1,
+                "phi_Mn_kNm": 3326.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 22000.0,
+                "phi_Pn_kN": 11339.3,
+                "phi_Mn_kNm": 6652.8
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 600,
+        "area_m2": 0.36,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3600.0,
+                "phi_Pn_kN": 5197.0,
+                "phi_Mn_kNm": 653.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7200.0,
+                "phi_Pn_kN": 5938.7,
+                "phi_Mn_kNm": 1306.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 14400.0,
+                "phi_Pn_kN": 7422.1,
+                "phi_Mn_kNm": 2612.7
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 650,
+        "area_m2": 0.39,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 3900.0,
+                "phi_Pn_kN": 5630.1,
+                "phi_Mn_kNm": 766.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 7800.0,
+                "phi_Pn_kN": 6433.6,
+                "phi_Mn_kNm": 1533.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 15600.0,
+                "phi_Pn_kN": 8040.6,
+                "phi_Mn_kNm": 3066.3
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 700,
+        "area_m2": 0.42,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4200.0,
+                "phi_Pn_kN": 6063.2,
+                "phi_Mn_kNm": 889.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8400.0,
+                "phi_Pn_kN": 6928.5,
+                "phi_Mn_kNm": 1778.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 16800.0,
+                "phi_Pn_kN": 8659.1,
+                "phi_Mn_kNm": 3556.2
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 750,
+        "area_m2": 0.45,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4500.0,
+                "phi_Pn_kN": 6496.3,
+                "phi_Mn_kNm": 1020.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9000.0,
+                "phi_Pn_kN": 7423.4,
+                "phi_Mn_kNm": 2041.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 18000.0,
+                "phi_Pn_kN": 9277.6,
+                "phi_Mn_kNm": 4082.4
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 800,
+        "area_m2": 0.48,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4800.0,
+                "phi_Pn_kN": 6929.4,
+                "phi_Mn_kNm": 1161.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9600.0,
+                "phi_Pn_kN": 7918.3,
+                "phi_Mn_kNm": 2322.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 19200.0,
+                "phi_Pn_kN": 9896.1,
+                "phi_Mn_kNm": 4644.9
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 850,
+        "area_m2": 0.51,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5100.0,
+                "phi_Pn_kN": 7362.5,
+                "phi_Mn_kNm": 1310.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 10200.0,
+                "phi_Pn_kN": 8413.2,
+                "phi_Mn_kNm": 2621.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 20400.0,
+                "phi_Pn_kN": 10514.6,
+                "phi_Mn_kNm": 5243.6
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 900,
+        "area_m2": 0.54,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5400.0,
+                "phi_Pn_kN": 7795.6,
+                "phi_Mn_kNm": 1469.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 10800.0,
+                "phi_Pn_kN": 8908.1,
+                "phi_Mn_kNm": 2939.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 21600.0,
+                "phi_Pn_kN": 11133.2,
+                "phi_Mn_kNm": 5878.7
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 950,
+        "area_m2": 0.57,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5700.0,
+                "phi_Pn_kN": 8228.7,
+                "phi_Mn_kNm": 1637.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 11400.0,
+                "phi_Pn_kN": 9403.0,
+                "phi_Mn_kNm": 3275.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 22800.0,
+                "phi_Pn_kN": 11751.7,
+                "phi_Mn_kNm": 6550.0
+            }
+        ]
+    },
+    {
+        "b_mm": 600,
+        "h_mm": 1000,
+        "area_m2": 0.6,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 8661.7,
+                "phi_Mn_kNm": 1814.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 12000.0,
+                "phi_Pn_kN": 9897.9,
+                "phi_Mn_kNm": 3628.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 24000.0,
+                "phi_Pn_kN": 12370.2,
+                "phi_Mn_kNm": 7257.6
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 650,
+        "area_m2": 0.4225,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4225.0,
+                "phi_Pn_kN": 6099.3,
+                "phi_Mn_kNm": 830.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 8450.0,
+                "phi_Pn_kN": 6969.8,
+                "phi_Mn_kNm": 1660.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 16900.0,
+                "phi_Pn_kN": 8710.7,
+                "phi_Mn_kNm": 3321.9
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 700,
+        "area_m2": 0.455,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4550.0,
+                "phi_Pn_kN": 6568.5,
+                "phi_Mn_kNm": 963.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9100.0,
+                "phi_Pn_kN": 7505.9,
+                "phi_Mn_kNm": 1926.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 18200.0,
+                "phi_Pn_kN": 9380.7,
+                "phi_Mn_kNm": 3852.6
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 750,
+        "area_m2": 0.4875,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4875.0,
+                "phi_Pn_kN": 7037.7,
+                "phi_Mn_kNm": 1105.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9750.0,
+                "phi_Pn_kN": 8042.0,
+                "phi_Mn_kNm": 2211.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 19500.0,
+                "phi_Pn_kN": 10050.8,
+                "phi_Mn_kNm": 4422.6
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 800,
+        "area_m2": 0.52,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5200.0,
+                "phi_Pn_kN": 7506.8,
+                "phi_Mn_kNm": 1258.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 10400.0,
+                "phi_Pn_kN": 8578.2,
+                "phi_Mn_kNm": 2516.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 20800.0,
+                "phi_Pn_kN": 10720.8,
+                "phi_Mn_kNm": 5031.9
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 850,
+        "area_m2": 0.5525,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5525.0,
+                "phi_Pn_kN": 7976.0,
+                "phi_Mn_kNm": 1420.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 11050.0,
+                "phi_Pn_kN": 9114.3,
+                "phi_Mn_kNm": 2840.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 22100.0,
+                "phi_Pn_kN": 11390.9,
+                "phi_Mn_kNm": 5680.6
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 900,
+        "area_m2": 0.585,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5850.0,
+                "phi_Pn_kN": 8445.2,
+                "phi_Mn_kNm": 1592.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 11700.0,
+                "phi_Pn_kN": 9650.4,
+                "phi_Mn_kNm": 3184.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 23400.0,
+                "phi_Pn_kN": 12060.9,
+                "phi_Mn_kNm": 6368.5
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 950,
+        "area_m2": 0.6175,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6175.0,
+                "phi_Pn_kN": 8914.4,
+                "phi_Mn_kNm": 1774.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 12350.0,
+                "phi_Pn_kN": 10186.6,
+                "phi_Mn_kNm": 3547.9
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 24700.0,
+                "phi_Pn_kN": 12731.0,
+                "phi_Mn_kNm": 7095.8
+            }
+        ]
+    },
+    {
+        "b_mm": 650,
+        "h_mm": 1000,
+        "area_m2": 0.65,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6500.0,
+                "phi_Pn_kN": 9383.6,
+                "phi_Mn_kNm": 1965.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 13000.0,
+                "phi_Pn_kN": 10722.7,
+                "phi_Mn_kNm": 3931.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 26000.0,
+                "phi_Pn_kN": 13401.0,
+                "phi_Mn_kNm": 7862.4
+            }
+        ]
+    },
+    {
+        "b_mm": 700,
+        "h_mm": 700,
+        "area_m2": 0.49,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 4900.0,
+                "phi_Pn_kN": 7073.8,
+                "phi_Mn_kNm": 1037.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 9800.0,
+                "phi_Pn_kN": 8083.3,
+                "phi_Mn_kNm": 2074.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 19600.0,
+                "phi_Pn_kN": 10102.3,
+                "phi_Mn_kNm": 4148.9
+            }
+        ]
+    },
+    {
+        "b_mm": 700,
+        "h_mm": 750,
+        "area_m2": 0.525,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5250.0,
+                "phi_Pn_kN": 7579.0,
+                "phi_Mn_kNm": 1190.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 10500.0,
+                "phi_Pn_kN": 8660.7,
+                "phi_Mn_kNm": 2381.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 21000.0,
+                "phi_Pn_kN": 10823.9,
+                "phi_Mn_kNm": 4762.8
+            }
+        ]
+    },
+    {
+        "b_mm": 700,
+        "h_mm": 800,
+        "area_m2": 0.56,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5600.0,
+                "phi_Pn_kN": 8084.3,
+                "phi_Mn_kNm": 1354.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 11200.0,
+                "phi_Pn_kN": 9238.0,
+                "phi_Mn_kNm": 2709.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 22400.0,
+                "phi_Pn_kN": 11545.5,
+                "phi_Mn_kNm": 5419.0
+            }
+        ]
+    },
+    {
+        "b_mm": 700,
+        "h_mm": 850,
+        "area_m2": 0.595,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5950.0,
+                "phi_Pn_kN": 8589.6,
+                "phi_Mn_kNm": 1529.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 11900.0,
+                "phi_Pn_kN": 9815.4,
+                "phi_Mn_kNm": 3058.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 23800.0,
+                "phi_Pn_kN": 12267.1,
+                "phi_Mn_kNm": 6117.6
+            }
+        ]
+    },
+    {
+        "b_mm": 700,
+        "h_mm": 900,
+        "area_m2": 0.63,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6300.0,
+                "phi_Pn_kN": 9094.8,
+                "phi_Mn_kNm": 1714.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 12600.0,
+                "phi_Pn_kN": 10392.8,
+                "phi_Mn_kNm": 3429.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 25200.0,
+                "phi_Pn_kN": 12988.7,
+                "phi_Mn_kNm": 6858.4
+            }
+        ]
+    },
+    {
+        "b_mm": 700,
+        "h_mm": 950,
+        "area_m2": 0.665,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6650.0,
+                "phi_Pn_kN": 9600.1,
+                "phi_Mn_kNm": 1910.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 13300.0,
+                "phi_Pn_kN": 10970.2,
+                "phi_Mn_kNm": 3820.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 26600.0,
+                "phi_Pn_kN": 13710.3,
+                "phi_Mn_kNm": 7641.6
+            }
+        ]
+    },
+    {
+        "b_mm": 700,
+        "h_mm": 1000,
+        "area_m2": 0.7,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 7000.0,
+                "phi_Pn_kN": 10105.4,
+                "phi_Mn_kNm": 2116.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 14000.0,
+                "phi_Pn_kN": 11547.5,
+                "phi_Mn_kNm": 4233.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 28000.0,
+                "phi_Pn_kN": 14431.9,
+                "phi_Mn_kNm": 8467.2
+            }
+        ]
+    },
+    {
+        "b_mm": 750,
+        "h_mm": 750,
+        "area_m2": 0.5625,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 5625.0,
+                "phi_Pn_kN": 8120.4,
+                "phi_Mn_kNm": 1275.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 11250.0,
+                "phi_Pn_kN": 9279.3,
+                "phi_Mn_kNm": 2551.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 22500.0,
+                "phi_Pn_kN": 11597.0,
+                "phi_Mn_kNm": 5103.0
+            }
+        ]
+    },
+    {
+        "b_mm": 750,
+        "h_mm": 800,
+        "area_m2": 0.6,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6000.0,
+                "phi_Pn_kN": 8661.7,
+                "phi_Mn_kNm": 1451.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 12000.0,
+                "phi_Pn_kN": 9897.9,
+                "phi_Mn_kNm": 2903.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 24000.0,
+                "phi_Pn_kN": 12370.2,
+                "phi_Mn_kNm": 5806.1
+            }
+        ]
+    },
+    {
+        "b_mm": 750,
+        "h_mm": 850,
+        "area_m2": 0.6375,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6375.0,
+                "phi_Pn_kN": 9203.1,
+                "phi_Mn_kNm": 1638.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 12750.0,
+                "phi_Pn_kN": 10516.5,
+                "phi_Mn_kNm": 3277.3
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 25500.0,
+                "phi_Pn_kN": 13143.3,
+                "phi_Mn_kNm": 6554.5
+            }
+        ]
+    },
+    {
+        "b_mm": 750,
+        "h_mm": 900,
+        "area_m2": 0.675,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6750.0,
+                "phi_Pn_kN": 9744.5,
+                "phi_Mn_kNm": 1837.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 13500.0,
+                "phi_Pn_kN": 11135.1,
+                "phi_Mn_kNm": 3674.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 27000.0,
+                "phi_Pn_kN": 13916.4,
+                "phi_Mn_kNm": 7348.3
+            }
+        ]
+    },
+    {
+        "b_mm": 750,
+        "h_mm": 950,
+        "area_m2": 0.7125,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 7125.0,
+                "phi_Pn_kN": 10285.8,
+                "phi_Mn_kNm": 2046.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 14250.0,
+                "phi_Pn_kN": 11753.7,
+                "phi_Mn_kNm": 4093.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 28500.0,
+                "phi_Pn_kN": 14689.6,
+                "phi_Mn_kNm": 8187.5
+            }
+        ]
+    },
+    {
+        "b_mm": 750,
+        "h_mm": 1000,
+        "area_m2": 0.75,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 7500.0,
+                "phi_Pn_kN": 10827.2,
+                "phi_Mn_kNm": 2268.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 15000.0,
+                "phi_Pn_kN": 12372.4,
+                "phi_Mn_kNm": 4536.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 30000.0,
+                "phi_Pn_kN": 15462.7,
+                "phi_Mn_kNm": 9072.0
+            }
+        ]
+    },
+    {
+        "b_mm": 800,
+        "h_mm": 800,
+        "area_m2": 0.64,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6400.0,
+                "phi_Pn_kN": 9239.2,
+                "phi_Mn_kNm": 1548.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 12800.0,
+                "phi_Pn_kN": 10557.7,
+                "phi_Mn_kNm": 3096.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 25600.0,
+                "phi_Pn_kN": 13194.9,
+                "phi_Mn_kNm": 6193.2
+            }
+        ]
+    },
+    {
+        "b_mm": 800,
+        "h_mm": 850,
+        "area_m2": 0.68,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 6800.0,
+                "phi_Pn_kN": 9816.6,
+                "phi_Mn_kNm": 1747.9
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 13600.0,
+                "phi_Pn_kN": 11217.6,
+                "phi_Mn_kNm": 3495.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 27200.0,
+                "phi_Pn_kN": 14019.5,
+                "phi_Mn_kNm": 6991.5
+            }
+        ]
+    },
+    {
+        "b_mm": 800,
+        "h_mm": 900,
+        "area_m2": 0.72,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 7200.0,
+                "phi_Pn_kN": 10394.1,
+                "phi_Mn_kNm": 1959.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 14400.0,
+                "phi_Pn_kN": 11877.5,
+                "phi_Mn_kNm": 3919.1
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 28800.0,
+                "phi_Pn_kN": 14844.2,
+                "phi_Mn_kNm": 7838.2
+            }
+        ]
+    },
+    {
+        "b_mm": 800,
+        "h_mm": 950,
+        "area_m2": 0.76,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 7600.0,
+                "phi_Pn_kN": 10971.5,
+                "phi_Mn_kNm": 2183.3
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 15200.0,
+                "phi_Pn_kN": 12537.3,
+                "phi_Mn_kNm": 4366.7
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 30400.0,
+                "phi_Pn_kN": 15668.9,
+                "phi_Mn_kNm": 8733.3
+            }
+        ]
+    },
+    {
+        "b_mm": 800,
+        "h_mm": 1000,
+        "area_m2": 0.8,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 8000.0,
+                "phi_Pn_kN": 11549.0,
+                "phi_Mn_kNm": 2419.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 16000.0,
+                "phi_Pn_kN": 13197.2,
+                "phi_Mn_kNm": 4838.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 32000.0,
+                "phi_Pn_kN": 16493.6,
+                "phi_Mn_kNm": 9676.8
+            }
+        ]
+    },
+    {
+        "b_mm": 850,
+        "h_mm": 850,
+        "area_m2": 0.7225,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 7225.0,
+                "phi_Pn_kN": 10430.2,
+                "phi_Mn_kNm": 1857.1
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 14450.0,
+                "phi_Pn_kN": 11918.7,
+                "phi_Mn_kNm": 3714.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 28900.0,
+                "phi_Pn_kN": 14895.8,
+                "phi_Mn_kNm": 7428.5
+            }
+        ]
+    },
+    {
+        "b_mm": 850,
+        "h_mm": 900,
+        "area_m2": 0.765,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 7650.0,
+                "phi_Pn_kN": 11043.7,
+                "phi_Mn_kNm": 2082.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 15300.0,
+                "phi_Pn_kN": 12619.8,
+                "phi_Mn_kNm": 4164.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 30600.0,
+                "phi_Pn_kN": 15772.0,
+                "phi_Mn_kNm": 8328.1
+            }
+        ]
+    },
+    {
+        "b_mm": 850,
+        "h_mm": 950,
+        "area_m2": 0.8075,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 8075.0,
+                "phi_Pn_kN": 11657.3,
+                "phi_Mn_kNm": 2319.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 16150.0,
+                "phi_Pn_kN": 13320.9,
+                "phi_Mn_kNm": 4639.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 32300.0,
+                "phi_Pn_kN": 16648.2,
+                "phi_Mn_kNm": 9279.1
+            }
+        ]
+    },
+    {
+        "b_mm": 850,
+        "h_mm": 1000,
+        "area_m2": 0.85,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 8500.0,
+                "phi_Pn_kN": 12270.8,
+                "phi_Mn_kNm": 2570.4
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 17000.0,
+                "phi_Pn_kN": 14022.0,
+                "phi_Mn_kNm": 5140.8
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 34000.0,
+                "phi_Pn_kN": 17524.4,
+                "phi_Mn_kNm": 10281.6
+            }
+        ]
+    },
+    {
+        "b_mm": 900,
+        "h_mm": 900,
+        "area_m2": 0.81,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 8100.0,
+                "phi_Pn_kN": 11693.4,
+                "phi_Mn_kNm": 2204.5
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 16200.0,
+                "phi_Pn_kN": 13362.1,
+                "phi_Mn_kNm": 4409.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 32400.0,
+                "phi_Pn_kN": 16699.7,
+                "phi_Mn_kNm": 8818.0
+            }
+        ]
+    },
+    {
+        "b_mm": 900,
+        "h_mm": 950,
+        "area_m2": 0.855,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 8550.0,
+                "phi_Pn_kN": 12343.0,
+                "phi_Mn_kNm": 2456.2
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 17100.0,
+                "phi_Pn_kN": 14104.5,
+                "phi_Mn_kNm": 4912.5
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 34200.0,
+                "phi_Pn_kN": 17627.5,
+                "phi_Mn_kNm": 9825.0
+            }
+        ]
+    },
+    {
+        "b_mm": 900,
+        "h_mm": 1000,
+        "area_m2": 0.9,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 9000.0,
+                "phi_Pn_kN": 12992.6,
+                "phi_Mn_kNm": 2721.6
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 18000.0,
+                "phi_Pn_kN": 14846.8,
+                "phi_Mn_kNm": 5443.2
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 36000.0,
+                "phi_Pn_kN": 18555.3,
+                "phi_Mn_kNm": 10886.4
+            }
+        ]
+    },
+    {
+        "b_mm": 950,
+        "h_mm": 950,
+        "area_m2": 0.9025,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 9025.0,
+                "phi_Pn_kN": 13028.7,
+                "phi_Mn_kNm": 2592.7
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 18050.0,
+                "phi_Pn_kN": 14888.1,
+                "phi_Mn_kNm": 5185.4
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 36100.0,
+                "phi_Pn_kN": 18606.8,
+                "phi_Mn_kNm": 10370.8
+            }
+        ]
+    },
+    {
+        "b_mm": 950,
+        "h_mm": 1000,
+        "area_m2": 0.95,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 9500.0,
+                "phi_Pn_kN": 13714.4,
+                "phi_Mn_kNm": 2872.8
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 19000.0,
+                "phi_Pn_kN": 15671.7,
+                "phi_Mn_kNm": 5745.6
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 38000.0,
+                "phi_Pn_kN": 19586.1,
+                "phi_Mn_kNm": 11491.2
+            }
+        ]
+    },
+    {
+        "b_mm": 1000,
+        "h_mm": 1000,
+        "area_m2": 1.0,
+        "tiers": [
+            {
+                "tier_level": 1,
+                "rho_percent": 1.0,
+                "As_mm2": 10000.0,
+                "phi_Pn_kN": 14436.2,
+                "phi_Mn_kNm": 3024.0
+            },
+            {
+                "tier_level": 2,
+                "rho_percent": 2.0,
+                "As_mm2": 20000.0,
+                "phi_Pn_kN": 16496.5,
+                "phi_Mn_kNm": 6048.0
+            },
+            {
+                "tier_level": 3,
+                "rho_percent": 4.0,
+                "As_mm2": 40000.0,
+                "phi_Pn_kN": 20617.0,
+                "phi_Mn_kNm": 12096.0
+            }
+        ]
+    }
+]
