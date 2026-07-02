@@ -32,11 +32,11 @@ The order below is prioritized by: (1) safety/correctness, (2) unblocks other wo
 
 ## Starting Point 2: Fix the MCP Server Path (BLOCKING)
 
-**Why start here:** The MCP server is completely broken — it points to `D:/Revit toolset/` (old project name). Every tool fails. This blocks any interactive model editing.
+**Why start here:** The MCP server is completely broken — it points to `D:/ResPlan toolset/` (old project name). Every tool fails. This blocks any interactive model editing.
 
 **What to do:**
-1. In `resplan-mcp/server.py`, change `PROJECT_DIR` from `'D:/Revit toolset/Projects/Sample Project'` to a dynamic path based on the actual repo location
-2. Fix the `run_structural_analysis` subprocess path from `'D:/Revit toolset/Structural Tools'` to the correct path
+1. In `resplan-mcp/server.py`, change `PROJECT_DIR` from `'D:/ResPlan toolset/Projects/Sample Project'` to a dynamic path based on the actual repo location
+2. Fix the `run_structural_analysis` subprocess path from `'D:/ResPlan toolset/Structural Tools'` to the correct path
 3. Fix `get_types` tool — it reads `types` from `resplan_nodes.json` which has no such key. Point it to `resplan_types.json` / `structural_types.json` instead
 4. Test each of the 13 tools manually against the live project
 

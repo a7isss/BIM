@@ -164,6 +164,18 @@
             "name": "Kitchen",
             "color": "#fce7f3",
             "label": "KITCHEN (\u0645\u0637\u0628\u062e)"
+        },
+        {
+            "id": "STORAGE_SPACE",
+            "name": "Storage",
+            "color": "#e5e7eb",
+            "label": "STORAGE (مستودع)"
+        },
+        {
+            "id": "INTERNAL_GARDEN_SPACE",
+            "name": "Internal Garden",
+            "color": "#bbf7d0",
+            "label": "GARDEN (حديقة)"
         }
     ],
     "furniture": [

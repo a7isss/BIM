@@ -18,7 +18,7 @@
 |------|--------|-------|
 | Centralize material config | Make `design_assumptions.json` the single source of truth. Update `beam_library_generator.py` and `slab_library_generator.py` to read from it instead of hardcoding. Reconcile `structural_types.json` (Global Libraries) with assumptions. | 2 |
 | Regenerate all libraries | Re-run all 4 generators (`column_library_generator.py`, `beam_library_generator.py`, `slab_library_generator.py`, `footing_library_generator.py`) with the corrected config. Verify output JSON files. | 1 |
-| Fix MCP server paths | Change `PROJECT_DIR` from `D:/Revit toolset/...` to dynamic path. Fix `run_structural_analysis` subprocess path. Fix `get_types` to read from correct file. | 1 |
+| Fix MCP server paths | Change `PROJECT_DIR` from `D:/ResPlan toolset/...` to dynamic path. Fix `run_structural_analysis` subprocess path. Fix `get_types` to read from correct file. | 1 |
 | Set up pytest | Create `Structural Tools/tests/` directory. Add `conftest.py` with shared fixtures (load design_assumptions, load libraries). Add `pytest.ini` or `pyproject.toml` config. | 1 |
 | Write selector tests | Test `column_selector.py`, `beam_selector.py`, `footing_selector.py` with known Pu/Mu/Vu inputs. Assert correct section is returned. Test edge cases (zero load, very high load → None). | 3 |
 | Write formula tests | Test ACI formulas directly: column axial capacity, beam flexural capacity, shear capacity, punching shear. Compare against hand-calculated values for a known section. | 3 |
@@ -72,7 +72,7 @@
 |------|--------|-------|
 | Delete dead frontend code | Remove `App.css` (Vite template leftover). Remove `calculateBeamSize` from `StructuralLabels.ts`. Remove `react-to-print` from `package.json`. Remove `autoprefixer` and `postcss` from dev deps (unnecessary with Tailwind v4). | 1 |
 | Delete dead Python files | Remove `frame3dd_example.py` (standalone demo). Remove `mock_frame3dd_results.json` (legacy test file). | 0.5 |
-| Fix `validate_geometry.py` path | Change hardcoded "Revit toolset" path to "BIM toolset" or make it dynamic. | 0.5 |
+| Fix `validate_geometry.py` path | Change hardcoded "ResPlan toolset" path to "BIM toolset" or make it dynamic. | 0.5 |
 | Remove dead ID-parsing in `geometry_to_frame3dd.py` | Remove the `replace('C', '').replace('B', '')` dead code. | 0.5 |
 | Clean up redundant data files | Remove `outputs/test.json` (redundant with analysis results). Remove duplicate type files in `inputs/` (they're identical to Global Libraries). | 0.5 |
 | Fix `slab_generator.py` default paths | Change default `output_file` to be different from `resplan_file` (prevent data corruption). Use a temp file + rename pattern. | 1 |
@@ -84,7 +84,7 @@
 
 **Sprint exit criteria:**
 - [ ] No unused imports, unused dependencies, or dead code
-- [ ] No file references "Revit toolset"
+- [ ] No file references "ResPlan toolset"
 - [ ] `DATA_MODELS.md` schemas match live data
 - [ ] `SBC_301_loads_reference.md` matches code
 - [ ] `slab_generator.py` cannot corrupt its input file

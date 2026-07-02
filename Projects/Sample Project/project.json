@@ -12,13 +12,14 @@
         }
     },
     "files": {
-        "nodes": "inputs/resplan_nodes.json",
-        "settings": "inputs/project_settings.json",
+        "nodes": "resplan_nodes.json",
+        "settings": "project_settings.json",
         "architectural_types": "../../Global Libraries/architectural.json",
         "structural_types": "../../Global Libraries/structural_types.json",
-        "design_assumptions": "inputs/design_assumptions.json",
-        "analysis_results": "outputs/resplan_analysis_results.json",
-        "structural_report": "outputs/structural_report.json",
-        "touchups": "inputs/resplan_touchups.json"
+        "design_assumptions": "design_assumptions.json",
+        "analysis_results": "output/resplan_analysis_results.json",
+        "structural_report": "output/structural_report.json",
+        "touchups": "resplan_touchups.json",
+        "annotations": "resplan_annotations.json"
     }
 }

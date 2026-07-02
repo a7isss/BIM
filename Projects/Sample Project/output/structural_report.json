@@ -1,0 +1,28 @@
+{
+    "elements": [
+        {
+            "id": "B1",
+            "type": "Beam",
+            "details": "Rectangular 200x300",
+            "capacity": "phi*Mn=39.3 kNm, phi*Vn=164.7 kN",
+            "reinforcement": "Tier 2 (As=451.6 mm2, stirrups @ 83.0 mm)",
+            "length_m": 13.05,
+            "effective_span_m": 13.05,
+            "n_intermediate_supports": 0,
+            "design_label": "B1",
+            "section": "Rectangular 200x300"
+        },
+        {
+            "id": "C1",
+            "type": "Column",
+            "details": "Rectangular 200x200 mm",
+            "capacity": "phi*Pn=577.4 kN, phi*Mn=10.7 kNm",
+            "reinforcement": "Tier 1 (rho=1.0%)",
+            "height_m": 3.0,
+            "Pu_kN": 22.8,
+            "Mu_kNm": 4.1,
+            "design_label": "C1",
+            "section": "Rectangular 200x200 mm"
+        }
+    ]
+}

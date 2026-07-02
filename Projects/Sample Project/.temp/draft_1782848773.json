@@ -1,0 +1,345 @@
+{
+    "nodes": [
+        {
+            "id": 1782848773677,
+            "x": 0.5,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773678,
+            "x": 4.5,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773679,
+            "x": 4.5,
+            "y": 8.5,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773680,
+            "x": 0.5,
+            "y": 8.5,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773681,
+            "x": 4.5,
+            "y": 12.5,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773682,
+            "x": 0.5,
+            "y": 12.5,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773683,
+            "x": 7.0,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773684,
+            "x": 7.0,
+            "y": 6.85,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773685,
+            "x": 4.5,
+            "y": 6.85,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773686,
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848773687,
+            "x": 4.5,
+            "y": 0.5,
+            "z": 0,
+            "is_support": false
+        }
+    ],
+    "elements": [],
+    "slabs": [],
+    "architecture": [
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_1",
+            "n1": 1782848773677,
+            "n2": 1782848773678
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_2",
+            "n1": 1782848773678,
+            "n2": 1782848773679
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_3",
+            "n1": 1782848773679,
+            "n2": 1782848773680
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_4",
+            "n1": 1782848773680,
+            "n2": 1782848773677
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_5",
+            "n1": 1782848773679,
+            "n2": 1782848773681
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_6",
+            "n1": 1782848773681,
+            "n2": 1782848773682
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_7",
+            "n1": 1782848773682,
+            "n2": 1782848773680
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_8",
+            "n1": 1782848773678,
+            "n2": 1782848773683
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_9",
+            "n1": 1782848773683,
+            "n2": 1782848773684
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_10",
+            "n1": 1782848773684,
+            "n2": 1782848773685
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_11",
+            "n1": 1782848773685,
+            "n2": 1782848773678
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_12",
+            "n1": 1782848773686,
+            "n2": 1782848773687
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_13",
+            "n1": 1782848773687,
+            "n2": 1782848773678
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_14",
+            "n1": 1782848773677,
+            "n2": 1782848773686
+        }
+    ],
+    "rooms": [
+        {
+            "id": "bedroom_0",
+            "type": "BEDROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BEDROOM_SPACE",
+            "nodes": [
+                1782848773677,
+                1782848773678,
+                1782848773679,
+                1782848773680
+            ]
+        },
+        {
+            "id": "bedroom_1",
+            "type": "BEDROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BEDROOM_SPACE",
+            "nodes": [
+                1782848773680,
+                1782848773679,
+                1782848773681,
+                1782848773682
+            ]
+        },
+        {
+            "id": "bathroom_0",
+            "type": "BATHROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BATHROOM_SPACE",
+            "nodes": [
+                1782848773678,
+                1782848773683,
+                1782848773684,
+                1782848773685
+            ]
+        },
+        {
+            "id": "bedroom_2",
+            "type": "BEDROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BEDROOM_SPACE",
+            "nodes": [
+                1782848773686,
+                1782848773687,
+                1782848773678,
+                1782848773677
+            ]
+        }
+    ],
+    "openings": [
+        {
+            "id": "door_aw_1",
+            "type": "door",
+            "wall_id": "aw_1",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_2",
+            "type": "door",
+            "wall_id": "aw_2",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_3",
+            "type": "door",
+            "wall_id": "aw_3",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_11",
+            "type": "door",
+            "wall_id": "aw_11",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        }
+    ],
+    "levels": {
+        "architectural": [
+            {
+                "id": "arch_ground",
+                "name": "Ground Floor",
+                "elevation_m": 0,
+                "height_m": 3.5
+            }
+        ],
+        "structural": []
+    },
+    "project_info": {
+        "name": "AI Generated Layout",
+        "front_elevation_angle": 0
+    },
+    "_meta": {
+        "draft_id": "draft_1782848773",
+        "requirements": "3 bedrooms, 1 bathroom, living, kitchen",
+        "adjacency": [
+            [
+                "bedroom_0",
+                "bathroom_0"
+            ]
+        ],
+        "room_specs": [
+            {
+                "id": "bedroom_0",
+                "type": "bedroom",
+                "w": 4.0,
+                "h": 4.0
+            },
+            {
+                "id": "bedroom_1",
+                "type": "bedroom",
+                "w": 4.0,
+                "h": 4.0
+            },
+            {
+                "id": "bedroom_2",
+                "type": "bedroom",
+                "w": 4.0,
+                "h": 4.0
+            },
+            {
+                "id": "bathroom_0",
+                "type": "bathroom",
+                "w": 2.5,
+                "h": 2.5
+            }
+        ],
+        "generated_at": "2026-06-30 22:46:13"
+    }
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOTTING - Generative Urban Design</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+    html,
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100%;
+    }
+
+    @keyframes gradient-move {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradient-move 5s ease infinite;
+    }
+
+    @keyframes rgb-glow {
+      0% {
+        box-shadow: 0 0 3px #ff00de, 0 0 5px #ff00de, 0 0 8px #ff00de;
+      }
+
+      33% {
+        box-shadow: 0 0 3px #00c3ff, 0 0 5px #00c3ff, 0 0 8px #00c3ff;
+      }
+
+      66% {
+        box-shadow: 0 0 3px #00ff95, 0 0 5px #00ff95, 0 0 8px #00ff95;
+      }
+
+      100% {
+        box-shadow: 0 0 3px #ff00de, 0 0 5px #ff00de, 0 0 8px #ff00de;
+      }
+    }
+
+    .rgb-glow-effect {
+      animation: rgb-glow 4s linear infinite;
+      border-radius: 0.75rem;
+      /* rounded-lg */
+    }
+
+    @keyframes rgb-text-glow {
+      0% {
+        text-shadow: 0 0 2px #ff00de, 0 0 4px #ff00de, 0 0 6px #ff00de;
+      }
+
+      33% {
+        text-shadow: 0 0 2px #00c3ff, 0 0 4px #00c3ff, 0 0 6px #00c3ff;
+      }
+
+      66% {
+        text-shadow: 0 0 2px #00ff95, 0 0 4px #00ff95, 0 0 6px #00ff95;
+      }
+
+      100% {
+        text-shadow: 0 0 2px #ff00de, 0 0 4px #ff00de, 0 0 6px #ff00de;
+      }
+    }
+
+    .tagline-effect {
+      background: linear-gradient(90deg, #ff00de, #00c3ff, #00ff95, #ff00de);
+      background-size: 200% 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient-move 5s ease infinite, rgb-text-glow 4s linear infinite;
+    }
+
+    .title-font-futuristic {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.1em;
+      text-shadow:
+        0 0 5px rgba(0, 195, 255, 0.5),
+        0 0 10px rgba(0, 195, 255, 0.4),
+        0 0 15px rgba(255, 0, 222, 0.3),
+        0 0 20px rgba(255, 0, 222, 0.2);
+    }
+
+    @keyframes pulsing-glow {
+      0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+        transform: scale(1);
+      }
+
+      50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1);
+        transform: scale(1.03);
+      }
+
+      100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+        transform: scale(1);
+      }
+    }
+
+    /* --- Logo Enhancement Styles --- */
+    @keyframes holographic-glow {
+
+      0%,
+      100% {
+        filter: drop-shadow(0 0 2px rgba(0, 195, 255, 0.8)) drop-shadow(0 0 5px rgba(0, 195, 255, 0.6));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 3px rgba(255, 0, 222, 0.9)) drop-shadow(0 0 8px rgba(255, 0, 222, 0.7));
+      }
+    }
+
+    .logo-holographic-glow {
+      animation: holographic-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes holographic-shine {
+      0% {
+        transform: skewX(-30deg) translateX(-150%);
+      }
+
+      60%,
+      100% {
+        transform: skewX(-30deg) translateX(250%);
+      }
+    }
+
+    .logo-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%);
+      animation: holographic-shine 5s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+
+    /* --- Upload Box Liquid Glass --- */
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    @keyframes rotate-angle {
+      to {
+        --angle: 360deg;
+      }
+    }
+
+    .upload-box-container {
+      border-radius: 1.5rem;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+      animation: float-box-animation 7s ease-in-out infinite;
+    }
+
+    .upload-box-container::before {
+      /* Animated Border */
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 1.5rem;
+      padding: 2px;
+      /* border thickness */
+      background: conic-gradient(from var(--angle), rgba(0, 195, 255, 0.7), rgba(255, 0, 222, 0.7) 20%, transparent 40%, transparent 60%, rgba(0, 255, 149, 0.7) 80%, rgba(0, 195, 255, 0.7) 100%);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: rotate-angle 8s linear infinite;
+      pointer-events: none;
+    }
+
+    .upload-box-glass-bg {
+      /* Background Layer */
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 24, 39, 0.6);
+      backdrop-filter: blur(20px) saturate(150%);
+      -webkit-backdrop-filter: blur(20px) saturate(150%);
+      border-radius: 1.5rem;
+    }
+
+    .upload-box-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(124, 58, 237, 0.2);
+    }
+
+    /* Magnifier/Lens effect */
+    .upload-box-container::after {
+      content: '';
+      position: absolute;
+      top: var(--y, 50%);
+      left: var(--x, 50%);
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .upload-box-container:hover::after {
+      opacity: 1;
+    }
+
+    .upload-box-content {
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+      transform-origin: center center;
+    }
+
+    .upload-box-container:hover .upload-box-content {
+      transform: scale(1.03);
+    }
+
+    /* --- Upload Box Floating & Text Glow --- */
+    @keyframes float-box-animation {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes upload-text-pulse {
+
+      0%,
+      100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a78bfa;
+        transform: scale(1);
+      }
+
+      50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #a78bfa, 0 0 30px #a78bfa;
+        transform: scale(1.03);
+      }
+    }
+
+    .upload-text-pulsing-glow {
+      animation: upload-text-pulse 2.5s ease-in-out infinite;
+    }
+
+    .upload-button-glass {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .upload-button-glass:hover {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    .upload-button-glass::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+      transform: skewX(-25deg);
+      transition: left 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .upload-button-glass:hover::after {
+      left: 125%;
+    }
+
+    /* --- Modify/Create Toggle Glass --- */
+    .toggle-button-glass {
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #d1d5db;
+      /* text-gray-300 */
+      transition: all 0.3s ease;
+    }
+
+    .toggle-button-glass:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .toggle-button-glass.selected {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+    }
+
+    .toggle-button-glass.selected::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+      transform: skewX(-25deg);
+      transition: left 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .toggle-button-glass.selected:hover::after {
+      left: 125%;
+    }
+
+    /* --- Custom Scrollbar Styles --- */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: rgba(139, 92, 246, 0.4);
+      border-radius: 10px;
+      border: 3px solid transparent;
+      background-clip: content-box;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(139, 92, 246, 0.6);
+    }
+
+    .custom-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(139, 92, 246, 0.6) transparent;
+    }
+
+    .custom-scrollbar-inner::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .custom-scrollbar-inner::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .custom-scrollbar-inner::-webkit-scrollbar-thumb {
+      background-color: rgba(139, 92, 246, 0.3);
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    .custom-scrollbar-inner::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(139, 92, 246, 0.5);
+    }
+
+    .custom-scrollbar-inner {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(139, 92, 246, 0.5) transparent;
+    }
+
+    /* --- Placeholder Sweep Animation --- */
+    @keyframes sweep-animation {
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    .placeholder-sweep::placeholder {
+      background: linear-gradient(90deg,
+          rgba(156, 163, 175, 0.5) 45%,
+          rgba(229, 231, 235, 1) 50%,
+          rgba(156, 163, 175, 0.5) 55%);
+      background-size: 200% 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: sweep-animation 8s linear infinite;
+      animation-delay: 1s;
+    }
+
+    /* --- Generate Icon Glow --- */
+    @keyframes white-glow-pulse {
+
+      0%,
+      100% {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 6px rgba(255, 255, 255, 1));
+      }
+    }
+
+    .icon-white-glow {
+      animation: white-glow-pulse 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+
+</html>

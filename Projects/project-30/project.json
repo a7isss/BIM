@@ -1,0 +1,24 @@
+{
+    "project_name": "project 30",
+    "version": "1.0.0",
+    "plot": {
+        "width_m": 20,
+        "depth_m": 30,
+        "setbacks_m": {
+            "front": 3,
+            "rear": 2,
+            "side1": 2,
+            "side2": 2
+        }
+    },
+    "files": {
+        "nodes": "resplan_nodes.json",
+        "settings": "project_settings.json",
+        "architectural_types": "../../Global Libraries/architectural.json",
+        "structural_types": "../../Global Libraries/structural_types.json",
+        "analysis_results": "output/resplan_analysis_results.json",
+        "structural_report": "output/structural_report.json",
+        "touchups": "resplan_touchups.json",
+        "annotations": "resplan_annotations.json"
+    }
+}

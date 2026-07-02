@@ -1,0 +1,23 @@
+{
+    "nodes": [],
+    "elements": [],
+    "slabs": [],
+    "architecture": [],
+    "rooms": [],
+    "openings": [],
+    "levels": {
+        "architectural": [
+            {
+                "id": "arch_ground",
+                "name": "Ground Floor",
+                "elevation_m": 0,
+                "height_m": 3.5
+            }
+        ],
+        "structural": []
+    },
+    "project_info": {
+        "name": "101",
+        "front_elevation_angle": 0
+    }
+}

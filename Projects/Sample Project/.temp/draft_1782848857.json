@@ -1,0 +1,607 @@
+{
+    "nodes": [
+        {
+            "id": 1782848857486,
+            "x": 4.0,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857487,
+            "x": 9.0,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857488,
+            "x": 9.0,
+            "y": 11.075,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857489,
+            "x": 4.0,
+            "y": 11.075,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857490,
+            "x": 8.0,
+            "y": 11.075,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857491,
+            "x": 8.0,
+            "y": 15.15,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857492,
+            "x": 4.0,
+            "y": 15.15,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857493,
+            "x": 13.0,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857494,
+            "x": 13.0,
+            "y": 8.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857495,
+            "x": 9.0,
+            "y": 8.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857496,
+            "x": 11.5,
+            "y": 8.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857497,
+            "x": 11.5,
+            "y": 11.075,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857498,
+            "x": 4.0,
+            "y": 0.5,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857499,
+            "x": 8.0,
+            "y": 0.5,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857500,
+            "x": 8.0,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857501,
+            "x": 0.5,
+            "y": 4.425,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857502,
+            "x": 4.0,
+            "y": 7.85,
+            "z": 0,
+            "is_support": false
+        },
+        {
+            "id": 1782848857503,
+            "x": 0.5,
+            "y": 7.85,
+            "z": 0,
+            "is_support": false
+        }
+    ],
+    "elements": [],
+    "slabs": [],
+    "architecture": [
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_1",
+            "n1": 1782848857486,
+            "n2": 1782848857487
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_2",
+            "n1": 1782848857487,
+            "n2": 1782848857488
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_3",
+            "n1": 1782848857488,
+            "n2": 1782848857489
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_4",
+            "n1": 1782848857489,
+            "n2": 1782848857486
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_5",
+            "n1": 1782848857489,
+            "n2": 1782848857490
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_6",
+            "n1": 1782848857490,
+            "n2": 1782848857491
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_7",
+            "n1": 1782848857491,
+            "n2": 1782848857492
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_8",
+            "n1": 1782848857492,
+            "n2": 1782848857489
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_9",
+            "n1": 1782848857487,
+            "n2": 1782848857493
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_10",
+            "n1": 1782848857493,
+            "n2": 1782848857494
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_11",
+            "n1": 1782848857494,
+            "n2": 1782848857495
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_12",
+            "n1": 1782848857495,
+            "n2": 1782848857487
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_13",
+            "n1": 1782848857495,
+            "n2": 1782848857496
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_14",
+            "n1": 1782848857496,
+            "n2": 1782848857497
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_15",
+            "n1": 1782848857497,
+            "n2": 1782848857488
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_16",
+            "n1": 1782848857488,
+            "n2": 1782848857495
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_17",
+            "n1": 1782848857498,
+            "n2": 1782848857499
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_18",
+            "n1": 1782848857499,
+            "n2": 1782848857500
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_19",
+            "n1": 1782848857500,
+            "n2": 1782848857486
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_20",
+            "n1": 1782848857486,
+            "n2": 1782848857498
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_21",
+            "n1": 1782848857501,
+            "n2": 1782848857486
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "INT_BLOCK_100",
+            "id": "aw_22",
+            "n1": 1782848857486,
+            "n2": 1782848857502
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_23",
+            "n1": 1782848857502,
+            "n2": 1782848857503
+        },
+        {
+            "type": "wall",
+            "level_id": "arch_ground",
+            "type_id": "EXT_BRICK_200",
+            "id": "aw_24",
+            "n1": 1782848857503,
+            "n2": 1782848857501
+        }
+    ],
+    "rooms": [
+        {
+            "id": "living_0",
+            "type": "LIVING_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "LIVING_SPACE",
+            "nodes": [
+                1782848857486,
+                1782848857487,
+                1782848857488,
+                1782848857489
+            ]
+        },
+        {
+            "id": "bedroom_1",
+            "type": "BEDROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BEDROOM_SPACE",
+            "nodes": [
+                1782848857489,
+                1782848857490,
+                1782848857491,
+                1782848857492
+            ]
+        },
+        {
+            "id": "bedroom_0",
+            "type": "BEDROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BEDROOM_SPACE",
+            "nodes": [
+                1782848857487,
+                1782848857493,
+                1782848857494,
+                1782848857495
+            ]
+        },
+        {
+            "id": "bathroom_0",
+            "type": "BATHROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BATHROOM_SPACE",
+            "nodes": [
+                1782848857495,
+                1782848857496,
+                1782848857497,
+                1782848857488
+            ]
+        },
+        {
+            "id": "bedroom_2",
+            "type": "BEDROOM_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "BEDROOM_SPACE",
+            "nodes": [
+                1782848857498,
+                1782848857499,
+                1782848857500,
+                1782848857486
+            ]
+        },
+        {
+            "id": "kitchen_0",
+            "type": "KITCHEN_SPACE",
+            "level_id": "arch_ground",
+            "type_id": "KITCHEN_SPACE",
+            "nodes": [
+                1782848857501,
+                1782848857486,
+                1782848857502,
+                1782848857503
+            ]
+        }
+    ],
+    "openings": [
+        {
+            "id": "door_aw_1",
+            "type": "door",
+            "wall_id": "aw_1",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_2",
+            "type": "door",
+            "wall_id": "aw_2",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_3",
+            "type": "door",
+            "wall_id": "aw_3",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_4",
+            "type": "door",
+            "wall_id": "aw_4",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_5",
+            "type": "door",
+            "wall_id": "aw_5",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_11",
+            "type": "door",
+            "wall_id": "aw_11",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_12",
+            "type": "door",
+            "wall_id": "aw_12",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_13",
+            "type": "door",
+            "wall_id": "aw_13",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_16",
+            "type": "door",
+            "wall_id": "aw_16",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_19",
+            "type": "door",
+            "wall_id": "aw_19",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        },
+        {
+            "id": "door_aw_22",
+            "type": "door",
+            "wall_id": "aw_22",
+            "ratio": 0.5,
+            "width": 0.9,
+            "height": 2.1,
+            "z": 0,
+            "level_id": "arch_ground",
+            "type_id": "swinging_door"
+        }
+    ],
+    "levels": {
+        "architectural": [
+            {
+                "id": "arch_ground",
+                "name": "Ground Floor",
+                "elevation_m": 0,
+                "height_m": 3.5
+            }
+        ],
+        "structural": []
+    },
+    "project_info": {
+        "name": "AI Generated Layout",
+        "front_elevation_angle": 0
+    },
+    "_meta": {
+        "draft_id": "draft_1782848857",
+        "requirements": "3 bedrooms, 1 bathroom, living, kitchen",
+        "adjacency": [
+            [
+                "living_0",
+                "bedroom_0"
+            ],
+            [
+                "living_0",
+                "bedroom_1"
+            ],
+            [
+                "living_0",
+                "bedroom_2"
+            ],
+            [
+                "living_0",
+                "bathroom_0"
+            ],
+            [
+                "living_0",
+                "kitchen_0"
+            ],
+            [
+                "bedroom_0",
+                "bathroom_0"
+            ]
+        ],
+        "room_specs": [
+            {
+                "id": "bedroom_0",
+                "type": "bedroom",
+                "w": 4.0,
+                "h": 4.0
+            },
+            {
+                "id": "bedroom_1",
+                "type": "bedroom",
+                "w": 4.0,
+                "h": 4.0
+            },
+            {
+                "id": "bedroom_2",
+                "type": "bedroom",
+                "w": 4.0,
+                "h": 4.0
+            },
+            {
+                "id": "bathroom_0",
+                "type": "bathroom",
+                "w": 2.5,
+                "h": 2.5
+            },
+            {
+                "id": "kitchen_0",
+                "type": "kitchen",
+                "w": 3.5,
+                "h": 3.5
+            },
+            {
+                "id": "living_0",
+                "type": "living",
+                "w": 5.0,
+                "h": 5.0
+            }
+        ],
+        "generated_at": "2026-06-30 22:47:37"
+    }
+}

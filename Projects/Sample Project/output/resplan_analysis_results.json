@@ -1,0 +1,70 @@
+{
+    "elements": [
+        {
+            "id": "B1",
+            "type": "beam",
+            "type_id": "B1",
+            "shape_req": "Rectangular",
+            "length_m": 13.05,
+            "effective_span_m": 13.05,
+            "n_intermediate_supports": 0,
+            "wall_load_kN_m": 0.0,
+            "properties": {
+                "Ax": 0.12,
+                "Iy": 0.0036,
+                "Iz": 0.0004,
+                "J": 0.004
+            },
+            "actions": {
+                "D": {
+                    "M": 22.2,
+                    "V": 8.5
+                },
+                "L": {
+                    "M": 6.8,
+                    "V": 2.6
+                },
+                "U": {
+                    "M": 37.5,
+                    "V": 14.4
+                }
+            },
+            "utilization": 0.2
+        },
+        {
+            "id": "C1",
+            "type": "column",
+            "type_id": "C1",
+            "height_m": 3.0,
+            "properties": {
+                "Ax": 0.12,
+                "Iy": 0.0036,
+                "Iz": 0.0004,
+                "J": 0.004
+            },
+            "actions": {
+                "D": {
+                    "P": 19.0,
+                    "M": 0.6,
+                    "V": 0.6
+                },
+                "L": {
+                    "P": 0.0,
+                    "M": 0.0,
+                    "V": 0.0
+                },
+                "W": {
+                    "P": 0.0,
+                    "M": 3.4,
+                    "V": 4.5
+                },
+                "U": {
+                    "P": 22.8,
+                    "M": 4.1,
+                    "V": 5.2
+                }
+            },
+            "utilization": 0.03
+        }
+    ]
+}

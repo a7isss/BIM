@@ -124,7 +124,7 @@ Zero test files in the entire project. No pytest, no unittest, no test infrastru
 - `footings_library.json` contains floating-point artifacts (`0.22499999999999998`)
 - `geometry_to_frame3dd.py` produces a text file, not actual Frame3DD CSV format
 - `frame3dd_example.py` and `mock_frame3dd_results.json` are legacy/unused
-- `validate_geometry.py` references "Revit toolset" (old project name)
+- `validate_geometry.py` references "ResPlan toolset" (old project name)
 - `slab_generator.py` has an unreadable nested list comprehension for beam filtering (O(n²))
 - Hardcoded Z-level mapping in `slab_generator.py`: `{"arch_ground": 3.5, "arch_first": 7.0}`
 
@@ -215,10 +215,10 @@ No test files exist anywhere in the frontend.
 #### Critical Issues
 
 **1. Hardcoded wrong project path (CRITICAL)**
-`server.py` line: `PROJECT_DIR = 'D:/Revit toolset/Projects/Sample Project'` — references "Revit toolset" (old project name), not "BIM toolset". Every tool that loads/saves data will fail or operate on the wrong directory.
+`server.py` line: `PROJECT_DIR = 'D:/ResPlan toolset/Projects/Sample Project'` — references "ResPlan toolset" (old project name), not "BIM toolset". Every tool that loads/saves data will fail or operate on the wrong directory.
 
 **2. `run_structural_analysis` points to wrong path (CRITICAL)**
-Calls `subprocess.run(['python', 'run_e2e_flow.py'], cwd='D:/Revit toolset/Structural Tools', ...)` — also wrong base directory.
+Calls `subprocess.run(['python', 'run_e2e_flow.py'], cwd='D:/ResPlan toolset/Structural Tools', ...)` — also wrong base directory.
 
 **3. `get_types` tool is broken (MEDIUM)**
 Reads `data.get('types', {})` from `resplan_nodes.json`, but that file has no `types` key. Type catalogs live in separate files (`resplan_types.json`, `structural_types.json`). This tool always returns "Category not found."
